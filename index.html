@@ -114,6 +114,56 @@ animation:twinkle2 3s ease-in-out infinite alternate;
 
 </div>
 
+<style>
+.latest-heading{text-align:center;padding:0 0 20px;margin-top:20px}
+.latest-heading h2{font-size:20px;font-weight:600;background:linear-gradient(90deg,#3B82F6,#22D3EE);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:2px}
+.latest-heading .line{width:60px;height:1px;margin:12px auto;background:linear-gradient(90deg,transparent,rgba(59,130,246,0.6),transparent)}
+.latest-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;padding:0 0 32px}
+.latest-card{background:rgba(255,255,255,0.015);border:1px solid rgba(59,130,246,0.08);border-radius:12px;padding:20px;text-decoration:none;color:inherit;transition:0.3s}
+.latest-card:hover{transform:translateY(-3px);border-color:rgba(59,130,246,0.25);box-shadow:0 0 20px rgba(59,130,246,0.05)}
+.latest-card .l-date{font-size:11px;color:#475569;margin-bottom:4px}
+.latest-card .l-title{font-size:14px;font-weight:600;color:#e2e8f0;margin-bottom:6px;line-height:1.5}
+.latest-card .l-desc{font-size:12px;color:#64748b;line-height:1.6}
+.latest-card .l-tag{display:inline-block;margin-top:8px;padding:2px 8px;border-radius:8px;font-size:10px;background:rgba(59,130,246,0.08);color:#3B82F6;border:1px solid rgba(59,130,246,0.15)}
+.latest-more{text-align:center;padding:0 0 32px}
+.latest-more a{display:inline-block;font-size:13px;color:#3B82F6;text-decoration:none;letter-spacing:1px;padding:8px 24px;border:1px solid rgba(59,130,246,0.2);border-radius:20px;transition:0.3s}
+.latest-more a:hover{background:rgba(59,130,246,0.1);border-color:rgba(59,130,246,0.4)}
+@media(max-width:640px){.latest-grid{grid-template-columns:1fr}}
+</style>
+<div class="container">
+<div class="latest-heading">
+<h2>最新文章</h2>
+<div class="line"></div>
+</div>
+<div class="latest-grid">
+<a href="articles/2026-05-10-strategy-review.html" class="latest-card">
+<div class="l-date">2026.05.10</div>
+<div class="l-title">策略复盘：数据周前夕的策略评估与风险预案</div>
+<div class="l-desc">震荡市趋势策略承压，针对PPI/CPI/ECB数据周制定多情景预案</div>
+<span class="l-tag">策略复盘</span>
+</a>
+<a href="articles/2026-05-10-weekly-review.html" class="latest-card">
+<div class="l-date">2026.05.10</div>
+<div class="l-title">本周市场回顾与下周展望（5月4日-10日）</div>
+<div class="l-desc">黄金$4,700-4,750震荡，BTC $78K-82K波动，下周关注PPI/CPI</div>
+<span class="l-tag">周度回顾</span>
+</a>
+<a href="articles/2026-05-10-market-analysis.html" class="latest-card">
+<div class="l-date">2026.05.10</div>
+<div class="l-title">今日行情分析：黄金稳步攀升，比特币震荡偏弱</div>
+<div class="l-desc">黄金$4,716，BTC $80,190，欧元1.1777，关键支撑阻力分析</div>
+<span class="l-tag">市场分析</span>
+</a>
+<a href="articles/2026-05-09-case-study.html" class="latest-card">
+<div class="l-date">2026.05.09</div>
+<div class="l-title">实战记录：AI模型判断 vs 实际走势推演复盘</div>
+<div class="l-desc">模型判断黄金4,680支撑有效，BTC若突破81,000上看82,000</div>
+<span class="l-tag">实战复盘</span>
+</a>
+</div>
+<div class="latest-more"><a href="insight-archive.html">查看全部文章 →</a></div>
+</div>
+
 <div class="footer">
 <div class="foot-line"><span style="color:#3B82F6;">✦</span> 天枢宇宙 · <a href="https://tianshu.shop">天枢探索</a> <span style="color:#22D3EE;">✦</span></div>
 <div class="foot-note">本站内容仅供研究与学习参考 · 不构成投资建议 · 🤖 AI生成</div>
