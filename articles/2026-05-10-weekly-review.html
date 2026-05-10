@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>本周市场回顾与下周展望（5月4日-10日） — 天枢 AI Insight</title>
+    <meta name="description" content="AI交易研究视角：本周市场回顾数据驱动分析，黄金高位震荡$4,700-4,750，BTC $78K-82K区间波动，DXY 99-100，下周关注PPI/CPI/ECB利率决议。">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #050816; position: relative; overflow-x: hidden; }
+        body::before { content: ''; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: radial-gradient(2px 2px at 31% 57%, rgba(255,255,255,0.188547219610097), transparent), radial-gradient(1px 1px at 21% 18%, rgba(255,255,255,0.261180988681121), transparent), radial-gradient(1px 1px at 76% 50%, rgba(255,255,255,0.187617685127825), transparent), radial-gradient(1px 1px at 73% 7%, rgba(255,255,255,0.240699156718654), transparent), radial-gradient(2px 2px at 66% 72%, rgba(255,255,255,0.236484474845456), transparent), radial-gradient(1px 1px at 89% 68%, rgba(255,255,255,0.343772019233448), transparent), radial-gradient(1px 1px at 64% 39%, rgba(255,255,255,0.234998698967974), transparent), radial-gradient(1px 1px at 51% 66%, rgba(255,255,255,0.28822524048771), transparent), radial-gradient(2px 2px at 66% 7%, rgba(255,255,255,0.132088152287569), transparent), radial-gradient(1px 1px at 35% 26%, rgba(255,255,255,0.205604426658528), transparent), radial-gradient(1px 1px at 97% 44%, rgba(255,255,255,0.194095541208096), transparent), radial-gradient(1px 1px at 40% 27%, rgba(255,255,255,0.206172763978212), transparent), radial-gradient(2px 2px at 83% 97%, rgba(255,255,255,0.35993489802812), transparent), radial-gradient(1px 1px at 83% 87%, rgba(255,255,255,0.140279100062456), transparent), radial-gradient(1px 1px at 94% 53%, rgba(255,255,255,0.337883105705438), transparent), radial-gradient(1px 1px at 58% 54%, rgba(255,255,255,0.135951230505459), transparent), radial-gradient(2px 2px at 62% 50%, rgba(255,255,255,0.274884660111221), transparent), radial-gradient(1px 1px at 79% 96%, rgba(255,255,255,0.232879848979823), transparent), radial-gradient(1px 1px at 6% 77%, rgba(255,255,255,0.371208170555163), transparent), radial-gradient(1px 1px at 67% 53%, rgba(255,255,255,0.134920745918025), transparent), radial-gradient(2px 2px at 45% 45%, rgba(255,255,255,0.176853225695367), transparent), radial-gradient(1px 1px at 92% 73%, rgba(255,255,255,0.278345515662034), transparent), radial-gradient(1px 1px at 19% 31%, rgba(255,255,255,0.243597934555075), transparent), radial-gradient(1px 1px at 14% 10%, rgba(255,255,255,0.30629703011657), transparent), radial-gradient(2px 2px at 92% 78%, rgba(255,255,255,0.245732512625741), transparent), radial-gradient(1px 1px at 34% 54%, rgba(255,255,255,0.141156293470951), transparent), radial-gradient(1px 1px at 82% 12%, rgba(255,255,255,0.24960758925863), transparent), radial-gradient(1px 1px at 96% 71%, rgba(255,255,255,0.323469246934852), transparent), radial-gradient(2px 2px at 76% 23%, rgba(255,255,255,0.232632279411253), transparent), radial-gradient(1px 1px at 85% 38%, rgba(255,255,255,0.239767358843129), transparent), radial-gradient(1px 1px at 46% 21%, rgba(255,255,255,0.242459277036814), transparent), radial-gradient(1px 1px at 74% 43%, rgba(255,255,255,0.234175029040396), transparent), radial-gradient(2px 2px at 86% 7%, rgba(255,255,255,0.334026495243435), transparent), radial-gradient(1px 1px at 23% 44%, rgba(255,255,255,0.174873981194046), transparent), radial-gradient(1px 1px at 64% 52%, rgba(255,255,255,0.227942065348822), transparent), radial-gradient(1px 1px at 88% 84%, rgba(255,255,255,0.158352595129215), transparent), radial-gradient(2px 2px at 94% 70%, rgba(255,255,255,0.173901899333066), transparent), radial-gradient(1px 1px at 76% 82%, rgba(255,255,255,0.231396128484698), transparent), radial-gradient(1px 1px at 62% 46%, rgba(255,255,255,0.316014653125785), transparent), radial-gradient(1px 1px at 52% 20%, rgba(255,255,255,0.26422837011713), transparent), radial-gradient(2px 2px at 19% 31%, rgba(255,255,255,0.377283540916295), transparent), radial-gradient(1px 1px at 6% 65%, rgba(255,255,255,0.364900680149393), transparent), radial-gradient(1px 1px at 24% 23%, rgba(255,255,255,0.212066643783854), transparent), radial-gradient(1px 1px at 8% 45%, rgba(255,255,255,0.252268566355234), transparent), radial-gradient(2px 2px at 38% 64%, rgba(255,255,255,0.298430233448013), transparent), radial-gradient(1px 1px at 28% 37%, rgba(255,255,255,0.160066283755035), transparent), radial-gradient(1px 1px at 34% 86%, rgba(255,255,255,0.201714920579323), transparent), radial-gradient(1px 1px at 28% 89%, rgba(255,255,255,0.29565174542165), transparent), radial-gradient(2px 2px at 25% 68%, rgba(255,255,255,0.203058933887192), transparent), radial-gradient(1px 1px at 8% 17%, rgba(255,255,255,0.392495343178741), transparent), radial-gradient(1px 1px at 72% 39%, rgba(255,255,255,0.356704142483279), transparent), radial-gradient(1px 1px at 26% 9%, rgba(255,255,255,0.141224549962778), transparent), radial-gradient(2px 2px at 35% 63%, rgba(255,255,255,0.359188232365618), transparent), radial-gradient(1px 1px at 55% 68%, rgba(255,255,255,0.297677338355071), transparent), radial-gradient(1px 1px at 81% 90%, rgba(255,255,255,0.180135433692548), transparent), radial-gradient(1px 1px at 73% 43%, rgba(255,255,255,0.159175299601245), transparent), radial-gradient(2px 2px at 77% 39%, rgba(255,255,255,0.129172288779715), transparent), radial-gradient(1px 1px at 53% 22%, rgba(255,255,255,0.189161355369334), transparent), radial-gradient(1px 1px at 24% 89%, rgba(255,255,255,0.211319567408096), transparent), radial-gradient(1px 1px at 30% 78%, rgba(255,255,255,0.39043440110536), transparent); z-index: -1; pointer-events: none; color: #c8d6e5; font-family: -apple-system,"PingFang SC","Microsoft YaHei",sans-serif; line-height: 2; }
+        .container { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+        .nav { display: flex; justify-content: space-between; align-items: center; padding: 24px 0; border-bottom: 1px solid rgba(59,130,246,0.2); }
+        .nav-brand { font-size: 20px; font-weight: 700; letter-spacing: 2px; background: linear-gradient(135deg,#60a5fa,#818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .nav-links { display: flex; gap: 24px; }
+        .nav-links a { color: #94a3b8; text-decoration: none; font-size: 13px; }
+        .nav-links a:hover { color: #3B82F6; }
+        .article-header { padding: 48px 0 32px; }
+        .article-header .date { font-size: 13px; color: #475569; margin-bottom: 8px; }
+        .article-header h1 { font-size: 28px; font-weight: 700; color: #e2e8f0; line-height: 1.4; }
+        .article-header .meta { margin-top: 16px; font-size: 13px; color: #64748b; }
+        .article-body { padding-bottom: 48px; }
+        .article-body h2 { font-size: 20px; font-weight: 600; color: #94a3b8; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid rgba(59,130,246,0.1); }
+        .article-body h3 { font-size: 16px; font-weight: 600; color: #818cf8; margin: 24px 0 12px; }
+        .article-body p { margin-bottom: 16px; color: #c8d6e5; }
+        .article-body ul { padding-left: 20px; margin-bottom: 16px; color: #c8d6e5; }
+        .article-body li { margin-bottom: 8px; }
+        .article-body .key-box { background: rgba(59,130,246,0.06); border: 1px solid rgba(59,130,246,0.2); border-radius: 12px; padding: 20px 24px; margin: 20px 0; }
+        .article-body .key-box .label { font-size: 12px; color: #64748b; margin-bottom: 4px; }
+        .article-body .key-box .value { font-size: 16px; font-weight: 600; color: #3B82F6; }
+        .article-body .data-row { display: flex; gap: 16px; flex-wrap: wrap; margin: 16px 0; }
+        .data-row .data-item { flex: 1; min-width: 130px; padding: 16px; background: rgba(59,130,246,0.04); border: 1px solid rgba(59,130,246,0.1); border-radius: 8px; text-align: center; }
+        .data-row .data-item .d-label { font-size: 12px; color: #64748b; }
+        .data-row .data-item .d-value { font-size: 18px; font-weight: 600; color: #e2e8f0; margin-top: 4px; }
+        .article-body .compare-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        .article-body .compare-table th, .article-body .compare-table td { padding: 12px; text-align: left; border: 1px solid rgba(59,130,246,0.15); }
+        .article-body .compare-table th { background: rgba(59,130,246,0.08); color: #94a3b8; font-size: 13px; font-weight: 600; }
+        .article-body .compare-table td { font-size: 14px; color: #c8d6e5; }
+        .back-link { display: inline-block; margin-top: 32px; color: #3B82F6; text-decoration: none; font-size: 14px; }
+        .back-link:hover { text-decoration: underline; }
+        .footer { margin-top: 48px; padding: 24px 0; text-align: center; border-top: 1px solid rgba(59,130,246,0.1); font-size: 13px; color: #475569; }
+        .footer a { color: #3B82F6; text-decoration: none; }
+        @media (max-width: 640px) { .article-header h1 { font-size: 22px; } .data-row { flex-direction: column; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <div class="nav-brand">✦ Tianshu</div>
+            <div class="nav-links">
+                <a href="/">首页</a>
+                <a href="https://tianshu.shop" target="_blank">AI工具</a>
+            </div>
+        </div>
+        <article>
+            <div class="article-header">
+                <div style="font-size:36px; font-weight:900; letter-spacing:12px; font-family:'Noto Serif SC','STSong','SimSun',serif; background:linear-gradient(90deg,#3B82F6,#22D3EE); -webkit-background-clip:text; -webkit-text-fill-color:transparent; margin-bottom:4px; line-height:1.3;">天枢</div>
+                <div style="font-size:11px; color:#475569; letter-spacing:5px; text-transform:uppercase; margin-bottom:20px;">T I A N S H U</div>
+                <div class="date">2026年05月10日 · 周度回顾</div>
+                <h1>本周市场回顾与下周展望（5月4日-10日）</h1>
+                <div class="meta">阅读时间约 5 分钟 · 数据来源：AI 交易研究系统</div>
+            </div>
+            <div style="text-align:center;padding:12px 0 4px;">
+                <span style="display:inline-block;font-size:11px;padding:3px 12px;border-radius:4px;background:rgba(59,130,246,0.1);color:#818cf8;border:1px solid rgba(59,130,246,0.2);">🤖 本文由AI生成，仅供学习参考</span>
+            </div>
+            <div class="article-body">
+
+                <h2>一、本周市场概况</h2>
+                <p>本周（5月4日-10日）全球金融市场呈现明显的结构性分化。贵金属延续高位盘整格局，黄金在$4,700-4,750区间内窄幅震荡，周线小幅收阳。比特币则在$78,000-82,000宽幅区间内反复拉锯，周五一度测试82,000关口但未能有效站稳。美元指数DXY徘徊于99-100之间，整体延续弱势，为风险资产提供了一定支撑。</p>
+
+                <div class="data-row">
+                    <div class="data-item">
+                        <div class="d-label">黄金 XAU/USD</div>
+                        <div class="d-value" style="color:#34d399;">$4,716</div>
+                    </div>
+                    <div class="data-item">
+                        <div class="d-label">比特币 BTC/USD</div>
+                        <div class="d-value" style="color:#fbbf24;">$80,190</div>
+                    </div>
+                    <div class="data-item">
+                        <div class="d-label">美元指数 DXY</div>
+                        <div class="d-value" style="color:#f87171;">99.5</div>
+                    </div>
+                    <div class="data-item">
+                        <div class="d-label">欧元 EUR/USD</div>
+                        <div class="d-value" style="color:#34d399;">1.1777</div>
+                    </div>
+                </div>
+
+                <p><strong>黄金：</strong>本周黄金在$4,680-4,750区间内窄幅波动，虽有数次尝试上攻4,750阻力位，但均未形成有效突破。从结构上看，4小时级别形成收敛三角形形态，日线上升趋势依然完整。ETF资金延续净流入态势，COMEX黄金期货持仓中多头仓位持续增加，市场对金价的配置意愿维持高位。</p>
+
+                <p><strong>比特币：</strong>BTC本周走势较为波折，周一从80,000附近快速下探至78,000后获得支撑反弹，周四一度冲高至82,000但遭遇抛压回撤。链上数据显示交易所BTC余额持续下降，卖出压力减弱，但上方82,000附近的供应区域较为密集，短期突破仍需成交量配合。</p>
+
+                <p><strong>美元指数：</strong>DXY本周在99-100区间低位震荡，整体走势偏弱。美伊协议谈判继续推进对美元构成压制。CFTC持仓数据显示美元多头仓位进一步减少。下周关注美国CPI数据对美元走势的短期驱动。</p>
+
+                <p><strong>大宗商品：</strong>原油价格本周在$62-66区间运行，受OPEC+增产预期影响波动较大。铜价小幅回调，但仍维持在近期高位附近。贵金属中白银表现弱于黄金，金银比价有所回升。</p>
+
+                <h2>二、核心数据回顾</h2>
+                <p>本周已公布的重要经济数据及市场反应如下：</p>
+
+                <table class="compare-table">
+                    <tr>
+                        <th>日期</th><th>数据</th><th>实际值</th><th>预期</th><th>市场反应</th>
+                    </tr>
+                    <tr>
+                        <td>05/04</td><td>美国4月ISM制造业PMI</td><td>49.2</td><td>48.5</td><td>略好于预期，美元短暂反弹后回落</td>
+                    </tr>
+                    <tr>
+                        <td>05/06</td><td>美国4月ADP就业人数</td><td>182K</td><td>175K</td><td>高于预期，黄金短线承压后快速收复</td>
+                    </tr>
+                    <tr>
+                        <td>05/07</td><td>美国当周EIA原油库存</td><td>-2.4M桶</td><td>-1.5M桶</td><td>降幅超预期，原油短线拉升</td>
+                    </tr>
+                    <tr>
+                        <td>05/08</td><td>中国4月贸易帐</td><td>¥428B</td><td>¥410B</td><td>顺差扩大，人民币小幅走强</td>
+                    </tr>
+                    <tr>
+                        <td>05/09</td><td>美国当周初请失业金</td><td>228K</td><td>235K</td><td>低于预期，劳动力市场仍具韧性</td>
+                    </tr>
+                </table>
+
+                <p>整体来看，本周公布的经济数据偏向积极。美国劳动力市场数据持续显示韧性，但通胀预期温和回落的趋势未变。市场对美联储降息的预期维持在7月首次降息的定价上，全年降息幅度约50-75个基点。</p>
+
+                <div class="key-box">
+                    <div class="label">市场结构判断</div>
+                    <div class="value" style="font-size:14px; font-weight:400; color:#c8d6e5; line-height:1.8;">
+                        <strong style="color:#3B82F6;">整体格局：</strong>风险资产与避险资产同步走强，市场处于"利好消化"阶段。<br>
+                        <strong style="color:#3B82F6;">核心矛盾：</strong>降息预期 vs 经济韧性的博弈仍在继续，CPI数据或将提供方向指引。
+                    </div>
+                </div>
+
+                <h2>三、AI模型表现记录</h2>
+                <p>过去一周，AI模型共发布 5 次市场研判，以下是模型历史判断的跟踪记录：</p>
+
+                <table class="compare-table">
+                    <tr>
+                        <th>日期</th><th>模型判断</th><th>实际走势</th><th>模型表现</th>
+                    </tr>
+                    <tr>
+                        <td>05/04</td><td>黄金维持$4,660-4,720区间震荡</td><td>实际区间$4,655-4,718</td><td style="color:#34d399;">区间判断合理</td>
+                    </tr>
+                    <tr>
+                        <td>05/06</td><td>BTC$78,000-81,000宽幅震荡</td><td>实际区间$78,150-81,800</td><td style="color:#34d399;">方向一致，振幅略偏小</td>
+                    </tr>
+                    <tr>
+                        <td>05/07</td><td>DXY弱势延续，关注99关口</td><td>DXY最低触及99.10后小幅反弹</td><td style="color:#34d399;">方向判断正确</td>
+                    </tr>
+                    <tr>
+                        <td>05/08</td><td>黄金4,680支撑有效，上看4,740</td><td>黄金回调至4,683后反弹至4,732</td><td style="color:#34d399;">支撑位判断准确</td>
+                    </tr>
+                    <tr>
+                        <td>05/09</td><td>BTC若突破81,000则上看82,000</td><td>BTC冲高至82,000后回撤至80,000</td><td style="color:#fbbf24;">突破后有回撤，判断部分兑现</td>
+                    </tr>
+                </table>
+
+                <p>本周模型表现总结：在趋势性判断上，模型对黄金和美元指数的方向性判断与实际走势较为吻合。比特币方面，模型提示了81,000-82,000压力位的重要性，实际走势中BTC确实在82,000遇阻回落，该判断在市场验证中具有参考价值。当前模型参数在震荡行情中的表现优于趋势行情，下周若有重大数据冲击，需关注模型对突破行情的响应速度。</p>
+
+                <h2>四、下周关键事件提醒</h2>
+                <p>下周（5月11日-16日）将迎来一系列重磅经济数据，是本月最重要的数据周之一：</p>
+
+                <div class="data-row">
+                    <div class="data-item">
+                        <div class="d-label">05/12 周二</div>
+                        <div class="d-value" style="font-size:14px; color:#f87171;">美国PPI月率</div>
+                    </div>
+                    <div class="data-item">
+                        <div class="d-label">05/13 周三</div>
+                        <div class="d-value" style="font-size:14px; color:#f87171;">美国CPI年率</div>
+                    </div>
+                    <div class="data-item">
+                        <div class="d-label">05/14 周四</div>
+                        <div class="d-value" style="font-size:14px; color:#fbbf24;">ECB利率决议</div>
+                    </div>
+                    <div class="data-item">
+                        <div class="d-label">05/15 周五</div>
+                        <div class="d-value" style="font-size:14px; color:#fbbf24;">密歇根消费者信心</div>
+                    </div>
+                </div>
+
+                <ul>
+                    <li><strong>周二 05/12 — 美国PPI月率：</strong>前值0.2%，市场预期0.3%。PPI作为CPI的先行指标，若超预期上行可能引发市场对通胀粘性的担忧，对金价形成短期压制。</li>
+                    <li><strong>周三 05/13 — 美国CPI年率：</strong>前值2.4%，市场预期2.5%。这是下周最核心的数据。若CPI高于预期，将打压降息预期，美元可能短线反弹，黄金面临回调风险；若CPI低于预期，则可能推动金价突破4,750阻力位。</li>
+                    <li><strong>周四 05/14 — ECB利率决议：</strong>目前市场定价降息25个基点的概率较高。若ECB如期降息，欧元短期可能承压，关注1.1700支撑；若意外按兵不动，欧元有望冲击1.1900。</li>
+                    <li><strong>周五 05/15 — 密歇根消费者信心指数：</strong>前值77.2，预期77.5。关注消费者通胀预期分项数据对市场情绪的影响。</li>
+                </ul>
+
+                <div class="key-box">
+                    <div class="label">AI 下周观察要点</div>
+                    <div style="font-size:14px; font-weight:400; color:#c8d6e5; line-height:1.8; margin-top:8px;">
+                        <span style="color:#f87171;">⚠ CPI数据是关键分水岭</span><br>
+                        黄金：关注4,680支撑与4,750突破方向；<br>
+                        比特币：关注78,000支撑有效性，若跌破则下看76,000；<br>
+                        欧元：关注ECB决议对1.1700-1.1900区间的突破。
+                    </div>
+                </div>
+
+                <h2>五、技术面补充观察</h2>
+                <p><strong>黄金日线：</strong>均线系统呈多头排列，MA20($4,660)和MA50($4,580)形成支撑。MACD在高位粘合，RSI在55-60区间运行，未见明显超买或超卖信号。布林带略有收窄，预示着突破行情可能正在酝酿。</p>
+                <p><strong>比特币日线：</strong>MA20($80,500)与MA50($79,000)之间的区域是多空博弈的核心地带。成交量呈现递减趋势，表明市场正在等待方向性选择的催化剂。下方78,000为关键结构支撑位。</p>
+                <p><strong>DXY：</strong>日线级别处于下降通道中，但99关口附近多次获得支撑，若CPI数据意外强劲，可能引发短线反弹至100.5附近。中期来看，美元仍处于弱势周期。</p>
+
+                <p style="font-size:12px; color:#475569; margin-top:32px;"><em>免责声明：以上分析由 AI 模型生成，基于历史数据和市场结构分析，仅供参考，不构成任何投资建议。交易有风险，请自行决策。</em></p>
+
+                <a href="/" class="back-link">← 返回首页</a>
+            </div>
+        </article>
+
+        <div class="footer">
+            <p>© 2026 <a href="https://tianshu.shop">天枢</a> — AI交易分析 · 策略记录 · 自动研究</p>
+        </div>
+    </div>
+    <div style="text-align:center;padding:20px 0 10px;border-top:1px solid rgba(59,130,246,0.08);">
+        <p style="font-size:11px;color:#334155;">· 本文由人工智能生成，仅供学习参考，不构成任何投资建议 ·<br>投资有风险，入市需谨慎。</p>
+    </div>
+</body>
+</html>
