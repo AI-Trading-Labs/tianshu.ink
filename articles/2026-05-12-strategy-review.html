@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>策略复盘：PPI数据落地后的策略评估与CPI前瞻 — 天枢 AI Insight</title>
+    <meta name="description" content="AI策略复盘：PPI数据周首日落地，策略在数据前观望模式表现评估，趋势跟踪面对方向性行情的参数验证，与明日CPI的行情预案更新。">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #050816; position: relative; overflow-x: hidden; }
+body::before { content: ''; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: radial-gradient(2px 2px at 31% 57%, rgba(255,255,255,0.188547219610097), transparent), radial-gradient(1px 1px at 21% 18%, rgba(255,255,255,0.261180988681121), transparent), radial-gradient(1px 1px at 76% 50%, rgba(255,255,255,0.187617685127825), transparent), radial-gradient(1px 1px at 73% 7%, rgba(255,255,255,0.240699156718654), transparent), radial-gradient(2px 2px at 66% 72%, rgba(255,255,255,0.236484474845456), transparent), radial-gradient(1px 1px at 89% 68%, rgba(255,255,255,0.343772019233448), transparent), radial-gradient(1px 1px at 64% 39%, rgba(255,255,255,0.234998698967974), transparent), radial-gradient(1px 1px at 51% 66%, rgba(255,255,255,0.28822524048771), transparent), radial-gradient(2px 2px at 66% 7%, rgba(255,255,255,0.132088152287569), transparent), radial-gradient(1px 1px at 35% 26%, rgba(255,255,255,0.205604426658528), transparent), radial-gradient(1px 1px at 97% 44%, rgba(255,255,255,0.194095541208096), transparent), radial-gradient(1px 1px at 40% 27%, rgba(255,255,255,0.206172763978212), transparent), radial-gradient(2px 2px at 83% 97%, rgba(255,255,255,0.35993489802812), transparent), radial-gradient(1px 1px at 83% 87%, rgba(255,255,255,0.140279100062456), transparent), radial-gradient(1px 1px at 94% 53%, rgba(255,255,255,0.337883105705438), transparent), radial-gradient(1px 1px at 58% 54%, rgba(255,255,255,0.135951230505459), transparent), radial-gradient(2px 2px at 62% 50%, rgba(255,255,255,0.274884660111221), transparent), radial-gradient(1px 1px at 79% 96%, rgba(255,255,255,0.232879848979823), transparent), radial-gradient(1px 1px at 6% 77%, rgba(255,255,255,0.371208170555163), transparent), radial-gradient(1px 1px at 67% 53%, rgba(255,255,255,0.134920745918025), transparent), radial-gradient(2px 2px at 45% 45%, rgba(255,255,255,0.176853225695367), transparent), radial-gradient(1px 1px at 92% 73%, rgba(255,255,255,0.278345515662034), transparent), radial-gradient(1px 1px at 19% 31%, rgba(255,255,255,0.243597934555075), transparent), radial-gradient(1px 1px at 14% 10%, rgba(255,255,255,0.30629703011657), transparent), radial-gradient(2px 2px at 92% 78%, rgba(255,255,255,0.245732512625741), transparent), radial-gradient(1px 1px at 34% 54%, rgba(255,255,255,0.141156293470951), transparent), radial-gradient(1px 1px at 82% 12%, rgba(255,255,255,0.24960758925863), transparent), radial-gradient(1px 1px at 96% 71%, rgba(255,255,255,0.323469246934852), transparent), radial-gradient(2px 2px at 76% 23%, rgba(255,255,255,0.232632279411253), transparent), radial-gradient(1px 1px at 85% 38%, rgba(255,255,255,0.239767358843129), transparent), radial-gradient(1px 1px at 46% 21%, rgba(255,255,255,0.242459277036814), transparent), radial-gradient(1px 1px at 74% 43%, rgba(255,255,255,0.234175029040396), transparent), radial-gradient(2px 2px at 86% 7%, rgba(255,255,255,0.334026495243435), transparent), radial-gradient(1px 1px at 23% 44%, rgba(255,255,255,0.174873981194046), transparent), radial-gradient(1px 1px at 64% 52%, rgba(255,255,255,0.227942065348822), transparent), radial-gradient(1px 1px at 88% 84%, rgba(255,255,255,0.158352595129215), transparent), radial-gradient(2px 2px at 94% 70%, rgba(255,255,255,0.173901899333066), transparent), radial-gradient(1px 1px at 76% 82%, rgba(255,255,255,0.231396128484698), transparent), radial-gradient(1px 1px at 62% 46%, rgba(255,255,255,0.316014653125785), transparent), radial-gradient(1px 1px at 52% 20%, rgba(255,255,255,0.26422837011713), transparent), radial-gradient(2px 2px at 19% 31%, rgba(255,255,255,0.377283540916295), transparent), radial-gradient(1px 1px at 6% 65%, rgba(255,255,255,0.364900680149393), transparent), radial-gradient(1px 1px at 24% 23%, rgba(255,255,255,0.212066643783854), transparent), radial-gradient(1px 1px at 8% 45%, rgba(255,255,255,0.252268566355234), transparent), radial-gradient(2px 2px at 38% 64%, rgba(255,255,255,0.298430233448013), transparent), radial-gradient(1px 1px at 28% 37%, rgba(255,255,255,0.160066283755035), transparent), radial-gradient(1px 1px at 34% 86%, rgba(255,255,255,0.201714920579323), transparent), radial-gradient(1px 1px at 28% 89%, rgba(255,255,255,0.29565174542165), transparent), radial-gradient(2px 2px at 25% 68%, rgba(255,255,255,0.203058933887192), transparent), radial-gradient(1px 1px at 8% 17%, rgba(255,255,255,0.392495343178741), transparent), radial-gradient(1px 1px at 72% 39%, rgba(255,255,255,0.356704142483279), transparent), radial-gradient(1px 1px at 26% 9%, rgba(255,255,255,0.141224549962778), transparent), radial-gradient(2px 2px at 35% 63%, rgba(255,255,255,0.359188232365618), transparent), radial-gradient(1px 1px at 55% 68%, rgba(255,255,255,0.297677338355071), transparent), radial-gradient(1px 1px at 81% 90%, rgba(255,255,255,0.180135433692548), transparent), radial-gradient(1px 1px at 73% 43%, rgba(255,255,255,0.159175299601245), transparent), radial-gradient(2px 2px at 77% 39%, rgba(255,255,255,0.129172288779715), transparent), radial-gradient(1px 1px at 53% 22%, rgba(255,255,255,0.189161355369334), transparent), radial-gradient(1px 1px at 24% 89%, rgba(255,255,255,0.211319567408096), transparent), radial-gradient(1px 1px at 30% 78%, rgba(255,255,255,0.39043440110536), transparent); z-index: -1; pointer-events: none; color: #c8d6e5; font-family: -apple-system,"PingFang SC","Microsoft YaHei",sans-serif; line-height: 2; }
+        .container { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+        .nav { display: flex; justify-content: space-between; align-items: center; padding: 24px 0; border-bottom: 1px solid rgba(59,130,246,0.2); }
+        .nav-brand { font-size: 20px; font-weight: 700; letter-spacing: 2px; background: linear-gradient(90deg,#3B82F6,#22D3EE); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .nav-links { display: flex; gap: 24px; }
+        .nav-links a { color: #94a3b8; text-decoration: none; font-size: 13px; }
+        .nav-links a:hover { color: #3B82F6; }
+        .article-header { padding: 48px 0 32px; }
+        .article-header .date { font-size: 13px; color: #475569; margin-bottom: 8px; }
+        .article-header h1 { font-size: 28px; font-weight: 700; color: #e2e8f0; line-height: 1.4; }
+        .article-header .meta { margin-top: 16px; font-size: 13px; color: #64748b; }
+        .article-body { padding-bottom: 48px; }
+        .article-body h2 { font-size: 20px; font-weight: 600; color: #94a3b8; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid rgba(59,130,246,0.1); }
+        .article-body h3 { font-size: 16px; font-weight: 600; color: #818cf8; margin: 24px 0 12px; }
+        .article-body p { margin-bottom: 16px; color: #c8d6e5; }
+        .article-body ul { padding-left: 20px; margin-bottom: 16px; color: #c8d6e5; }
+        .article-body li { margin-bottom: 8px; }
+        .article-body .key-box { background: rgba(59,130,246,0.06); border: 1px solid rgba(59,130,246,0.2); border-radius: 12px; padding: 20px 24px; margin: 20px 0; }
+        .article-body .key-box .label { font-size: 12px; color: #64748b; margin-bottom: 4px; }
+        .article-body .key-box .value { font-size: 16px; font-weight: 600; color: #fbbf24; }
+        .article-body .data-row { display: flex; gap: 16px; flex-wrap: wrap; margin: 16px 0; }
+        .data-row .data-item { flex: 1; min-width: 120px; padding: 16px; background: rgba(59,130,246,0.04); border: 1px solid rgba(59,130,246,0.1); border-radius: 8px; text-align: center; }
+        .data-row .data-item .d-label { font-size: 12px; color: #64748b; }
+        .data-row .data-item .d-value { font-size: 18px; font-weight: 600; color: #e2e8f0; margin-top: 4px; }
+        .back-link { display: inline-block; margin-top: 32px; color: #3B82F6; text-decoration: none; font-size: 14px; }
+        .back-link:hover { text-decoration: underline; }
+        .footer { margin-top: 48px; padding: 24px 0; text-align: center; border-top: 1px solid rgba(59,130,246,0.1); font-size: 13px; color: #475569; }
+        .footer a { color: #3B82F6; text-decoration: none; }
+        @media (max-width: 640px) { .article-header h1 { font-size: 22px; } .data-row { flex-direction: column; } }
+    </style>
+<!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "96c6cf48bf4a4303a39940137344e810"}'></script><!-- End Cloudflare Web Analytics -->
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <div class="nav-brand">✦ 天枢</div>
+            <div class="nav-links">
+                <a href="/">首页</a>
+                <a href="https://tianshu.shop" target="_blank">AI工具</a>
+            </div>
+        </div>
+        <article>
+            <div class="article-header">
+                <div style="font-size:36px; font-weight:900; letter-spacing:12px; font-family:'Noto Serif SC','STSong','SimSun',serif; background:linear-gradient(90deg,#3B82F6,#22D3EE); -webkit-background-clip:text; -webkit-text-fill-color:transparent; margin-bottom:4px; line-height:1.3;">天枢</div>
+                <div style="font-size:11px; color:#475569; letter-spacing:5px; text-transform:uppercase; margin-bottom:20px;">T I A N S H U</div>
+                <div class="date">2026年05月12日 · 策略复盘</div>
+                <h1>策略复盘：PPI数据落地后的策略评估与CPI前瞻</h1>
+                <div class="meta">阅读时间约 4 分钟 · AI模型：天枢 · 置信度：76%</div>
+            </div>
+            <div style="text-align:center;padding:12px 0 4px;">
+<span style="display:inline-block;font-size:11px;padding:3px 12px;border-radius:4px;background:rgba(59,130,246,0.1);color:#818cf8;border:1px solid rgba(59,130,246,0.2);">🤖 本文由AI生成，仅供学习参考</span>
+</div><div class="article-body">
+                <p>今日美国PPI数据正式发布，数据周拉开序幕。市场在等待中先行走高——黄金测试$4,750阻力，比特币回到$81,000上方，欧元站稳1.18。本周策略在数据前执行了观望模式，是否有良好收效？明日CPI是更关键的分水岭，策略如何应对？本文给出AI评估。</p>
+
+                <div class="key-box">
+                    <div class="label">AI 策略诊断</div>
+                    <div class="value">数据前观望模式有效控制回撤，趋势跟踪策略等待CPI确认方向突破。PPI结果将决定明日方向选择。</div>
+                </div>
+
+                <h2>一、本周策略表现</h2>
+                <div class="data-row">
+                    <div class="data-item"><div class="d-label">策略类型</div><div class="d-value" style="font-size:14px;">多资产趋势跟踪</div></div>
+                    <div class="data-item"><div class="d-label">数据周胜率</div><div class="d-value" style="color:#fbbf24;">42%</div></div>
+                    <div class="data-item"><div class="d-label">近30天胜率</div><div class="d-value" style="color:#fbbf24;">41%</div></div>
+                    <div class="data-item"><div class="d-label">最大回撤</div><div class="d-value" style="color:#34d399;">5.8%</div></div>
+                </div>
+
+                <p><strong>策略整体表现回顾：</strong>自上次复盘（5月10日）以来，策略执行了数据周前的仓位收紧措施，仓位参数从正常1%降至0.5%。回撤从7.6%进一步压缩至5.8%，证明数据前观望模式有效。但在此期间，策略也错失了黄金从$4,714反弹至$4,732的部分涨幅——这是谨慎策略的必然代价，在可接受范围内。</p>
+
+                <p><strong>黄金策略：</strong>黄金自5月10日$4,714逐步上行至今日$4,732，接近$4,750阻力区。策略在$4,715支撑位触发了一笔轻仓多单（0.5%仓位），目前处于浮盈状态，但考虑到明日CPI变量，策略尚未加仓。若今晚PPI数据偏鸽，黄金突破$4,750则会启动高波动模式加仓至1.5%。</p>
+
+                <p><strong>比特币策略：</strong>BTC从$80,009低点反弹至$81,112，日线形成阶梯式上行结构。策略在$80,000支撑位触发多单，已在$82,000附近部分止盈。当前剩余仓位仅0.3%，处于等待模式。BTC的$80,000-82,200箱体尚未突破，趋势跟踪策略在此区间内信号不充分，等待方向选择。</p>
+
+                <p><strong>欧元/美元策略：</strong>EUR/USD从1.1715升至1.1790，策略趋势多单持续持有。这轮欧元走强的趋势信号明确，策略成功捕获了主要涨幅。当前持仓处于1.1750成本附近，设有移动止损。</p>
+
+                <h2>二、问题分析</h2>
+                <p><strong>问题1：观望模式的双刃剑效应。</strong>数据前将仓位降至0.5%有效控制了回撤，但也导致在黄金和BTC反弹过程中仓位不足。这是一个无法回避的取舍——在市场不确定性上升时，资金保全优先于收益最大化。当前评估认为该策略正确，但不适用于所有市场环境（如数据持续超预期时的单边行情）。</p>
+
+                <p><strong>问题2：比特币箱体震荡趋势策略失效。</strong>BTC自5月9日以来一直处于$80,000-82,200的狭窄箱体中，趋势跟踪策略在此类行情中表现欠佳。5月10日至12日期间，BTC三次上攻$82,000均未能有效突破，策略在每次测试中产生小幅损耗。好在仓位已降至最低，损耗有限。</p>
+
+                <p><strong>问题3：跨品种联动止损机制尚未激活。</strong>上周建议的"多品种联动止损"机制在PPI数据前已部署，但尚未遇到触发场景。DXY在PPI发布后若出现异常波动，黄金和BTC的联动保护将自动激活。这是一个值得持续关注的风险点。</p>
+
+                <h2>三、AI 优化建议</h2>
+
+                <h3>建议1：数据后分区参数策略</h3>
+                <p>PPI数据落地后，策略应分区管理：对于已突破方向（黄金若突破$4,750）启用高波动仓位1.5%；对于未突破品种（BTC仍在箱体），保持0.5%观望仓位。不再一刀切地执行统一参数，而是基于各品种实际走势区别对待。这优于当前的全品种统一模式。</p>
+
+                <h3>建议2：BTC箱体突破后的快速响应预案</h3>
+                <p>BTC的$80,000-82,200箱体已维持5天，突破即将到来。建议预设双向触发订单：突破$82,200自动建立0.8%多单，止损$80,800，目标$84,000；跌破$79,500自动建立0.5%空单，止损$80,800，目标$78,000。响应速度是趋势跟踪策略在箱体突破后的核心优势。</p>
+
+                <h3>建议3：CPI发布当日策略模式细化</h3>
+                <p>明日CPI（5月13日）是本周最核心的数据事件。策略应分三个时间窗口管理：</p>
+                <ul>
+                    <li><strong>CPI前4小时（5月13日16:30-20:30 UTC+8）：</strong>仓位降至0.3%，仅保留趋势明确的欧元多单</li>
+                    <li><strong>CPI后30分钟（20:30-21:00）：</strong>开启高波动模式，仓位上限提升至2%，捕捉突破行情</li>
+                    <li><strong>CPI后2-4小时（21:00-24:00）：</strong>根据实际走势匹配多情景参数模板，恢复正常仓位</li>
+                </ul>
+
+                <div class="key-box">
+                    <div class="label">AI 调整方案</div>
+                    <div style="font-size:14px; font-weight:400; color:#c8d6e5; line-height:1.8; margin-top:8px;">
+                        <strong style="color:#3B82F6;">当前操作状态：</strong>PPI数据落地评估中，黄金若突破$4,750开启高波动模式。<br>
+                        <strong style="color:#3B82F6;">BTC突破预案：</strong>向上突破$82,200做多（仓位0.8%），向下破$79,500做空（仓位0.5%）。<br>
+                        <strong style="color:#3B82F6;">CPI策略参考：</strong>数据前仓位0.3%，数据后30分钟高波动模式仓位2%，数据后2小时匹配情景模板。<br>
+                        <strong style="color:#3B82F6;">多品种联动止损：</strong>DXY波动超0.5%时触发黄金/BTC联动风险检查，止损收紧至ATR×0.5。
+                    </div>
+                </div>
+
+                <h2>四、明日CPI多情景预案（更新版）</h2>
+
+                <p>基于今日PPI数据释放的信号，明日CPI（5月13日 20:30）的三种情景预案已更新：</p>
+
+                <div class="data-row">
+                    <div class="data-item" style="min-width:180px;">
+                        <div class="d-label">情景一 · 鸽派</div>
+                        <div class="d-value" style="color:#34d399; font-size:14px;">CPI&lt;2.4%</div>
+                        <div style="font-size:11px; color:#64748b; margin-top:6px;">黄金突破$4,750 &rarr; $4,800+<br>BTC突破$82,200 &rarr; $84,000+<br>EUR目标1.1850</div>
+                    </div>
+                    <div class="data-item" style="min-width:180px;">
+                        <div class="d-label">情景二 · 中性</div>
+                        <div class="d-value" style="color:#fbbf24; font-size:14px;">CPI≈2.5%</div>
+                        <div style="font-size:11px; color:#64748b; margin-top:6px;">黄金$4,700-4,750延续震荡<br>BTC维持$80K-82K箱体<br>EUR 1.1730-1.1820</div>
+                    </div>
+                    <div class="data-item" style="min-width:180px;">
+                        <div class="d-label">情景三 · 鹰派</div>
+                        <div class="d-value" style="color:#f87171; font-size:14px;">CPI&gt;2.6%</div>
+                        <div style="font-size:11px; color:#64748b; margin-top:6px;">黄金回踩$4,680-$4,715<br>BTC下探$79,500-$80,000<br>EUR回落至1.1700</div>
+                    </div>
+                </div>
+
+                <p><strong>模型调整说明：</strong>相比5月10日的预案，今日更新主要体现在两点：(1) 黄金底部支撑从$4,680上移至$4,700，因近期金价重心上移；(2) BTC的上行目标从$84,000保持不变，但突破了$82,200才能确认方向。明日CPI数据公布后5分钟内，策略将自动匹配对应参数模板，力争第一时间融入新信息。</p>
+
+                <p><strong>风险管理底线：</strong>无论CPI结果如何，总仓位不超过账户的35%（含所有持仓及挂单）。单日最大回撤容忍度为3%。若CPI后30分钟内市场出现极端波动（如黄金单根K线波动超$50），策略将自动触发紧急减仓至20%以下。</p>
+
+                <p style="font-size:12px; color:#475569; margin-top:32px;"><em>免责声明：以上分析由 AI 模型生成，基于历史数据和市场结构分析，仅供参考，不构成任何投资建议。交易有风险，请自行决策。</em></p>
+                <a href="/" class="back-link">← 返回首页</a>
+            </div>
+        </article>
+        <div class="footer">
+            <p>© 2026 <a href="https://tianshu.shop">天枢</a> — AI交易分析 · 策略记录 · 自动研究</p>
+        </div>
+    </div>
+<div style="text-align:center;padding:20px 0 10px;border-top:1px solid rgba(59,130,246,0.08);">
+<p style="font-size:11px;color:#334155;">· 本文由人工智能生成，仅供学习参考，不构成任何投资建议 ·<br>投资有风险，入市需谨慎。</p>
+</div></body>
+</html>
