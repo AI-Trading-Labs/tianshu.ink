@@ -7,24 +7,8 @@
 <meta name="description" content="澶╂灑 鈥?鐜勫够灏忚銆傝崚鍙ゆ垬绁炶鑴夎閱掞紝鍏冩煆浠庡皬闀囧簾鏉愯蛋鍚戞棤杈瑰ぇ闄嗙殑浼犲涔嬭矾銆備綔鑰咃細灏忕孩榫?馃悏">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#0a0e1a;color:#c8d6e5;font-family:-apple-system,"PingFang SC","Noto Sans SC","Microsoft YaHei","Noto Serif SC",serif;line-height:2;min-height:100vh;overflow-x:hidden}
-body::before{content:'';position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;pointer-events:none;
-background:#0a0e1a;
-background-image:
-radial-gradient(3px 3px at 8% 12%, rgba(255,255,255,0.9), transparent),
-radial-gradient(3px 3px at 25% 60%, rgba(255,255,255,0.85), transparent),
-radial-gradient(3px 3px at 55% 8%, rgba(255,255,255,0.9), transparent),
-radial-gradient(3px 3px at 72% 45%, rgba(255,255,255,0.8), transparent),
-radial-gradient(3px 3px at 90% 75%, rgba(255,255,255,0.85), transparent),
-radial-gradient(3px 3px at 45% 85%, rgba(255,255,255,0.9), transparent),
-radial-gradient(2px 2px at 18% 38%, rgba(255,255,255,0.7), transparent),
-radial-gradient(2px 2px at 62% 68%, rgba(255,255,255,0.7), transparent),
-radial-gradient(2px 2px at 85% 55%, rgba(255,255,255,0.75), transparent),
-radial-gradient(2px 2px at 5% 70%, rgba(255,255,255,0.7), transparent),
-radial-gradient(2px 2px at 50% 95%, rgba(255,255,255,0.7), transparent),
-radial-gradient(2px 2px at 75% 88%, rgba(255,255,255,0.75), transparent);
-animation:twinkle 5s ease-in-out infinite alternate;
-}
+body{background:#080c18;color:#c8d6e5;font-family:-apple-system,"PingFang SC","Noto Sans SC","Microsoft YaHei","Noto Serif SC",serif;line-height:2;min-height:100vh;overflow-x:hidden}
+/* bg handled by .stars div */
 @keyframes twinkle{0%{opacity:0.35}100%{opacity:1}}
 .container{max-width:760px;margin:0 auto;padding:0 24px}
 .back-link{display:inline-block;margin:28px 0 4px;color:#818cf8;text-decoration:none;font-size:13px;font-family:-apple-system,"PingFang SC",sans-serif}
@@ -57,7 +41,7 @@ animation:twinkle 5s ease-in-out infinite alternate;
 .chapter-nav{text-align:center;margin-bottom:12px;font-family:-apple-system,"PingFang SC",sans-serif}
 .chapter-nav select{padding:8px 16px;border-radius:8px;border:1px solid rgba(244,114,182,0.15);background:rgba(244,114,182,0.03);color:#c8d6e5;font-size:14px;font-family:inherit;cursor:pointer;outline:none;min-width:200px;text-align:center}
 .chapter-nav select:hover{border-color:rgba(244,114,182,0.3)}
-.chapter-nav select option{background:#0a0e1a;color:#c8d6e5}
+.chapter-nav select option{background:#080c18;color:#c8d6e5}
 .article{padding:24px 0 40px}
 .article .chapter-title{font-size:22px;font-weight:700;color:#e2e8f0;text-align:center;margin-bottom:8px;letter-spacing:3px;font-family:-apple-system,"PingFang SC",sans-serif}
 .article .chapter-motto{font-size:12px;color:#475569;text-align:center;margin-bottom:20px}
@@ -75,10 +59,16 @@ animation:twinkle 5s ease-in-out infinite alternate;
 .foot-line a:hover{color:#818cf8}
 .foot-note{font-size:10px;color:#94a3b8;margin-top:8px;font-family:-apple-system,"PingFang SC",sans-serif}
 @media(max-width:640px){.article p{font-size:15px}.novel-header h1{font-size:26px}.container{padding:0 16px}}
+
+.stars { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; }
+.star { position: absolute; width: 2px; height: 2px; background: #fff; border-radius: 50%; animation: twinkle 4s infinite; }
+@keyframes twinkle { 0%,100% { opacity: 0.2; } 50% { opacity: 1; } }
+
 </style>
 <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "96c6cf48bf4a4303a39940137344e810"}'></script><!-- End Cloudflare Web Analytics -->
 </head>
 <body>
+<div class="stars"></div>
 <div class="container">
 
 <a href="index.html" class="back-link">鈫?杩斿洖棣栭〉 路 澶╂灑娲炲療</a>
@@ -287,6 +277,7 @@ animation:twinkle 5s ease-in-out infinite alternate;
 </div>
 
 </div>
+<script>(function(){var c=document.querySelector(".stars");if(!c)return;for(var i=0;i<80;i++){var s=document.createElement("div");s.className="star";s.style.left=(Math.random()*100)+"%";s.style.top=(Math.random()*100)+"%";s.style.animationDelay=(Math.random()*4)+"s";s.style.width=(Math.random()*2+1)+"px";c.appendChild(s);}})();</script>
 </body>
 </html>
 
