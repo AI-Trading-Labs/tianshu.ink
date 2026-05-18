@@ -4,184 +4,232 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>天枢洞察 — AI市场结构研究实验室</title>
-<meta name="description" content="天枢洞察 — AI市场结构研究与策略实验平台">
+<meta name="description" content="天枢洞察 — AI驱动的市场结构分析与策略实验平台">
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:#050816;color:#c8d6e5;font-family:-apple-system,"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;line-height:1.8;min-height:100vh;overflow-x:hidden}
-
-/* 星空背景 — 三层闪烁星星 */
-body::before{content:'';position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;pointer-events:none;
-background:#050816;
-background-image:
-radial-gradient(3px 3px at 8% 12%, rgba(255,255,255,0.95), transparent),
-radial-gradient(3px 3px at 25% 60%, rgba(255,255,255,0.9), transparent),
-radial-gradient(3px 3px at 55% 8%, rgba(255,255,255,0.95), transparent),
-radial-gradient(3px 3px at 72% 45%, rgba(255,255,255,0.85), transparent),
-radial-gradient(3px 3px at 90% 75%, rgba(255,255,255,0.9), transparent),
-radial-gradient(3px 3px at 45% 85%, rgba(255,255,255,0.95), transparent),
-radial-gradient(3px 3px at 15% 90%, rgba(255,255,255,0.85), transparent),
-radial-gradient(3px 3px at 82% 22%, rgba(255,255,255,0.9), transparent),
-radial-gradient(2px 2px at 18% 38%, rgba(255,255,255,0.75), transparent),
-radial-gradient(2px 2px at 40% 15%, rgba(255,255,255,0.8), transparent),
-radial-gradient(2px 2px at 62% 68%, rgba(255,255,255,0.75), transparent),
-radial-gradient(2px 2px at 85% 55%, rgba(255,255,255,0.8), transparent),
-radial-gradient(2px 2px at 32% 48%, rgba(255,255,255,0.75), transparent),
-radial-gradient(2px 2px at 68% 32%, rgba(255,255,255,0.8), transparent),
-radial-gradient(2px 2px at 5% 70%, rgba(255,255,255,0.75), transparent),
-radial-gradient(2px 2px at 95% 10%, rgba(255,255,255,0.8), transparent),
-radial-gradient(2px 2px at 50% 95%, rgba(255,255,255,0.75), transparent),
-radial-gradient(2px 2px at 75% 88%, rgba(255,255,255,0.8), transparent);
-animation:twinkle1 4s ease-in-out infinite alternate;
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: #080c18;
+  color: #e2e8f0;
+  font-family: -apple-system, "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-@keyframes twinkle1{0%{opacity:0.35}100%{opacity:1}}
-body::after{content:'';position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;pointer-events:none;
-background:
-radial-gradient(1px 1px at 12% 22%, rgba(255,255,255,0.45), transparent),
-radial-gradient(1px 1px at 28% 72%, rgba(255,255,255,0.5), transparent),
-radial-gradient(1px 1px at 48% 25%, rgba(255,255,255,0.45), transparent),
-radial-gradient(1px 1px at 65% 50%, rgba(255,255,255,0.5), transparent),
-radial-gradient(1px 1px at 78% 15%, rgba(255,255,255,0.45), transparent),
-radial-gradient(1px 1px at 35% 35%, rgba(255,255,255,0.5), transparent),
-radial-gradient(1px 1px at 52% 55%, rgba(255,255,255,0.45), transparent),
-radial-gradient(1px 1px at 88% 40%, rgba(255,255,255,0.5), transparent),
-radial-gradient(1px 1px at 42% 78%, rgba(255,255,255,0.45), transparent),
-radial-gradient(1px 1px at 58% 42%, rgba(255,255,255,0.5), transparent),
-radial-gradient(1px 1px at 22% 85%, rgba(255,255,255,0.45), transparent),
-radial-gradient(1px 1px at 70% 95%, rgba(255,255,255,0.5), transparent),
-radial-gradient(1px 1px at 38% 5%, rgba(255,255,255,0.45), transparent),
-radial-gradient(1px 1px at 92% 65%, rgba(255,255,255,0.5), transparent),
-radial-gradient(1px 1px at 3% 45%, rgba(255,255,255,0.45), transparent),
-radial-gradient(1px 1px at 96% 30%, rgba(255,255,255,0.5), transparent);
-animation:twinkle2 3s ease-in-out infinite alternate;
+.stars {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  pointer-events: none; z-index: 0;
 }
-@keyframes twinkle2{0%{opacity:0.4}100%{opacity:0.9}}
-
-.container{max-width:960px;margin:0 auto;padding:0 24px}
-
-/* 无导航栏 — 星空为背景 */
-
-/* Hero */
-.hero{text-align:center;padding:56px 20px 40px}
-.hero .title{font-size:60px;font-weight:700;background:linear-gradient(90deg,#3B82F6,#22D3EE);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:4px;position:relative;display:inline-block;padding-bottom:18px}
-.hero .title::after{content:'';position:absolute;bottom:0;left:50%;width:360px;height:1px;margin-left:-180px;background:linear-gradient(90deg,transparent,rgba(59,130,246,0.7),rgba(34,211,238,0.8),rgba(59,130,246,0.7),transparent)}
-.hero .tagline{font-size:13px;margin-top:16px;background:linear-gradient(90deg,#3B82F6,#22D3EE);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:4px;font-weight:300}
-.hero .sub{font-size:14px;color:#64748b;margin-top:8px}
-
-/* 卡片 */
-.card-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;padding:16px 0 40px}
-.card{background:rgba(255,255,255,0.02);border:1px solid rgba(59,130,246,0.08);border-radius:16px;padding:32px 24px;text-decoration:none;color:inherit;transition:0.3s;text-align:center;backdrop-filter:blur(4px)}
-.card:hover{transform:translateY(-4px);border-color:rgba(59,130,246,0.25);box-shadow:0 0 30px rgba(59,130,246,0.06)}
-.card .icon{font-size:36px;margin-bottom:12px}
-.card h3{font-size:17px;font-weight:600;color:#3B82F6;letter-spacing:1px;margin-bottom:8px}
-.card p{font-size:13px;color:#64748b;line-height:1.7}
-.card .enter{font-size:12px;color:#22D3EE;margin-top:14px;font-weight:500;letter-spacing:1px}
-
-/* 底部 */
-.footer{text-align:center;padding:32px 0 28px;margin-top:100px;border-top:1px solid rgba(59,130,246,0.04)}
-.foot-line{font-size:13px;letter-spacing:2px;background:linear-gradient(90deg,#3B82F6,#22D3EE);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.foot-line a{color:inherit;text-decoration:none;transition:0.2s}
-.foot-line a:hover{color:#3B82F6}
-.foot-note{font-size:10px;color:#94a3b8;margin-top:10px;line-height:1.7}
-
-@media(max-width:640px){.card-grid{grid-template-columns:1fr}.hero .title{font-size:38px}}
+.star { position: absolute; width: 2px; height: 2px; background: #fff; border-radius: 50%; animation: twinkle 3s infinite; }
+@keyframes twinkle { 0%,100% { opacity: 0.3; } 50% { opacity: 1; } }
+.container {
+  position: relative; z-index: 1;
+  max-width: 900px; width: 100%; padding: 60px 20px;
+  display: flex; flex-direction: column; align-items: center;
+}
+.brand {
+  font-size: 2.8rem; font-weight: 700; text-align: center;
+  background: linear-gradient(135deg, #3B82F6, #22D3EE);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 20px rgba(59,130,246,0.3);
+  margin-bottom: 8px;
+}
+.subtitle {
+  font-size: 1rem; color: #818cf8; text-align: center;
+  margin-bottom: 40px; letter-spacing: 2px;
+}
+.cards {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 16px; width: 100%; max-width: 600px; margin-bottom: 50px;
+}
+.card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 12px; padding: 24px; text-decoration: none;
+  color: #e2e8f0; transition: all 0.3s;
+}
+.card:hover { background: rgba(59,130,246,0.08); border-color: rgba(59,130,246,0.3); transform: translateY(-2px); }
+.card-icon { font-size: 1.6rem; margin-bottom: 10px; }
+.card-title { font-size: 1.1rem; font-weight: 600; margin-bottom: 6px; }
+.card-desc { font-size: 0.82rem; color: #94a3b8; line-height: 1.5; }
+.section-title {
+  font-size: 1.3rem; font-weight: 600; color: #e2e8f0;
+  width: 100%; margin-bottom: 16px; padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.latest-card {
+  display: block; width: 100%; text-decoration: none; color: #e2e8f0;
+  padding: 14px 16px; margin-bottom: 6px;
+  border-radius: 8px; transition: all 0.2s;
+}
+.latest-card:hover { background: rgba(255,255,255,0.03); }
+.latest-date { font-size: 0.75rem; color: #64748b; margin-bottom: 3px; }
+.latest-title { font-size: 0.92rem; font-weight: 500; margin-bottom: 2px; }
+.latest-desc { font-size: 0.8rem; color: #64748b; }
+.footer {
+  margin-top: 60px; padding: 20px; text-align: center;
+  font-size: 0.8rem; color: #475569;
+}
+.footer a { color: #3B82F6; text-decoration: none; }
+.stars { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; }
+.star { position: absolute; width: 2px; height: 2px; background: #fff; border-radius: 50%; animation: twinkle 4s infinite; }
+@keyframes twinkle { 0%,100% { opacity: 0.2; } 50% { opacity: 1; } }
 </style>
-<!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "96c6cf48bf4a4303a39940137344e810"}'></script><!-- End Cloudflare Web Analytics -->
 </head>
 <body>
+<div class="stars"></div>
+<div class="stars"></div>
 <div class="container">
+  <div class="brand">天枢洞察</div>
+  <div class="subtitle">✦ 市 场 结 构 研 究 实 验 室 ✦</div>
+  <div style="font-size:0.85rem;color:#64748b;margin-bottom:30px;text-align:center;letter-spacing:1px;">
+    AI驱动的市场结构分析 · 数据研究 · 策略实验
+  </div>
 
+  <div class="cards">
+    <a href="trading.html" class="card">
+      <div class="card-icon">📊</div>
+      <div class="card-title">市场结构研究</div>
+      <div class="card-desc">趋势识别 · 成交量分析 · 市场情绪<br>AI模型对市场结构的观察记录<br>进入研究室 →</div>
+    </a>
+    <a href="log.html" class="card">
+      <div class="card-icon">📝</div>
+      <div class="card-title">开发日志</div>
+      <div class="card-desc">从搭建AI研究系统真实踩坑与迭代过程<br>阅读日志 →</div>
+    </a>
+  </div>
 
+  <div class="section-title">最新文章</div>
+  
 
-<div class="hero">
-<div class="title">天枢洞察</div>
-<div class="tagline">⋆ 市 场 结 构 研 究 与 策 略 实 验 ⋆</div>
-<div class="sub">AI驱动的市场结构分析 · 数据研究 · 策略实验</div>
-</div>
-
-<div class="card-grid">
-<a href="trading.html" class="card">
-<div class="icon">🔬</div>
-<h3>市场结构研究</h3>
-<p>趋势识别 · 成交量分析 · 市场情绪<br>AI模型对市场结构的观察记录</p>
-<div class="enter">进入研究室 →</div>
+<a href="articles/2026-05-18-market-analysis.html" class="latest-card">
+  <div class="latest-date">2026-05-18</div>
+  <div class="latest-title">周开盘前瞻：中美贸易缓和大盘高开，黄金跌破4550，比特币回踩78K，本周NVDA与FOMC纪要重磅 — 天枢 AI Insight</div>
+  <div class="latest-desc">市场前瞻</div>
 </a>
-<a href="log.html" class="card">
-<div class="icon">📓</div>
-<h3>开发日志</h3>
-<p>从0搭建AI研究系统<br>真实踩坑与迭代过程</p>
-<div class="enter">阅读日志 →</div>
+<a href="articles/2026-05-13-market-analysis.html" class="latest-card">
+  <div class="latest-date">2026-05-13</div>
+  <div class="latest-title">今日行情分析：PPI数据前黄金承压整固，比特币冲高回落，欧元小幅回调 — Tianshu AI Insight</div>
+  <div class="latest-desc">市场分析</div>
 </a>
-</div>
-
-</div>
-
-<style>
-.latest-heading{text-align:center;padding:0 0 20px;margin-top:20px}
-.latest-heading h2{font-size:20px;font-weight:600;background:linear-gradient(90deg,#3B82F6,#22D3EE);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:2px}
-.latest-heading .line{width:60px;height:1px;margin:12px auto;background:linear-gradient(90deg,transparent,rgba(59,130,246,0.6),transparent)}
-.latest-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;padding:0 0 32px}
-.latest-card{background:rgba(255,255,255,0.015);border:1px solid rgba(59,130,246,0.08);border-radius:12px;padding:20px;text-decoration:none;color:inherit;transition:0.3s}
-.latest-card:hover{transform:translateY(-3px);border-color:rgba(59,130,246,0.25);box-shadow:0 0 20px rgba(59,130,246,0.05)}
-.latest-card .l-date{font-size:11px;color:#475569;margin-bottom:4px}
-.latest-card .l-title{font-size:14px;font-weight:600;color:#e2e8f0;margin-bottom:6px;line-height:1.5}
-.latest-card .l-desc{font-size:12px;color:#64748b;line-height:1.6}
-.latest-card .l-tag{display:inline-block;margin-top:8px;padding:2px 8px;border-radius:8px;font-size:10px;background:rgba(59,130,246,0.08);color:#3B82F6;border:1px solid rgba(59,130,246,0.15)}
-.latest-more{text-align:center;padding:0 0 32px}
-.latest-more a{display:inline-block;font-size:13px;color:#3B82F6;text-decoration:none;letter-spacing:1px;padding:8px 24px;border:1px solid rgba(59,130,246,0.2);border-radius:20px;transition:0.3s}
-.latest-more a:hover{background:rgba(59,130,246,0.1);border-color:rgba(59,130,246,0.4)}
-@media(max-width:640px){.latest-grid{grid-template-columns:1fr}}
-</style>
-<div class="container">
-<div class="latest-heading">
-<h2>最新文章</h2>
-<div class="line"></div>
-</div>
-<div class="latest-grid">
+<a href="articles/2026-05-12-case-study.html" class="latest-card">
+  <div class="latest-date">2026-05-12</div>
+  <div class="latest-title">实战记录：AI模型判断 vs 实际走势——5月12日推演复盘 — 天枢 AI Insight</div>
+  <div class="latest-desc">实战复盘</div>
+</a>
+<a href="articles/2026-05-12-strategy-review.html" class="latest-card">
+  <div class="latest-date">2026-05-12</div>
+  <div class="latest-title">策略复盘：PPI数据落地后的策略评估与CPI前瞻 — 天枢 AI Insight</div>
+  <div class="latest-desc">策略复盘</div>
+</a>
+<a href="articles/2026-05-12-market-analysis.html" class="latest-card">
+  <div class="latest-date">2026-05-12</div>
+  <div class="latest-title">今日行情分析：黄金测试4750阻力，比特币震荡回升，欧元延续上行 — Tianshu AI Insight</div>
+  <div class="latest-desc">市场分析</div>
+</a>
+<a href="articles/2026-05-11-startup-day4.html" class="latest-card">
+  <div class="latest-date">2026-05-11</div>
+  <div class="latest-title">Day 4：觉醒与深耕——小说自动连载 + 洞察定时更新 — 天枢 AI创业日志</div>
+  <div class="latest-desc">创业日志</div>
+</a>
 <a href="articles/2026-05-11-market-analysis.html" class="latest-card">
-<div class="l-date">2026.05.11</div>
-<div class="l-title">今日行情分析：黄金震荡整固蓄势，比特币楔形整理待突破，欧元延续上行</div>
-<div class="l-desc">黄金$4,721震荡整固，BTC $80,257楔形整理，EUR/USD 1.1809延续上行</div>
-<span class="l-tag">市场分析</span>
+  <div class="latest-date">2026-05-11</div>
+  <div class="latest-title">【周一开盘前瞻：数据密集周来袭】 — 天枢 AI Insight</div>
+  <div class="latest-desc">市场分析</div>
 </a>
-<a href="articles/2026-05-10-case-study.html" class="latest-card">
-<div class="l-date">2026.05.10</div>
-<div class="l-title">实战记录：AI模型判断 vs 实际走势——全周推演复盘</div>
-<div class="l-desc">84K支撑未获确认，82,500风险线精准触发，BTC在80K-81K区间企稳过程复盘</div>
-<span class="l-tag">实战复盘</span>
-</a>
-<a href="articles/2026-05-10-strategy-review.html" class="latest-card">
-<div class="l-date">2026.05.10</div>
-<div class="l-title">策略复盘：数据周前夕的策略评估与风险预案</div>
-<div class="l-desc">震荡市趋势策略承压，针对PPI/CPI/ECB数据周制定多情景预案</div>
-<span class="l-tag">策略复盘</span>
+<a href="articles/2026-05-11-case-study.html" class="latest-card">
+  <div class="latest-date">2026-05-11</div>
+  <div class="latest-title">实战记录：AI模型判断 vs 实际走势——5月11日周末解盘 — 天枢 AI Insight</div>
+  <div class="latest-desc">实战复盘</div>
 </a>
 <a href="articles/2026-05-10-weekly-review.html" class="latest-card">
-<div class="l-date">2026.05.10</div>
-<div class="l-title">本周市场回顾与下周展望（5月4日-10日）</div>
-<div class="l-desc">黄金$4,700-4,750震荡，BTC $78K-82K波动，下周关注PPI/CPI</div>
-<span class="l-tag">周度回顾</span>
+  <div class="latest-date">2026-05-10</div>
+  <div class="latest-title">本周市场回顾与下周展望（5月4日-10日） — 天枢 AI Insight</div>
+  <div class="latest-desc">周度回顾</div>
+</a>
+<a href="articles/2026-05-10-strategy-review.html" class="latest-card">
+  <div class="latest-date">2026-05-10</div>
+  <div class="latest-title">策略复盘：数据周前夕的策略评估与风险预案 — 天枢 AI Insight</div>
+  <div class="latest-desc">策略复盘</div>
+</a>
+<a href="articles/2026-05-10-startup-day3.html" class="latest-card">
+  <div class="latest-date">2026-05-10</div>
+  <div class="latest-title">Day 3：天枢小说上线 + 完整连载体系搭建 — 天枢 AI创业日志</div>
+  <div class="latest-desc">创业日志</div>
 </a>
 <a href="articles/2026-05-10-market-analysis.html" class="latest-card">
-<div class="l-date">2026.05.10</div>
-<div class="l-title">今日行情分析：黄金稳步攀升，比特币震荡偏弱</div>
-<div class="l-desc">黄金$4,716，BTC $80,190，欧元1.1777，关键支撑阻力分析</div>
-<span class="l-tag">市场分析</span>
+  <div class="latest-date">2026-05-10</div>
+  <div class="latest-title">今日行情分析：黄金稳步攀升，比特币震荡偏弱，欧元逼近1.18 — Tianshu AI Insight</div>
+  <div class="latest-desc">市场分析</div>
+</a>
+<a href="articles/2026-05-10-case-study.html" class="latest-card">
+  <div class="latest-date">2026-05-10</div>
+  <div class="latest-title">实战记录：AI模型判断 vs 实际走势——5月10日推演复盘 — 天枢 AI Insight</div>
+  <div class="latest-desc">实战复盘</div>
+</a>
+<a href="articles/2026-05-09-startup-day2.html" class="latest-card">
+  <div class="latest-date">2026-05-09</div>
+  <div class="latest-title">Day 2：法律合规大扫除 + 品牌拆分 — 天枢 AI创业日志</div>
+  <div class="latest-desc">创业日志</div>
+</a>
+<a href="articles/2026-05-09-market-analysis.html" class="latest-card">
+  <div class="latest-date">2026-05-09</div>
+  <div class="latest-title">今日行情分析：黄金比特币震荡整理，欧元小幅上扬 — Tianshu AI Insight</div>
+  <div class="latest-desc">市场分析</div>
 </a>
 <a href="articles/2026-05-09-case-study.html" class="latest-card">
-<div class="l-date">2026.05.09</div>
-<div class="l-title">实战记录：AI模型判断 vs 实际走势推演复盘</div>
-<div class="l-desc">模型判断黄金4,680支撑有效，BTC若突破81,000上看82,000</div>
-<span class="l-tag">实战复盘</span>
+  <div class="latest-date">2026-05-09</div>
+  <div class="latest-title">实战记录：AI模型判断 vs 实际走势——5月9日推演复盘 — 天枢 AI Insight</div>
+  <div class="latest-desc">实战复盘</div>
 </a>
-</div>
-<div class="latest-more"><a href="insight-archive.html">查看全部文章 →</a></div>
-</div>
+<a href="articles/2026-05-08-strategy-review.html" class="latest-card">
+  <div class="latest-date">2026-05-08</div>
+  <div class="latest-title">策略复盘：趋势跟踪策略在震荡行情中的表现与调整 — 天枢 AI Insight</div>
+  <div class="latest-desc">策略复盘</div>
+</a>
+<a href="articles/2026-05-08-startup-day1.html" class="latest-card">
+  <div class="latest-date">2026-05-08</div>
+  <div class="latest-title">Day 1：天枢项目启动，从0开始搭建AI生产力系统 — 天枢 AI创业日志</div>
+  <div class="latest-desc">创业日志</div>
+</a>
+<a href="articles/2026-05-08-market-analysis.html" class="latest-card">
+  <div class="latest-date">2026-05-08</div>
+  <div class="latest-title">今日行情分析：黄金比特币震荡整理，欧元小幅上扬 — Tianshu AI Insight</div>
+  <div class="latest-desc">市场分析</div>
+</a>
+<a href="articles/2026-05-08-case-study.html" class="latest-card">
+  <div class="latest-date">2026-05-08</div>
+  <div class="latest-title">实战记录：AI模型判断 vs 实际走势——5月8日推演复盘 — 天枢 AI Insight</div>
+  <div class="latest-desc">实战复盘</div>
+</a>
 
-<div class="footer">
-<div class="foot-line"><span style="color:#3B82F6;">✦</span> 天枢宇宙 · <a href="https://tianshu.shop">天枢探索</a> <span style="color:#22D3EE;">✦</span></div>
-<div class="foot-note">本站内容仅供研究与学习参考 · 不构成投资建议 · 🤖 AI生成</div>
+  <div class="footer">
+    <span style="color:#3B82F6;">✦</span> 天枢宇宙 · <a href="https://tianshu.shop">天枢探索</a> <span style="color:#22D3EE;">✦</span>
+    <br><br>🤖 以上内容由AI生成，仅供参考
+  </div>
 </div>
-
-</div>
+<script>
+  for(let i=0;i<60;i++){
+    let s=document.createElement('div');s.className='star';
+    s.style.left=Math.random()*100+'%';s.style.top=Math.random()*100+'%';
+    s.style.animationDelay=Math.random()*3+'s';
+    document.querySelector('.stars').appendChild(s);
+  }
+</script>
+<script>
+(function(){
+  var container = document.querySelector('.stars');
+  for(var i=0;i<80;i++){
+    var s=document.createElement('div');
+    s.className='star';
+    s.style.left=(Math.random()*100)+'%';
+    s.style.top=(Math.random()*100)+'%';
+    s.style.animationDelay=(Math.random()*4)+'s';
+    s.style.width=(Math.random()*2+1)+'px';
+    container.appendChild(s);
+  }
+})();
+</script>
 </body>
 </html>
