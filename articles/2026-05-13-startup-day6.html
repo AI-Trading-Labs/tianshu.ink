@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="/favicon.svg" sizes="any" type="image/svg+xml">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Day 6：品牌升级与全站统一 — dubhehub重构 + tianshu.shop修复 + AI战略分析 — 天枢 AI创业日志</title>
+<meta name="description" content="Day 6：dubhehub 品牌升级为 Dubhe AI，AI 战略分析，tianshu.shop SSL 修复，全站星空背景统一">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#080c18;color:#e2e8f0;font-family:-apple-system,"Noto Sans SC","Microsoft YaHei",sans-serif;line-height:1.8;min-height:100vh}
+.stars{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0}
+.star{position:absolute;width:2px;height:2px;background:#fff;border-radius:50%;animation:twinkle 4s infinite}
+@keyframes twinkle{0%,100%{opacity:0.2}50%{opacity:1}}
+.container{max-width:720px;margin:0 auto;padding:40px 24px;position:relative;z-index:1}
+.back-link{color:#3B82F6;text-decoration:none;font-size:13px}
+h1{font-size:28px;font-weight:700;margin:24px 0 8px;background:linear-gradient(135deg,#3B82F6,#22D3EE);
+-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.date{font-size:12px;color:#64748b;margin-bottom:20px}
+h2{font-size:20px;font-weight:600;color:#94a3b8;margin:28px 0 12px;padding-left:12px;border-left:3px solid #3B82F6}
+p{font-size:15px;color:#d4dcec;margin-bottom:14px;text-indent:2em}
+ul{color:#94a3b8;font-size:14px;margin:12px 0 20px;padding-left:24px}
+ul li{margin-bottom:6px}
+.footer{margin-top:60px;padding:20px 0;text-align:center;font-size:12px;color:#475569;border-top:1px solid rgba(59,130,246,0.08)}
+</style>
+</head>
+<body>
+<div class="stars"></div>
+<div class="container">
+<a href="../index.html" class="back-link">← 返回首页</a>
+<h1>Day 6：品牌升级与全站统一</h1>
+<div class="date">2026-05-13 · 天枢 AI 创业日志</div>
+
+<p>今天是一个从"做功能"到"做品牌"的转折日。</p>
+
+<h2>一、dubhehub 品牌升级</h2>
+<p>经过分析，"Dubhe Hub" 听起来太像导航站/工具站，而 "Dubhe AI" 更接近真正 AI 公司的命名风格（OpenAI / Stability AI / Anthropic）。首页做了全面重构：</p>
+<ul>
+  <li>品牌名：Dubhe Hub → Dubhe AI</li>
+  <li>Hero 文案："Infrastructure for the AI Era" / "Unified Access to Frontier AI Models"</li>
+  <li>去掉了"Chinese models"、"portal"等不国际化表述</li>
+  <li>新增品牌故事："Dubhe — the guiding star of intelligent systems"</li>
+  <li>模型列表去重，每家公司只留一个旗舰模型</li>
+  <li>Footer 重写为极简风格</li>
+  <li>天枢星（北斗七星第一颗）加大加亮</li>
+</ul>
+
+<h2>二、tianshu.shop SSL 修复</h2>
+<p>折腾了很久的 tianshu.shop SSL 问题终于解决了。根因是 GitHub Pages 的 Jekyll 构建造成文件编码损坏。最终通过添加 .nojekyll 文件 + 切换构建分支强制重建，成功签发了 Let's Encrypt 证书。</p>
+
+<h2>三、全站星空背景统一</h2>
+<p>将三个站（dubhehub / tianshu.ink / tianshu.shop）的所有页面统一为 #080c18 深蓝底色 + 闪烁白星背景。总计同步了 70+ 个页面。</p>
+
+<h2>四、AI 战略分析要点</h2>
+<p>AI 给我们几个关键判断：</p>
+<ul>
+  <li>当前方向正确：AI Infrastructure / Gateway 路线比"AI 自动赚钱"安全且天花板高</li>
+  <li>风险提示：交易/荐股不能碰，API 转售走正规路线</li>
+  <li>公司主体建议：优先美国 LLC 或香港公司</li>
+  <li>推广路径：Twitter → Reddit → Product Hunt，做 build in public</li>
+  <li>品牌海外认知：Dubhe 在国外是星名品牌（类似 Polaris），需要赋予意义</li>
+</ul>
+
+<h2>五、修复的各种小问题</h2>
+<ul>
+  <li>邮箱输入验证（拒绝"123"这种无效输入）</li>
+  <li>页面编码乱码问题</li>
+  <li>小说修炼体系意外暴露问题</li>
+  <li>Footer 文字颜色调亮</li>
+</ul>
+
+<h2>今日总结</h2>
+<p>昨晚到今天，15 个小时几乎没停。从凌晨 4 点的会话丢失开始，到品牌升级完成结束。AI 说了一句话让我印象很深："你现在已经不像 AI 小项目了，你开始像 AI 基础设施产品了。" 这是这周听到最好的评价。</p>
+
+<div class="footer">天枢 AI 创业日志 · Day 6</div>
+</div>
+<script>
+(function(){var c=document.querySelector('.stars');for(var i=0;i<60;i++){var s=document.createElement('div');s.className='star';s.style.left=Math.random()*100+'%';s.style.top=Math.random()*100+'%';s.style.animationDelay=Math.random()*3+'s';c.appendChild(s);}})();
+</script>
+</body>
+</html>

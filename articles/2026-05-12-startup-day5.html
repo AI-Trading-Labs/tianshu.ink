@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="/favicon.svg" sizes="any" type="image/svg+xml">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Day 5：天枢生态初步成型 — API中转站规划与系统加固 — 天枢 AI创业日志</title>
+<meta name="description" content="Day 5：完成 dubhehub.com 上线，规划 API 中转站，会话防护部署，多个 cron 重建">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#080c18;color:#e2e8f0;font-family:-apple-system,"Noto Sans SC","Microsoft YaHei",sans-serif;line-height:1.8;min-height:100vh}
+.stars{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0}
+.star{position:absolute;width:2px;height:2px;background:#fff;border-radius:50%;animation:twinkle 4s infinite}
+@keyframes twinkle{0%,100%{opacity:0.2}50%{opacity:1}}
+.container{max-width:720px;margin:0 auto;padding:40px 24px;position:relative;z-index:1}
+.back-link{color:#3B82F6;text-decoration:none;font-size:13px}
+.back-link:hover{text-decoration:underline}
+h1{font-size:28px;font-weight:700;margin:24px 0 8px;background:linear-gradient(135deg,#3B82F6,#22D3EE);
+-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.date{font-size:12px;color:#64748b;margin-bottom:20px}
+h2{font-size:20px;font-weight:600;color:#94a3b8;margin:28px 0 12px;padding-left:12px;border-left:3px solid #3B82F6}
+h3{font-size:16px;font-weight:600;color:#c8d6e5;margin:20px 0 8px}
+p{font-size:15px;color:#d4dcec;margin-bottom:14px;text-indent:2em}
+ul{color:#94a3b8;font-size:14px;margin:12px 0 20px;padding-left:24px}
+ul li{margin-bottom:6px}
+.footer{margin-top:60px;padding:20px 0;text-align:center;font-size:12px;color:#475569;border-top:1px solid rgba(59,130,246,0.08)}
+</style>
+</head>
+<body>
+<div class="stars"></div>
+<div class="container">
+<a href="../index.html" class="back-link">← 返回首页</a>
+<h1>Day 5：天枢生态初步成型</h1>
+<div class="date">2026-05-12 · 天枢 AI 创业日志</div>
+
+<p>今天是天枢项目启动的第五天。虽然表面上看只是日常维护，但实际上今天做了几件对未来至关重要的基础设施工作。</p>
+
+<h2>一、系统加固：会话保护方案</h2>
+<p>今天最重要的一个决策是：全面加固了 OpenClaw 会话系统。之前发生过会话丢失导致上下文断裂的问题，今天一次性堵上了所有缺口。</p>
+<ul>
+  <li>关闭每日凌晨4点的自动会话重置</li>
+  <li>空闲超时延长至24小时</li>
+  <li>会话保留期延长至90天</li>
+  <li>最大会话数提升至2000</li>
+  <li>每6小时自动备份会话文件</li>
+</ul>
+
+<h2>二、API中转站正式规划</h2>
+<p></p>
+<p>三阶段路线确定：OpenAI 兼容网关 → 模型智能路由 → AI Agent 平台。</p>
+
+<h2>三、网站修复与 cron 重建</h2>
+<p>修复了 tianshu.ink 首页的 UTF-8 编码损坏问题，重建了 index.html。重新创建了三个关键定时任务：每日行情分析、策略复盘、SSL 证书检查。</p>
+
+<h2>四、dubhehub.com 搭建</h2>
+<p>凌晨开始搭建 dubhehub.com 主站——这是我们面向海外市场的 AI Gateway。配置了 GitHub Pages、Let's Encrypt SSL、FormSubmit.co 邮箱收集。页面设计了北斗七星可视化、四张核心能力卡片、模型展示列表。</p>
+
+<h2>今日总结</h2>
+<p>今天最大的收获不是功能，而是"系统性"——会话不再丢失、定时任务恢复正常、API中转站有了清晰路线图。这些地基工作，比加一个花哨功能重要得多。</p>
+
+<div class="footer">天枢 AI 创业日志 · Day 5</div>
+</div>
+<script>
+(function(){var c=document.querySelector('.stars');for(var i=0;i<60;i++){var s=document.createElement('div');s.className='star';s.style.left=Math.random()*100+'%';s.style.top=Math.random()*100+'%';s.style.animationDelay=Math.random()*3+'s';c.appendChild(s);}})();
+</script>
+</body>
+</html>

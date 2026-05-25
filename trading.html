@@ -2,11 +2,11 @@
 <html lang="zh-CN">
 <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>天枢洞察 — AI市场结构研究</title>
-<meta name="description" content="天枢洞察 — AI市场结构研究与策略实验平台：趋势识别、成交量分析、市场情绪、策略回测。">
+<meta name="description" content="天枢洞察 — AI市场结构研究实验平台。趋势识别、成交量分析、市场情绪、策略回测——阶段性研究成果展示。">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;700;900&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#0a0e1a;color:#c8d6e5;font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.8}
+body{background:#080c18;color:#c8d6e5;font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.8}
 .container{max-width:960px;margin:0 auto;padding:0 24px}
 .nav{display:flex;justify-content:space-between;align-items:center;padding:24px 0;border-bottom:1px solid rgba(59,130,246,0.2)}
 .nav-brand{font-size:22px;font-weight:700;letter-spacing:2px;background:linear-gradient(90deg,#3B82F6,#22D3EE);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
@@ -26,7 +26,6 @@ body{background:#0a0e1a;color:#c8d6e5;font-family:-apple-system,"PingFang SC","M
 .quick-ai .qi-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:16px}
 .quick-ai select,.quick-ai button{padding:10px 16px;border-radius:8px;border:1px solid rgba(59,130,246,0.2);background:rgba(59,130,246,0.06);color:#e2e8f0;font-size:14px}
 .quick-ai button{background:linear-gradient(90deg,#3B82F6,#22D3EE);color:#fff;font-weight:600;cursor:pointer;border:none}
-
 /* articles */
 .article-list{display:flex;flex-direction:column;gap:20px;margin-bottom:40px}
 .article-card{padding:24px;border:1px solid rgba(59,130,246,0.12);border-radius:12px;background:rgba(59,130,246,0.03)}
@@ -66,10 +65,14 @@ body{background:#0a0e1a;color:#c8d6e5;font-family:-apple-system,"PingFang SC","M
 .footer{margin-top:64px;padding:32px 0;text-align:center;border-top:1px solid rgba(59,130,246,0.1);font-size:13px;color:#475569}
 .footer a{color:#3B82F6;text-decoration:none}
 @media(max-width:640px){.sentiment-row,.global-grid{grid-template-columns:repeat(2,1fr)}.sentiment-row{flex-direction:column}}
+.stars { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; }
+.star { position: absolute; width: 2px; height: 2px; background: #fff; border-radius: 50%; animation: twinkle 4s infinite; }
+@keyframes twinkle { 0%,100% { opacity: 0.2; } 50% { opacity: 1; } }
 </style>
 <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "96c6cf48bf4a4303a39940137344e810"}'></script><!-- End Cloudflare Web Analytics -->
 </head>
 <body>
+<div class="stars"></div>
 <div class="container">
 <div class="nav">
 <div class="nav-brand">✦ 天枢</div>
@@ -85,24 +88,44 @@ body{background:#0a0e1a;color:#c8d6e5;font-family:-apple-system,"PingFang SC","M
 <h1 style="font-size:24px;font-weight:700;color:#e2e8f0;margin-top:16px;">📈 AI洞察研究</h1>
 <!-- 交易情绪 -->
 <h2 class="section-title">交易情绪</h2>
+<p style="font-size:11px;color:#475569;margin-top:-16px;margin-bottom:16px;">数据更新：2026.05.24 08:00 · 非实时数据，仅供参考</p>
 <div class="sentiment-row">
-<div class="sentiment-item"><div class="s-label">恐惧与贪婪指数</div><div class="s-value red">30</div><div class="s-status" style="color:#f87171;">恐惧 · 市场情绪低迷</div></div>
-<div class="sentiment-item"><div class="s-label">黄金市场情绪</div><div class="s-value yellow">4,509</div><div class="s-status" style="color:#fbbf24;">承压 · CPI+FOMC双重打压</div></div>
-<div class="sentiment-item"><div class="s-label">美元强度</div><div class="s-value yellow">99.32</div><div class="s-status" style="color:#fbbf24;">DXY · 偏强整理</div></div>
-<div class="sentiment-item"><div class="s-label">加密货币情绪</div><div class="s-value red">30</div><div class="s-status" style="color:#f87171;">恐惧 · BTC跌至76K</div></div>
+<div class="sentiment-item"><div class="s-label">恐惧与贪婪指数</div><div class="s-value yellow">59</div><div class="s-status" style="color:#fbbf24;">贪婪 · 标普500连涨八周创2023年来最长纪录，风险偏好延续强势，假日周交投或趋淡</div></div>
+<div class="sentiment-item"><div class="s-label">黄金 XAUUSD</div><div class="s-value red">$4,508</div><div class="s-status" style="color:#f87171;">-0.58% · 连跌六周，$4,500关口周末前终告失守，创年内新低区域</div></div>
+<div class="sentiment-item"><div class="s-label">美元指数 DXY</div><div class="s-value green">99.24</div><div class="s-status" style="color:#34d399;">-0.02% · 美债收益率回落至4.56%，DXY窄幅整理于99关口</div></div>
+<div class="sentiment-item"><div class="s-label">加密货币情绪</div><div class="s-value red">38</div><div class="s-status" style="color:#f87171;">恐惧 · BTC周末跌至$75,150，10年期美债高位压制风险资产，市场情绪冰点</div></div>
+</div>
+
+<!-- 全球资产 -->
+<h2 class="section-title">全球资产</h2>
+<p style="font-size:11px;color:#475569;margin-top:-16px;margin-bottom:16px;">数据更新：2026.05.22 收盘 · 周末无交易</p>
+<div class="global-grid">
+<div class="global-card"><div class="g-icon">🏆</div><div class="g-name">黄金 XAUUSD</div><div class="g-price">$4,508</div><div class="g-change down">-0.58%</div></div>
+<div class="global-card"><div class="g-icon">💵</div><div class="g-name">美元指数 DXY</div><div class="g-price">99.24</div><div class="g-change neutral">-0.02%</div></div>
+<div class="global-card"><div class="g-icon">₿</div><div class="g-name">比特币 BTCUSD</div><div class="g-price">$75,150</div><div class="g-change down">-0.98%</div></div>
+<div class="global-card"><div class="g-icon">📊</div><div class="g-name">S&P 500</div><div class="g-price">7,473</div><div class="g-change up">+0.37%</div></div>
 </div>
 
 <!-- 经济数据 -->
 <h2 class="section-title">经济数据</h2>
+<p style="font-size:11px;color:#475569;margin-top:-16px;margin-bottom:16px;">数据更新：2026.05.24 08:00 · 非实时数据，仅供参考</p>
 <table class="cal-table">
-<tr><th>日期</th><th>事件</th><th>前值</th><th>预期/最新</th><th>影响</th></tr>
-<tr><td>05/25</td><td>🇺🇸 阵亡将士纪念日 美股休市</td><td>—</td><td>—</td><td><span class="cal-impact med">中</span></td></tr>
-<tr><td>05/26</td><td>美国消费者信心指数(5月)</td><td>94.8</td><td>—</td><td><span class="cal-impact med">中</span></td></tr>
-<tr><td>05/27</td><td>美国EIA原油库存</td><td>—</td><td>—</td><td><span class="cal-impact med">中</span></td></tr>
-<tr><td>05/27</td><td>美联储褐皮书</td><td>—</td><td>—</td><td><span class="cal-impact med">中</span></td></tr>
-<tr><td>05/28</td><td>🏆 美国Q1 GDP修正值</td><td>1.5%</td><td>—</td><td><span class="cal-impact high">高</span></td></tr>
-<tr><td>05/28</td><td>初请失业金人数</td><td>—</td><td>—</td><td><span class="cal-impact med">中</span></td></tr>
-<tr><td>05/29</td><td>🏆 美国核心PCE(4月)</td><td>2.8%</td><td>—</td><td><span class="cal-impact high">高</span></td></tr>
+<tr><th>日期</th><th>事件</th><th>前值</th><th>预期</th><th>实际</th><th>影响</th></tr>
+<tr><td>05/18</td><td>NAHB房产市场指数 <span style="color:#34d399;font-size:11px;margin-left:4px;">✅ 好于预期</span></td><td>34</td><td>35</td><td style="color:#34d399;">37</td><td><span class="cal-impact med">中</span></td></tr>
+<tr><td>05/19</td><td>英国失业率 <span style="color:#f87171;font-size:11px;margin-left:4px;">⚠️ 超预期</span></td><td>4.4%</td><td>4.9%</td><td style="color:#f87171;">5.0%</td><td><span class="cal-impact high">高</span></td></tr>
+<tr><td>05/19</td><td>美国ADP就业数据 <span style="color:#f87171;font-size:11px;margin-left:4px;">⚠️ 超预期</span></td><td>3.3万</td><td>—</td><td style="color:#f87171;">4.23万</td><td><span class="cal-impact high">高</span></td></tr>
+<tr><td>05/19</td><td>加拿大CPI年率 <span style="color:#34d399;font-size:11px;margin-left:4px;">✅ 低于预期</span></td><td>2.4%</td><td>3.1%</td><td style="color:#34d399;">2.8%</td><td><span class="cal-impact med">中</span></td></tr>
+<tr><td>05/20 <span style="color:#34d399;font-size:10px;margin-left:2px;">🔥 超级周三</span></td><td>Nvidia Q1 FY2027财报 <span style="color:#34d399;font-size:11px;margin-left:4px;">✅ 双beat</span></td><td>EPS 0.57</td><td>EPS 0.64</td><td style="color:#34d399;">EPS $1.87</td><td><span class="cal-impact high">高</span></td></tr>
+<tr><td>05/20 <span style="color:#60a5fa;font-size:10px;margin-left:2px;">★</span></td><td>FOMC 4月会议纪要 <span style="color:#f87171;font-size:11px;margin-left:4px;">⚠️ 鹰派超预期</span></td><td>—</td><td>—</td><td style="color:#f87171;">4 dissent 1992</td><td><span class="cal-impact high">高</span></td></tr>
+<tr><td>05/22 <span style="color:#60a5fa;font-size:10px;margin-left:2px;">★</span></td><td>日本4月核心CPI <span style="color:#fbbf24;font-size:11px;margin-left:4px;">✅ 符合预期</span></td><td>1.8%</td><td>1.7%</td><td>1.7%</td><td><span class="cal-impact med">中</span></td></tr>
+<tr><td>05/22 <span style="color:#34d399;font-size:10px;margin-left:2px;">★</span></td><td>德国IFO景气指数 <span style="color:#34d399;font-size:11px;margin-left:4px;">✅ 超预期</span></td><td>84.5</td><td>84.2</td><td style="color:#34d399;">84.9</td><td><span class="cal-impact med">中</span></td></tr>
+<tr><td>05/22 <span style="color:#60a5fa;font-size:10px;margin-left:2px;">★</span></td><td>美国密歇根消费者信心终值 <span style="color:#64748b;font-size:11px;margin-left:4px;">持平</span></td><td>48.2</td><td>48.2</td><td>48.2</td><td><span class="cal-impact med">中</span></td></tr>
+<tr><td>05/25</td><td>美国阵亡将士纪念日 · 休市</td><td>—</td><td>—</td><td style="color:#64748b;">休市</td><td><span class="cal-impact med">中</span></td></tr>
+<tr><td>05/26</td><td>美国4月新屋销售</td><td>—</td><td>—</td><td style="color:#64748b;">—</td><td><span class="cal-impact med">中</span></td></tr>
+<tr><td>05/27</td><td>美国Case-Shiller房价指数</td><td>—</td><td>—</td><td style="color:#64748b;">—</td><td><span class="cal-impact med">中</span></td></tr>
+<tr><td>05/28</td><td>美联储褐皮书 (Beige Book)</td><td>—</td><td>—</td><td style="color:#64748b;">—</td><td><span class="cal-impact high">高</span></td></tr>
+<tr><td>05/28</td><td>美国Q1 GDP修正值</td><td>1.8%</td><td>—</td><td style="color:#64748b;">—</td><td><span class="cal-impact high">高</span></td></tr>
+<tr><td>05/29</td><td>美国4月核心PCE物价指数</td><td>—</td><td>—</td><td style="color:#64748b;">—</td><td><span class="cal-impact high">高</span></td></tr>
 </table>
 
 <!-- AI解析 -->
@@ -115,53 +138,79 @@ body{background:#0a0e1a;color:#c8d6e5;font-family:-apple-system,"PingFang SC","M
 <div class="meta-row"><span>阅读时间约 5 分钟</span><span>数据来源：AI分析系统</span><span>更新：08:00</span></div>
 <span class="tag-sm">市场前瞻</span>
 </a></div>
-<div class="article-card"><a href="articles/2026-05-18-market-analysis.html">
-<div class="date">2026.05.18</div>
-<div class="title">周开盘前瞻：中美贸易缓和大盘高开，黄金跌破4550，比特币回踩78K，本周NVDA与FOMC纪要重磅</div>
-<div class="desc">周一开盘前瞻：中美贸易缓和推动亚洲风险偏好回升，黄金连跌后面临技术支撑考验，比特币$78K关口多空拉锯，NVDA财报将是本周最大行情催化剂。</div>
-<div class="meta-row"><span>阅读时间约 4 分钟</span><span>数据来源：AI分析系统</span><span>更新：08:00</span></div>
-<span class="tag-sm">市场前瞻</span>
-</a></div>
-<div class="article-card"><a href="articles/2026-05-13-market-analysis.html">
-<div class="date">2026.05.13</div>
-<div class="title">今日行情分析：PPI数据前黄金承压整固，比特币冲高回落，欧元小幅回调</div>
-<div class="desc">AI今日行情分析：黄金$4,730附近整固等待PPI催化、比特币$80,800-81,700区间整理、欧元兑美元回撤至1.1740。</div>
-<div class="meta-row"><span>阅读时间约 3 分钟</span><span>数据来源：AI分析系统</span><span>更新：18:00</span></div>
+<div class="article-card"><a href="articles/2026-05-24-market-analysis.html">
+<div class="date">2026.05.24</div>
+<div class="title">标普500连涨八周创2023年来最长纪录，黄金$4,500关口承压，比特币周末跳水</div>
+<div class="desc">AI行情周报：标普500连续第八周上涨报7,473创2023年来最长纪录；黄金跌至$4,508连续第六周收跌，$4,500关口承压；比特币周末跳水至$75,150；下周关注PCE物价指数与Q1 GDP修正值。</div>
+<div class="meta-row"><span>阅读时间约 5 分钟</span><span>数据来源：公开市场数据</span><span>更新：08:00</span></div>
 <span class="tag-sm">市场分析</span>
 </a></div>
-<div class="article-card"><a href="articles/2026-05-11-market-analysis.html">
-<div class="date">2026.05.11</div>
-<div class="title">【周一开盘前瞻：数据密集周来袭】</div>
-<div class="desc">AI交易研究视角：周一开盘前瞻，数据密集周来袭，PPI/CPI/初请通胀数据三重检验。</div>
+<div class="article-card"><a href="articles/2026-05-23-market-analysis.html">
+<div class="date">2026.05.23</div>
+<div class="title">超级星期三消化周收官：黄金失守$4,510，美股逼近历史高位，德国IFO回暖</div>
+<div class="desc">AI行情分析：黄金连续第五周收跌，$4,500关口反复测试；标普500距历史新高仅一步之遥；比特币$77K窄幅整理；德国IFO景气指数84.9超预期；密歇根消费信心终值48.2持平。</div>
+<div class="meta-row"><span>阅读时间约 5 分钟</span><span>数据来源：公开市场数据</span><span>更新：08:00</span></div>
+<span class="tag-sm">市场分析</span>
+</a></div>
+<div class="article-card"><a href="articles/2026-05-22-market-analysis.html">
+<div class="date">2026.05.22</div>
+<div class="title">Nvidia财报双beat+FOMC纪要鹰派落地：美股反弹黄金企稳$4,540，比特币$77K整理</div>
+<div class="desc">AI行情分析：Nvidia Q1 FY2027营收$81.6B超预期，Q2指引$91B亦超预期；FOMC 4月纪要显示加息讨论浮上台面，4张反对票创1992年新高；美股三大指数反弹超1%，黄金回升$4,540后受阻，比特币$77K窄幅震荡。</div>
+<div class="meta-row"><span>阅读时间约 5 分钟</span><span>数据来源：公开市场数据</span><span>更新：08:00</span></div>
+<span class="tag-sm">市场分析</span>
+</a></div>
+<div class="article-card"><a href="articles/2026-05-21-market-analysis.html">
+<div class="date">2026.05.21</div>
+<div class="title">Nvidia财报超预期+FOMC纪要鹰派共振：美股反弹黄金企稳$4,540，油价暴跌失守$100</div>
+<div class="desc">AI行情分析：Nvidia FY2027 Q1营收$81.6B超预期，Q2指引$91B亦超预期；FOMC纪要显示降息讨论几乎终结，开始讨论加息可能；美股三大指数涨超1%，黄金回升至$4,540，WTI暴跌5.7%破$100。</div>
+<div class="meta-row"><span>阅读时间约 5 分钟</span><span>数据来源：公开市场数据</span><span>更新：08:00</span></div>
+<span class="tag-sm">市场分析</span>
+</a></div>
+<div class="article-card"><a href="articles/2026-05-20-market-analysis.html">
+<div class="date">2026.05.20</div>
+<div class="title">超级星期三：Nvidia财报日黄金失守$4,500，比特币$77K低点徘徊，美债收益率逼近5.2%</div>
+<div class="desc">AI行情分析：Nvidia财报+FOMC纪要双核驱动，黄金跌至$4,485跌破$4,500关口，比特币$76,950附近整理，美债30Y收益率逼近5.2%创2007年新高，伊朗局势持续发酵。</div>
 <div class="meta-row"><span>阅读时间约 5 分钟</span><span>数据来源：AI交易研究系统</span><span>更新：08:00</span></div>
-<span class="tag-sm">市场前瞻</span>
+<span class="tag-sm">市场分析</span>
+</a></div>
+<div class="article-card"><a href="articles/2026-05-19-market-analysis.html">
+<div class="date">2026.05.19</div>
+<div class="title">Nvidia财报前最后一日：市场屏息以待，黄金温和反弹，比特币持续承压</div>
+<div class="desc">AI行情分析：明日Nvidia财报登场决定市场方向，黄金从$4,536反弹至$4,577，比特币$77K区域弱势整理，欧元重返1.1650上方等待PMI信号。</div>
+<div class="meta-row"><span>阅读时间约 4 分钟</span><span>数据来源：AI交易研究系统</span><span>更新：08:00</span></div>
+<span class="tag-sm">市场分析</span>
+</a></div>
+<div class="article-card"><a href="articles/2026-05-17-market-analysis.html">
+<div class="date">2026.05.17</div>
+<div class="title">周末行情：黄金超卖区企稳待变，比特币重返8万关口，Warsh时代与Nvidia财报成为焦点</div>
+<div class="desc">AI周末行情分析：黄金$4,550超卖区企稳观望、比特币重返$80,000悬念、欧元失守1.17低位徘徊、本周Nvidia财报决定市场方向、Kevin Warsh主席首周登场。</div>
+<div class="meta-row"><span>阅读时间约 4 分钟</span><span>数据来源：AI交易研究系统</span><span>更新：08:00</span></div>
+<span class="tag-sm">周末行情</span>
+</a></div>
+<div class="article-card"><a href="articles/2026-05-16-market-analysis.html">
+<div class="date">2026.05.16</div>
+<div class="title">周末复盘：通胀超级周完美收官——鲍威尔谢幕、标普新高、黄金闪崩、比特币鏖战8万</div>
+<div class="desc">AI周末复盘：通胀超级周全景回顾、鲍威尔时代落幕、标普500新高、黄金暴跌至$4,551、比特币$80K博弈、下周前瞻。</div>
+<div class="meta-row"><span>阅读时间约 4 分钟</span><span>数据来源：AI交易研究系统</span><span>更新：08:00</span></div>
+<span class="tag-sm">周末复盘</span>
 </a></div>
 </div>
-<div style="text-align:right;padding:4px 0 20px;">
-<a href="insight-archive.html" style="color:#3B82F6;font-size:12px;text-decoration:none;">查看更多分析 →</a>
-</div>
-<!-- 智能洞察 -->
-<h2 class="section-title">历史洞察</h2>
+<div style="text-align:center;margin-bottom:24px;"><a href="articles/" style="color:#3B82F6;font-size:14px;">查看更多分析 →</a></div>
+
+<h2 class="section-title">策略洞察</h2>
 <div class="article-list">
 <div class="article-card"><a href="backtest.html">
 <div class="date">2025.05 - 2026.05</div>
-<div class="title">XAUUSD_BoGe_EA 智能洞察报告</div>
+<div class="title">XAUUSD_BoGe_EA 策略回测报告</div>
 <div class="desc">趋势跟踪策略在黄金市场的历史表现分析。包含资金曲线、月度收益、胜率统计、交易记录等。</div>
 <div class="meta-row"><span>胜率：62.8%</span><span>夏普：1.82</span><span>最大回撤：8.5%</span></div>
-<span class="tag-sm">智能洞察报告</span>
+<span class="tag-sm">策略报告</span>
 </a></div>
-</div>
-<!-- 智能洞察 -->
-<h2 class="section-title">智能洞察</h2>
-<div style="padding:40px 20px;border:1px solid rgba(59,130,246,0.1);border-radius:12px;text-align:center;background:rgba(59,130,246,0.02);margin-bottom:24px;">
-<div style="font-size:28px;margin-bottom:8px;">🤖</div>
-<p style="font-size:15px;color:#94a3b8;margin-bottom:8px;">智能洞察系统</p>
-<p style="font-size:13px;color:#475569;">学习研究 · 洞察探索</p>
-<p style="font-size:12px;color:#334155;margin-top:12px;">即将上线 · 敬请期待</p>
 </div>
 
 <a href="/" class="back-link">← 返回首页</a>
-<div class="footer"><p>© 2026 <a href="https://tianshu.shop">天枢</a> — AI洞察研究</p><p style="margin-top:8px;font-size:12px;color:#334155;">万千智能，一枢统御</p></div>
+<div class="footer"><p>&copy; 2026 <a href="https://tianshu.shop">天枢</a> &mdash; AI洞察研究</p><p style="margin-top:8px;font-size:12px;color:#334155;">万千智能，一枢统御</p></div>
 </div>
+<script>(function(){var c=document.querySelector('.stars');for(var i=0;i<80;i++){var s=document.createElement('div');s.className='star';s.style.left=(Math.random()*100)+'%';s.style.top=(Math.random()*100)+'%';s.style.animationDelay=(Math.random()*4)+'s';s.style.width=(Math.random()*2+1)+'px';c.appendChild(s);}})();</script>
 </body>
 </html>

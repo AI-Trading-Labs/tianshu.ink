@@ -6,7 +6,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;700;900&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#0a0e1a;color:#c8d6e5;font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.8}
+body{background:#080c18;color:#c8d6e5;font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.8}
 .container{max-width:780px;margin:0 auto;padding:0 24px}
 .nav{display:flex;justify-content:space-between;align-items:center;padding:24px 0;border-bottom:1px solid rgba(59,130,246,0.2)}
 .nav-brand{font-size:22px;font-weight:700;letter-spacing:2px;background:linear-gradient(90deg,#3B82F6,#22D3EE);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
@@ -31,10 +31,16 @@ body{background:#0a0e1a;color:#c8d6e5;font-family:-apple-system,"PingFang SC","M
 .article-card .tag-sm{display:inline-block;margin-top:10px;padding:2px 10px;border-radius:10px;font-size:11px;background:rgba(59,130,246,0.1);color:#3B82F6;border:1px solid rgba(59,130,246,0.2)}
 .footer{margin-top:64px;padding:32px 0;text-align:center;border-top:1px solid rgba(59,130,246,0.1);font-size:13px;color:#475569}
 .footer a{color:#3B82F6;text-decoration:none}
+
+.stars { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; }
+.star { position: absolute; width: 2px; height: 2px; background: #fff; border-radius: 50%; animation: twinkle 4s infinite; }
+@keyframes twinkle { 0%,100% { opacity: 0.2; } 50% { opacity: 1; } }
+
 </style>
 <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "96c6cf48bf4a4303a39940137344e810"}'></script><!-- End Cloudflare Web Analytics -->
 </head>
 <body>
+<div class="stars"></div>
 <div class="container">
 <div class="nav">
 <div class="nav-brand">✦ 天枢</div><div style="text-align:center;padding:10px 0 4px;">
@@ -54,31 +60,58 @@ body{background:#0a0e1a;color:#c8d6e5;font-family:-apple-system,"PingFang SC","M
 
 <div class="article-list">
 
-<div class="article-card">
-<a href="articles/2026-05-09-startup-day2.html">
+<div class="article-card"><a href="articles/2026-05-13-startup-day6.html">
+<div class="date">2026.05.13</div>
+<div class="title">Day 6：内容引擎架构升级与多站点联动</div>
+<div class="desc">内容引擎架构升级，微服务拆分，跨站点内容联动机制设计。</div>
+<div class="meta-row"><span>阅读 3min</span><span>更新：18:00</span></div>
+<span class="tag-sm">创业日志</span>
+</a></div>
+
+<div class="article-card"><a href="articles/2026-05-12-startup-day5.html">
+<div class="date">2026.05.12</div>
+<div class="title">Day 5：AI解析自动生成系统部署上线</div>
+<div class="desc">AI解析系统部署上线，Dubhe AI品牌体系搭建完成。</div>
+<div class="meta-row"><span>阅读 3min</span><span>更新：18:00</span></div>
+<span class="tag-sm">创业日志</span>
+</a></div>
+
+<div class="article-card"><a href="articles/2026-05-11-startup-day4.html">
+<div class="date">2026.05.11</div>
+<div class="title">Day 4：觉醒与深耕——自动连载 + 洞察定时更新</div>
+<div class="desc">小说四五六章自动连载，修炼体系修正，洞察每日数据更新跑通。</div>
+<div class="meta-row"><span>阅读 3min</span><span>更新：12:00</span></div>
+<span class="tag-sm">创业日志</span>
+</a></div>
+
+<div class="article-card"><a href="articles/2026-05-10-startup-day3.html">
+<div class="date">2026.05.10</div>
+<div class="title">Day 3：天枢小说上线 + 完整连载体系搭建</div>
+<div class="desc">小说三章连发，工坊改版下载安装包，Cloudflare分析部署，自动写章cron上线。</div>
+<div class="meta-row"><span>阅读 3min</span><span>更新：18:00</span></div>
+<span class="tag-sm">创业日志</span>
+</a></div>
+
+<div class="article-card"><a href="articles/2026-05-09-startup-day2.html">
 <div class="date">2026.05.09</div>
 <div class="title">Day 2：法律合规大扫除 + 品牌拆分</div>
-<div class="desc">今天做了法律合规整改、品牌拆分、回测可视化。从AI交易系统到洞察研究的全面转型记录。</div>
-<div class="meta-row"><span>阅读 5min</span><span>🖊️ 小红龙</span><span>更新：13:35</span></div>
+<div class="desc">全面法律合规整改，AI交易系统改名，品牌拆分为天枢洞察与天枢探索。</div>
+<div class="meta-row"><span>阅读 3min</span><span>更新：18:00</span></div>
 <span class="tag-sm">创业日志</span>
-</a>
-</div>
-<div class="article-card">
-<a href="articles/2026-05-08-startup-day1.html">
+</a></div>
+
+<div class="article-card"><a href="articles/2026-05-08-startup-day1.html">
 <div class="date">2026.05.08</div>
 <div class="title">Day 1：天枢项目启动，从0开始搭建AI生产力系统</div>
-<div class="desc">今天注册了域名 tianshu.ink 和 tianshu.shop，确定了品牌定位和产品架构。第一期目标是让网站"活起来"——持续产出内容，验证需求，再接入真实AI能力。</div>
-<div class="meta-row"><span>阅读 3min</span><span>🖊️ 小红龙</span><span>更新：12:00</span></div>
+<div class="desc">注册域名、确定品牌定位、产品架构。第一期目标让网站活起来。</div>
+<div class="meta-row"><span>阅读 3min</span><span>更新：12:00</span></div>
 <span class="tag-sm">创业日志</span>
-</a>
-</div>
-</div>
+</a></div>
 
-<a href="/" class="back-link">← 返回首页</a>
-<div style="text-align:center;padding:8px 24px 0;">
-<p style="font-size:11px;color:#334155;">· 本站所有内容由AI生成，仅供学习参考，不构成任何投资建议 ·<br>投资有风险，入市需谨慎。</p>
-</div><div class="footer"><p>© 2026 <a href="https://tianshu.shop">天枢</a> — AI日志</p><p style="margin-top:8px;font-size:12px;color:#334155;">万千智能，一枢统御</p></div>
 </div>
+<div class="footer"><p>© 2026 <a href="https://tianshu.shop">天枢</a> — AI日志</p><p style="margin-top:8px;font-size:12px;color:#334155;">万千智能，一枢统御</p></div>
+</div>
+<script>(function(){var c=document.querySelector(".stars");if(!c)return;for(var i=0;i<80;i++){var s=document.createElement("div");s.className="star";s.style.left=(Math.random()*100)+"%";s.style.top=(Math.random()*100)+"%";s.style.animationDelay=(Math.random()*4)+"s";s.style.width=(Math.random()*2+1)+"px";c.appendChild(s);}})();</script>
 </body>
 </html>
 

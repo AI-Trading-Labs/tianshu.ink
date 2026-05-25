@@ -1,269 +1,121 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>今日行情分析：PPI数据前黄金承压整固，比特币冲高回落，欧元小幅回调 — Tianshu AI Insight</title>
-    <meta name="description" content="AI今日行情分析：黄金$4,730附近整固等待PPI催化、比特币$80,800-81,700区间整理、欧元兑美元回撤至1.1740、关键支撑阻力位与交易建议。">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            background: #050816; position: relative; overflow-x: hidden; }
-body::before { content: ''; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: radial-gradient(2px 2px at 31% 57%, rgba(255,255,255,0.188547219610097), transparent), radial-gradient(1px 1px at 21% 18%, rgba(255,255,255,0.261180988681121), transparent), radial-gradient(1px 1px at 76% 50%, rgba(255,255,255,0.187617685127825), transparent), radial-gradient(1px 1px at 73% 7%, rgba(255,255,255,0.240699156718654), transparent), radial-gradient(2px 2px at 66% 72%, rgba(255,255,255,0.236484474845456), transparent), radial-gradient(1px 1px at 89% 68%, rgba(255,255,255,0.343772019233448), transparent), radial-gradient(1px 1px at 64% 39%, rgba(255,255,255,0.234998698967974), transparent), radial-gradient(1px 1px at 51% 66%, rgba(255,255,255,0.28822524048771), transparent), radial-gradient(2px 2px at 66% 7%, rgba(255,255,255,0.132088152287569), transparent), radial-gradient(1px 1px at 35% 26%, rgba(255,255,255,0.205604426658528), transparent), radial-gradient(1px 1px at 97% 44%, rgba(255,255,255,0.194095541208096), transparent), radial-gradient(1px 1px at 40% 27%, rgba(255,255,255,0.206172763978212), transparent), radial-gradient(2px 2px at 83% 97%, rgba(255,255,255,0.35993489802812), transparent), radial-gradient(1px 1px at 83% 87%, rgba(255,255,255,0.140279100062456), transparent), radial-gradient(1px 1px at 94% 53%, rgba(255,255,255,0.337883105705438), transparent), radial-gradient(1px 1px at 58% 54%, rgba(255,255,255,0.135951230505459), transparent), radial-gradient(2px 2px at 62% 50%, rgba(255,255,255,0.274884660111221), transparent), radial-gradient(1px 1px at 79% 96%, rgba(255,255,255,0.232879848979823), transparent), radial-gradient(1px 1px at 6% 77%, rgba(255,255,255,0.371208170555163), transparent), radial-gradient(1px 1px at 67% 53%, rgba(255,255,255,0.134920745918025), transparent), radial-gradient(2px 2px at 45% 45%, rgba(255,255,255,0.176853225695367), transparent), radial-gradient(1px 1px at 92% 73%, rgba(255,255,255,0.278345515662034), transparent), radial-gradient(1px 1px at 19% 31%, rgba(255,255,255,0.243597934555075), transparent), radial-gradient(1px 1px at 14% 10%, rgba(255,255,255,0.30629703011657), transparent), radial-gradient(2px 2px at 92% 78%, rgba(255,255,255,0.245732512625741), transparent), radial-gradient(1px 1px at 34% 54%, rgba(255,255,255,0.141156293470951), transparent), radial-gradient(1px 1px at 82% 12%, rgba(255,255,255,0.24960758925863), transparent), radial-gradient(1px 1px at 96% 71%, rgba(255,255,255,0.323469246934852), transparent), radial-gradient(2px 2px at 76% 23%, rgba(255,255,255,0.232632279411253), transparent), radial-gradient(1px 1px at 85% 38%, rgba(255,255,255,0.239767358843129), transparent), radial-gradient(1px 1px at 46% 21%, rgba(255,255,255,0.242459277036814), transparent), radial-gradient(1px 1px at 74% 43%, rgba(255,255,255,0.234175029040396), transparent), radial-gradient(2px 2px at 86% 7%, rgba(255,255,255,0.334026495243435), transparent), radial-gradient(1px 1px at 23% 44%, rgba(255,255,255,0.174873981194046), transparent), radial-gradient(1px 1px at 64% 52%, rgba(255,255,255,0.227942065348822), transparent), radial-gradient(1px 1px at 88% 84%, rgba(255,255,255,0.158352595129215), transparent), radial-gradient(2px 2px at 94% 70%, rgba(255,255,255,0.173901899333066), transparent), radial-gradient(1px 1px at 76% 82%, rgba(255,255,255,0.231396128484698), transparent), radial-gradient(1px 1px at 62% 46%, rgba(255,255,255,0.316014653125785), transparent), radial-gradient(1px 1px at 52% 20%, rgba(255,255,255,0.26422837011713), transparent), radial-gradient(2px 2px at 19% 31%, rgba(255,255,255,0.377283540916295), transparent), radial-gradient(1px 1px at 6% 65%, rgba(255,255,255,0.364900680149393), transparent), radial-gradient(1px 1px at 24% 23%, rgba(255,255,255,0.212066643783854), transparent), radial-gradient(1px 1px at 8% 45%, rgba(255,255,255,0.252268566355234), transparent), radial-gradient(2px 2px at 38% 64%, rgba(255,255,255,0.298430233448013), transparent), radial-gradient(1px 1px at 28% 37%, rgba(255,255,255,0.160066283755035), transparent), radial-gradient(1px 1px at 34% 86%, rgba(255,255,255,0.201714920579323), transparent), radial-gradient(1px 1px at 28% 89%, rgba(255,255,255,0.29565174542165), transparent), radial-gradient(2px 2px at 25% 68%, rgba(255,255,255,0.203058933887192), transparent), radial-gradient(1px 1px at 8% 17%, rgba(255,255,255,0.392495343178741), transparent), radial-gradient(1px 1px at 72% 39%, rgba(255,255,255,0.356704142483279), transparent), radial-gradient(1px 1px at 26% 9%, rgba(255,255,255,0.141224549962778), transparent), radial-gradient(2px 2px at 35% 63%, rgba(255,255,255,0.359188232365618), transparent), radial-gradient(1px 1px at 55% 68%, rgba(255,255,255,0.297677338355071), transparent), radial-gradient(1px 1px at 81% 90%, rgba(255,255,255,0.180135433692548), transparent), radial-gradient(1px 1px at 73% 43%, rgba(255,255,255,0.159175299601245), transparent), radial-gradient(2px 2px at 77% 39%, rgba(255,255,255,0.129172288779715), transparent), radial-gradient(1px 1px at 53% 22%, rgba(255,255,255,0.189161355369334), transparent), radial-gradient(1px 1px at 24% 89%, rgba(255,255,255,0.211319567408096), transparent), radial-gradient(1px 1px at 30% 78%, rgba(255,255,255,0.39043440110536), transparent); z-index: -1; pointer-events: none;
-            color: #c8d6e5;
-            font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
-            line-height: 2;
-        }
-        .container { max-width: 780px; margin: 0 auto; padding: 0 24px; }
-
-        .nav {
-            display: flex; justify-content: space-between; align-items: center;
-            padding: 24px 0; border-bottom: 1px solid rgba(59, 130, 246, 0.2);
-        }
-        .nav-brand {
-            font-size: 20px; font-weight: 700; letter-spacing: 2px;
-            background: linear-gradient(135deg, #60a5fa, #818cf8);
-            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-        }
-        .nav-links { display: flex; gap: 24px; }
-        .nav-links a { color: #94a3b8; text-decoration: none; font-size: 13px; }
-        .nav-links a:hover { color: #3B82F6; }
-
-        .article-header { padding: 48px 0 32px; }
-        .article-header .date { font-size: 13px; color: #475569; margin-bottom: 8px; }
-        .article-header h1 { font-size: 28px; font-weight: 700; color: #e2e8f0; line-height: 1.4; }
-        .article-header .meta { margin-top: 16px; font-size: 13px; color: #64748b; }
-
-        .article-body { padding-bottom: 48px; }
-        .article-body h2 { font-size: 20px; font-weight: 600; color: #94a3b8; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid rgba(59,130,246,0.1); }
-        .article-body h3 { font-size: 16px; font-weight: 600; color: #818cf8; margin: 24px 0 12px; }
-        .article-body p { margin-bottom: 16px; color: #c8d6e5; }
-        .article-body ul { padding-left: 20px; margin-bottom: 16px; color: #c8d6e5; }
-        .article-body ul li { margin-bottom: 8px; }
-        .article-body .key-box {
-            background: rgba(59, 130, 246, 0.06);
-            border: 1px solid rgba(59, 130, 246, 0.2);
-            border-radius: 12px; padding: 20px 24px; margin: 20px 0;
-        }
-        .article-body .key-box .label { font-size: 12px; color: #64748b; margin-bottom: 4px; }
-        .article-body .key-box .value { font-size: 16px; font-weight: 600; color: #3B82F6; }
-        .article-body .key-box .value.red { color: #f87171; }
-        .article-body .key-box .value.green { color: #34d399; }
-        .article-body .data-row { display: flex; gap: 16px; flex-wrap: wrap; margin: 16px 0; }
-        .data-row .data-item {
-            flex: 1; min-width: 140px; padding: 16px;
-            background: rgba(59, 130, 246, 0.04); border: 1px solid rgba(59,130,246,0.1);
-            border-radius: 8px; text-align: center;
-        }
-        .data-row .data-item .d-label { font-size: 12px; color: #64748b; }
-        .data-row .data-item .d-value { font-size: 18px; font-weight: 600; color: #e2e8f0; margin-top: 4px; }
-
-        .back-link { display: inline-block; margin-top: 32px; color: #3B82F6; text-decoration: none; font-size: 14px; }
-        .back-link:hover { text-decoration: underline; }
-
-        .footer { margin-top: 48px; padding: 24px 0; text-align: center; border-top: 1px solid rgba(59,130,246,0.1); font-size: 13px; color: #475569; }
-        .footer a { color: #3B82F6; text-decoration: none; }
-
-        @media (max-width: 640px) {
-            .article-header h1 { font-size: 22px; }
-            .data-row { flex-direction: column; }
-        }
-    </style>
-<!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "96c6cf48bf4a4303a39940137344e810"}'></script><!-- End Cloudflare Web Analytics -->
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>【CPI日深度解析】4月通胀超预期上行，黄金DXY剧烈波动，市场面临利率考验 — 天枢 AI Insight</title>
+<meta name="description" content="AI交易研究视角：4月CPI年率3.8%超预期，核心CPI 2.8%，能源冲击传导至核心通胀，黄金测试4700支撑，DXY反弹至98.3上方，比特币回落至80K寻求支撑。">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;700;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#080c18;color:#c8d6e5;font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.9;padding:24px}
+.container{max-width:800px;margin:0 auto}
+.header-link{display:inline-block;margin-bottom:24px;color:#3B82F6;text-decoration:none;font-size:13px}
+.header-link:hover{text-decoration:underline}
+.article-header{margin-bottom:32px}
+.article-header .date{font-size:13px;color:#475569;margin-bottom:8px}
+.article-header h1{font-size:26px;font-weight:700;color:#e2e8f0;line-height:1.5;margin-bottom:12px}
+.article-header .meta-row{display:flex;gap:16px;font-size:12px;color:#64748b}
+.article-header .tag{display:inline-block;padding:4px 12px;border-radius:12px;font-size:12px;background:rgba(59,130,246,0.1);color:#3B82F6;border:1px solid rgba(59,130,246,0.2)}
+.article-content h2{font-size:20px;font-weight:600;color:#e2e8f0;margin:36px 0 16px;padding-bottom:8px;border-bottom:1px solid rgba(59,130,246,0.1)}
+.article-content h3{font-size:16px;font-weight:600;color:#94a3b8;margin:24px 0 12px}
+.article-content p{margin-bottom:16px;font-size:15px;color:#c8d6e5}
+.article-content .highlight-box{padding:20px;border:1px solid rgba(59,130,246,0.15);border-radius:12px;background:rgba(59,130,246,0.04);margin:20px 0}
+.article-content .highlight-box strong{color:#3B82F6}
+.article-content ul{margin:12px 0 20px;padding-left:20px}
+.article-content ul li{margin-bottom:8px;font-size:15px;color:#c8d6e5}
+.article-content .data-table{width:100%;border-collapse:collapse;margin:16px 0 24px}
+.article-content .data-table th{padding:10px 12px;text-align:left;font-size:13px;color:#64748b;border-bottom:1px solid rgba(59,130,246,0.1);font-weight:500}
+.article-content .data-table td{padding:10px 12px;font-size:14px;color:#c8d6e5;border-bottom:1px solid rgba(59,130,246,0.06)}
+.article-content .data-table .up{color:#34d399}
+.article-content .data-table .down{color:#f87171}
+.article-content .data-table .neutral{color:#fbbf24}
+.footer{margin-top:48px;padding:24px 0;border-top:1px solid rgba(59,130,246,0.1);font-size:13px;color:#475569;text-align:center}
+.footer a{color:#3B82F6;text-decoration:none}
+</style>
 </head>
 <body>
-    <div class="container">
-        <div class="nav">
-            <div class="nav-brand">✦ Tianshu</div>
-            <div class="nav-links">
-                <a href="/">首页</a>
-                <a href="https://tianshu.shop" target="_blank">AI工具</a>
-            </div>
-        </div>
+<div class="container">
+<a href="../trading.html" class="header-link">← 返回研究页面</a>
+<div class="article-header">
+<div class="date">2026.05.13 · 更新 08:00</div>
+<h1>【CPI日深度解析】4月通胀超预期上行，黄金DXY剧烈波动，市场面临利率考验</h1>
+<div class="meta-row">
+<span>阅读时间约 6 分钟</span>
+<span>数据来源：AI交易研究系统</span>
+<span>更新：08:00 CST</span>
+</div>
+<span class="tag">市场分析</span>
+</div>
 
-        <article>
-            <div class="article-header">
-                <div style="font-size:36px; font-weight:900; letter-spacing:12px; font-family:'Noto Serif SC','STSong','SimSun',serif; background:linear-gradient(90deg,#3B82F6,#22D3EE); -webkit-background-clip:text; -webkit-text-fill-color:transparent; margin-bottom:4px; line-height:1.3;">天枢</div>
-                <div style="font-size:11px; color:#475569; letter-spacing:5px; text-transform:uppercase; margin-bottom:20px;">T I A N S H U</div>
-                <div class="date">2026年05月13日 · 市场分析</div>
-                <h1>今日行情分析：PPI数据前黄金承压整固，比特币冲高回落，欧元小幅回调</h1>
-                <div class="meta">阅读时间约 3 分钟 · 来源：Tianshu AI 分析系统</div>
-            </div>
+<div class="article-content">
 
-            <div style="text-align:center;padding:12px 0 4px;">
-<span style="display:inline-block;font-size:11px;padding:3px 12px;border-radius:4px;background:rgba(59,130,246,0.1);color:#818cf8;border:1px solid rgba(59,130,246,0.2);">🤖 本文由AI生成，仅供学习参考</span>
-</div><div class="article-body">
+<h2>📊 核心数据一览：CPI全面超预期</h2>
 
-                <p>今日（5月13日周三）迎来本周重磅数据——美国4月PPI数据发布日。黄金价格约 <strong>$4,715-4,730/盎司</strong>区间运行，昨日收盘于 $4,735 附近后小幅回落；比特币价格约 <strong>$80,860</strong>，昨日一度冲高至 $82,026 后受阻回落；欧元兑美元汇率约 <strong>1.1739</strong>，从1.18关口上方回撤。市场整体处于数据发布前的谨慎观望态势，三大资产均等待PPI数据的催化方向。</p>
+<p>今日公布的美国4月CPI数据全面超出预期，通胀压力显著回升，成为2026年以来最重要的宏观事件之一。以下是关键数据对比：</p>
 
-                <div class="key-box">
-                    <div class="label">AI 核心判断</div>
-                    <div class="value">黄金等待PPI催化整固待变，比特币冲高回踩确认支撑，欧元回调测试1.17关口支撑力度</div>
-                </div>
+<table class="data-table">
+<tr><th>指标</th><th>实际值</th><th>预期</th><th>前值</th><th>方向</th></tr>
+<tr><td>CPI年率（整体）</td><td>3.8%</td><td>2.5%</td><td>3.3%</td><td class="up">↑ 超预期</td></tr>
+<tr><td>CPI月率</td><td>0.6%</td><td>—</td><td>0.3%</td><td class="up">↑ 加速</td></tr>
+<tr><td>核心CPI年率</td><td>2.8%</td><td>2.6%</td><td>2.6%</td><td class="up">↑ 超预期</td></tr>
+<tr><td>核心CPI月率</td><td>0.4%</td><td>—</td><td>0.3%</td><td class="up">↑ 加速</td></tr>
+</table>
 
-                <h2>市场概况</h2>
-                <p>本周是美国通胀数据的关键一周：周二（12日）4月CPI数据录得三年来最大同比涨幅（CPI-U环比+0.6%），远超预期的通胀数据引发市场剧烈波动，美债收益率上行，风险资产承压。周三（13日）PPI数据接踵而至，市场预期PPI月率+0.5%。中东地缘方面美伊停火谈判进展反复及霍尔木兹海峡事件持续牵动市场神经。三大资产日内走势分化明显：</p>
-                <ul>
-                    <li><strong>黄金</strong>：CPI超预期后金价从 $4,735 回落至 $4,710-4,720 区间，正测试50日均线（$4,753）下方的整固支撑</li>
-                    <li><strong>比特币</strong>：$82,000 阻力再次验证有效，从 $82,026 高点回落至 $80,800 附近，$80,000 仍是关键支撑</li>
-                    <li><strong>欧元/美元</strong>：连续五个交易日走高的涨势被CPI数据打断，从1.18上方回落至1.1738附近，关注1.1700支撑</li>
-                </ul>
+<div class="highlight-box">
+<strong>💡 AI解读：</strong>整体CPI从3.3%跃升至3.8%，远超预期的2.5%，是2023年以来最大单月涨幅。核心CPI回升至2.8%，显示能源冲击已开始通过供应链传导至核心通胀。IRAN/Hormuz海峡封锁导致的能源供给冲击正在改变通胀轨迹。
+</div>
 
-                <h3>黄金关键位置</h3>
-                <div class="data-row">
-                    <div class="data-item">
-                        <div class="d-label">当前价格</div>
-                        <div class="d-value" style="color:#fbbf24;">4,720</div>
-                    </div>
-                    <div class="data-item">
-                        <div class="d-label">支撑位</div>
-                        <div class="d-value" style="color:#f87171;">4,700</div>
-                    </div>
-                    <div class="data-item">
-                        <div class="d-label">强支撑位</div>
-                        <div class="d-value" style="color:#f87171;">4,650</div>
-                    </div>
-                    <div class="data-item">
-                        <div class="d-label">阻力位</div>
-                        <div class="d-value" style="color:#34d399;">4,750</div>
-                    </div>
-                    <div class="data-item">
-                        <div class="d-label">强阻力位</div>
-                        <div class="d-value" style="color:#34d399;">4,800</div>
-                    </div>
-                </div>
+<h2>🛢️ 通胀飙升的底层逻辑：能源冲击+统计扰动</h2>
 
-                <h3>比特币关键位置</h3>
-                <div class="data-row">
-                    <div class="data-item">
-                        <div class="d-label">当前价格</div>
-                        <div class="d-value" style="color:#fbbf24;">80,860</div>
-                    </div>
-                    <div class="data-item">
-                        <div class="d-label">支撑位</div>
-                        <div class="d-value" style="color:#f87171;">80,000</div>
-                    </div>
-                    <div class="data-item">
-                        <div class="d-label">强支撑位</div>
-                        <div class="d-value" style="color:#f87171;">78,500</div>
-                    </div>
-                    <div class="data-item">
-                        <div class="d-label">阻力位</div>
-                        <div class="d-value" style="color:#34d399;">82,000</div>
-                    </div>
-                    <div class="data-item">
-                        <div class="d-label">强阻力位</div>
-                        <div class="d-value" style="color:#34d399;">84,000</div>
-                    </div>
-                </div>
+<p>本次CPI数据大幅超预期的背后，有几个关键驱动因素：</p>
 
-                <h3>欧元/美元关键位置</h3>
-                <div class="data-row">
-                    <div class="data-item">
-                        <div class="d-label">当前价格</div>
-                        <div class="d-value" style="color:#f87171;">1.1739</div>
-                    </div>
-                    <div class="data-item">
-                        <div class="d-label">支撑位</div>
-                        <div class="d-value" style="color:#f87171;">1.1700</div>
-                    </div>
-                    <div class="data-item">
-                        <div class="d-label">强支撑位</div>
-                        <div class="d-value" style="color:#f87171;">1.1660</div>
-                    </div>
-                    <div class="data-item">
-                        <div class="d-label">阻力位</div>
-                        <div class="d-value" style="color:#34d399;">1.1780</div>
-                    </div>
-                    <div class="data-item">
-                        <div class="d-label">强阻力位</div>
-                        <div class="d-value" style="color:#34d399;">1.1820</div>
-                    </div>
-                </div>
+<ul>
+<li><strong>能源成本飙升：</strong>伊朗局势升级和霍尔木兹海峡持续封锁，全球能源供给严重受阻，油价维持在2022年以来高位，直接推动能源分项大幅上涨。</li>
+<li><strong>供应链传导：</strong>能源价格上涨正通过生产和物流成本传导至核心商品和服务领域。</li>
+<li><strong>统计基准效应：</strong>Core CPI中的住房分项受到2025年政府停摆期间住房样本采集中断的统计扭曲影响，部分涨幅为统计修正而非真实通胀加速。但市场情绪不会区分这些技术细节。</li>
+</ul>
 
-                <h2>AI 判断逻辑</h2>
-                <p>基于当前市场数据与历史模式匹配，AI模型给出以下分析：</p>
+<h2>📈 市场即时反应</h2>
 
-                <h3>黄金 — 中性偏观望（置信度 60%）</h3>
-                <p>昨日CPI数据超预期导致金价从 $4,735 回撤至 $4,710-4,720 区间，显示高通胀对黄金的双刃剑效应——一方面升息预期打压金价，另一方面通胀对冲需求提供支撑。当前金价在50日均线（$4,753）下方整固，PPI数据将是短期方向催化剂。若PPI同样高于预期，金价可能测试 $4,680-4,700 支撑带；若PPI温和，则有望重回 $4,750 上方。</p>
+<p>CPI公布后主要市场表现：</p>
 
-                <h3>比特币 — 偏弱震荡（置信度 55%）</h3>
-                <p>比特币昨日在CPI数据冲击下一度下探 $80,300，随后快速反弹至 $80,860，但 $82,000 阻力再次证明其有效性。Michael Burry近日警告股市可能崩盘，叠加通胀数据偏高，加密市场风险偏好降温。$80,000 为短期多空分水岭，若PPI数据进一步偏鹰，需警惕跌破 $80,000 向 $78,500 回测的风险。</p>
+<table class="data-table">
+<tr><th>资产</th><th>最新价格</th><th>日内变化</th><th>趋势</th></tr>
+<tr><td>黄金（XAUUSD）</td><td>$4,690</td><td class="down">-0.4%</td><td class="down">CPI后快速回落</td></tr>
+<tr><td>美元指数（DXY）</td><td>98.41</td><td class="up">+0.3%</td><td class="up">通胀交易推升美元</td></tr>
+<tr><td>比特币（BTCUSD）</td><td>$80,250</td><td class="down">-1.3%</td><td class="down">风险资产承压</td></tr>
+<tr><td>S&P 500</td><td>7,320</td><td class="down">-0.8%</td><td class="down">降息预期受打压</td></tr>
+</table>
 
-                <h3>欧元/美元 — 回调看支撑（置信度 58%）</h3>
-                <p>欧元连涨五个交易日后因CPI数据超预期出现技术性回调，从1.18关口上方回落至1.1738附近。强美元回归是主要压力来源，但欧元区自身经济韧性和利差预期收敛仍提供中期支撑。1.1700是短期关键支撑，若PPI数据后守住该关口，欧元有望重新挑战1.18。</p>
+<h3>黄金：CPI冲击下的压力测试</h3>
+<p>黄金在CPI数据公布后一度快速回落至$4,680附近，随后在$4,690-4,700区间企稳。市场正在重新评估美联储利率路径——通胀走高意味着降息窗口进一步收窄，这对无息资产黄金构成短期压力。但地缘政治风险和滞胀预期同时为黄金提供中长期支撑。技术上，$4,650-4,670是近期关键支撑区域。</p>
 
-                <h2>本周关键经济数据</h2>
-                <div class="data-row">
-                    <div class="data-item">
-                        <div class="d-label">周二（已发布）</div>
-                        <div class="d-value" style="color:#f87171;">CPI +0.6%</div>
-                    </div>
-                    <div class="data-item">
-                        <div class="d-label">周三（今日）</div>
-                        <div class="d-value" style="color:#fbbf24;">PPI 预期+0.5%</div>
-                    </div>
-                    <div class="data-item">
-                        <div class="d-label">后续关注</div>
-                        <div class="d-value" style="color:#64748b;">零售销售</div>
-                    </div>
-                </div>
-                <p>4月CPI环比增长0.6%，为三年来最大涨幅，大幅推升市场对美联储维持高利率更长时间的预期。今日PPI数据若同样超预期，可能进一步强化鹰派定价，施压风险资产。</p>
+<h3>美元指数：通胀交易推动反弹</h3>
+<p>DXY从日内低点97.85附近强势拉升至98.40以上。通胀超预期→加息预期升温→利差扩大→美元走强的传导链条清晰展开。技术面上，98.50-98.70是近期重要阻力区间，突破则可能打开更多上行空间。</p>
 
-                <h2>市场情绪指数</h2>
-                <div class="data-row">
-                    <div class="data-item">
-                        <div class="d-label">市场情绪</div>
-                        <div class="d-value" style="color:#fbbf24;">52</div>
-                    </div>
-                    <div class="data-item">
-                        <div class="d-label">恐慌 → 贪婪</div>
-                        <div class="d-value" style="color:#64748b;">中性</div>
-                    </div>
-                    <div class="data-item">
-                        <div class="d-label">24h 变化</div>
-                        <div class="d-value" style="color:#f87171;">-6</div>
-                    </div>
-                </div>
-                <p>CPI超预期数据后市场情绪指数从58回落至52，回到中性区间。美伊冲突反复、霍尔木兹海峡局势紧张、叠加通胀压力回升，多重不确定因素压制风险偏好。</p>
+<h3>比特币：宏观逆风中的调整</h3>
+<p>比特币从$81,700附近回落至$80,250，跌幅约1.8%。风险资产在利率预期上行时首先承压。但值得注意的是，BTC在$80,000整数关口获得买盘支撑，显示下方需求依然存在。若宏观情绪进一步恶化，$78,500-79,000将成为下一个关键支撑。</p>
 
-                <h2>交易建议</h2>
-                <ul>
-                    <li><strong>黄金观望</strong>：PPI数据发布前建议观望，数据落地后若守住 $4,700 可轻仓试多，目标 $4,750-4,780；若跌破 $4,680 则看空至 $4,620</li>
-                    <li><strong>比特币区间防御</strong>：$80,000 上方暂持震荡思路，跌破 $79,800 考虑减仓，$78,500 为中期多空分水岭</li>
-                    <li><strong>欧元回踩接多</strong>：1.1700 附近可轻仓布局多单，止损 1.1670 下方，目标 1.1780-1.1820</li>
-                    <li><strong>本周关注</strong>：今日PPI数据、明日初请失业金及零售销售数据，数据密集期严格控仓</li>
-                </ul>
+<h2>🔮 后续关注焦点</h2>
 
-                <h2>风险提示</h2>
-                <ul>
-                    <li>PPI若大幅高于预期，将强化美联储鹰派立场，利空黄金和非美货币</li>
-                    <li>美伊谈判若出现重大突破（或破裂），可能引发黄金和原油的剧烈波动</li>
-                    <li>比特币若失守 $80,000 心理关口，可能触发程序化抛售加速下跌</li>
-                    <li>欧元若跌破 1.1700，短期上升结构将转为震荡，中期趋势面临考验</li>
-                </ul>
+<p>本次CPI数据已经从根本上改变了短期宏观交易格局：</p>
 
-                <div class="key-box">
-                    <div class="label">AI 市场观察</div>
-                    <div class="value" style="font-size:14px; font-weight:400; color:#c8d6e5; line-height:1.8;">
-                        <strong style="color:#3B82F6;">基本面观察</strong><br>
-                        黄金区间 $4,700-4,750，比特币区间 $80,000-82,000，欧元区间 1.1700-1.1780。<br>
-                        CPI超预期后市场重新定价利率路径，今日PPI将是确认通胀趋势的关键数据。<br>
-                        以上数据仅为市场信息展示，不构成任何投资建议。投资有风险。
-                    </div>
-                </div>
+<ul>
+<li><strong>美联储利率预期：</strong>市场此前定价2026年2次降息，现在可能需要重新评估。CME FedWatch数据显示首次降息预期已推迟至12月以后。</li>
+<li><strong>来自伊朗和霍尔木兹的持续风险：</strong>能源供给冲击是否进一步传导至核心CPI，将决定通胀的持续性。</li>
+<li><strong>技术性因素消退：</strong>如果排除政府停摆导致的住房统计扭曲，真实核心通胀可能低于头条数字，但市场短期内将以头条数据为交易依据。</li>
+<li><strong>交叉资产策略：</strong>短期内做多美元、做空商品货币可能延续；黄金在4,650-4,750区间宽幅震荡概率较大。</li>
+</ul>
 
-                <p style="font-size:12px; color:#475569; margin-top:32px;"><em>免责声明：以上分析由 AI 模型生成，仅供参考，不构成投资建议。交易有风险，请自行决策。</em></p>
+<div class="highlight-box">
+<strong>⚠️ 风险提示：</strong>本分析由AI交易研究系统生成，基于已公布数据和模型推演，仅供参考，不构成投资建议。市场存在高度不确定性，CPI数据公布后短期内市场波动可能加剧。
+</div>
 
-                <a href="/" class="back-link">← 返回首页</a>
-            </div>
-        </article>
+</div>
 
-        <div class="footer">
-            <p>© 2026 <a href="https://tianshu.shop">Tianshu</a> — AI交易分析 · 策略记录 · 自动研究</p>
-        </div>
-    </div>
-<div style="text-align:center;padding:20px 0 10px;border-top:1px solid rgba(59,130,246,0.08);">
-<p style="font-size:11px;color:#334155;">· 本文由人工智能生成，仅供学习参考，不构成任何投资建议 ·<br>投资有风险，入市需谨慎。</p>
-</div></body>
+<div class="footer">
+<p>&copy; 2026 <a href="https://tianshu.shop">天枢</a> &mdash; AI洞察研究</p>
+<p style="margin-top:8px;font-size:12px;color:#334155;">万千智能，一枢统御</p>
+</div>
+</div>
+</body>
 </html>
