@@ -20,13 +20,6 @@ body{background:#080c18;color:#c8d6e5;font-family:-apple-system,"PingFang SC","M
 .section-title{font-size:16px;font-weight:600;color:#94a3b8;margin:40px 0 20px;padding-left:12px;border-left:3px solid #60a5fa}
 .back-link{display:inline-block;margin:24px 0;color:#3B82F6;text-decoration:none;font-size:13px}
 .back-link:hover{text-decoration:underline}
-/* quick-ai */
-.quick-ai{margin:32px 0;padding:28px 24px;border:1px solid rgba(59,130,246,0.12);border-radius:16px;background:rgba(59,130,246,0.04);text-align:center}
-.quick-ai h3{font-size:16px;color:#94a3b8;margin-bottom:16px;font-weight:400}
-.quick-ai .qi-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:16px}
-.quick-ai select,.quick-ai button{padding:10px 16px;border-radius:8px;border:1px solid rgba(59,130,246,0.2);background:rgba(59,130,246,0.06);color:#e2e8f0;font-size:14px}
-.quick-ai button{background:linear-gradient(90deg,#3B82F6,#22D3EE);color:#fff;font-weight:600;cursor:pointer;border:none}
-/* articles */
 .article-list{display:flex;flex-direction:column;gap:20px;margin-bottom:40px}
 .article-card{padding:24px;border:1px solid rgba(59,130,246,0.12);border-radius:12px;background:rgba(59,130,246,0.03)}
 .article-card:hover{border-color:rgba(59,130,246,0.35);background:rgba(59,130,246,0.06)}
@@ -36,7 +29,6 @@ body{background:#080c18;color:#c8d6e5;font-family:-apple-system,"PingFang SC","M
 .article-card .desc{font-size:14px;color:#64748b;line-height:1.7}
 .article-card .meta-row{display:flex;gap:16px;margin-top:8px;font-size:11px;color:#475569}
 .article-card .tag-sm{display:inline-block;margin-top:10px;padding:2px 10px;border-radius:10px;font-size:11px;background:rgba(59,130,246,0.1);color:#3B82F6;border:1px solid rgba(59,130,246,0.2)}
-/* calendar */
 .cal-table{width:100%;border-collapse:collapse;margin-bottom:40px}
 .cal-table th{padding:10px 12px;text-align:left;font-size:12px;color:#64748b;border-bottom:1px solid rgba(59,130,246,0.1);font-weight:500}
 .cal-table td{padding:12px;font-size:13px;color:#c8d6e5;border-bottom:1px solid rgba(59,130,246,0.06)}
@@ -44,7 +36,6 @@ body{background:#080c18;color:#c8d6e5;font-family:-apple-system,"PingFang SC","M
 .cal-impact{display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:600}
 .cal-impact.high{background:rgba(239,68,68,0.15);color:#f87171}
 .cal-impact.med{background:rgba(251,191,36,0.15);color:#fbbf24}
-/* sentiment */
 .sentiment-row{display:flex;gap:24px;margin-bottom:40px}
 .sentiment-item{flex:1;padding:20px;border:1px solid rgba(59,130,246,0.1);border-radius:12px;text-align:center;background:rgba(59,130,246,0.02)}
 .sentiment-item .s-label{font-size:12px;color:#64748b;margin-bottom:6px}
@@ -53,7 +44,6 @@ body{background:#080c18;color:#c8d6e5;font-family:-apple-system,"PingFang SC","M
 .sentiment-item .s-value.yellow{color:#fbbf24}
 .sentiment-item .s-value.red{color:#f87171}
 .sentiment-item .s-status{font-size:13px;margin-top:4px}
-/* global */
 .global-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:40px}
 .global-card{padding:20px 16px;border:1px solid rgba(59,130,246,0.1);border-radius:12px;background:rgba(59,130,246,0.02);text-align:center}
 .global-card .g-icon{font-size:20px;margin-bottom:6px}
@@ -90,51 +80,77 @@ body{background:#080c18;color:#c8d6e5;font-family:-apple-system,"PingFang SC","M
 <h2 class="section-title">交易情绪</h2>
 <p style="font-size:11px;color:#475569;margin-top:-16px;margin-bottom:16px;">数据更新：2026.05.30 08:00 · 非实时数据，仅供参考</p>
 <div class="sentiment-row">
-<div class="sentiment-item"><div class="s-label">恐惧与贪婪指数</div><div class="s-value yellow">60</div><div class="s-status" style="color:#fbbf24;">贪婪 · PCE 3.8%创近三年新高，美股三大指数逆势创新高，标普500九周连涨</div></div>
-<div class="sentiment-item"><div class="s-label">黄金 XAUUSD</div><div class="s-value green">$4,541</div><div class="s-status" style="color:#34d399;">+1.02% · 周中触及$4,447后反弹修复$4,541，结束六周连跌收阳</div></div>
-<div class="sentiment-item"><div class="s-label">美元指数 DXY</div><div class="s-value red">98.94</div><div class="s-status" style="color:#f87171;">-0.08% · PCE数据公布后美元走弱，DXY跌破99关口至98.94</div></div>
-<div class="sentiment-item"><div class="s-label">加密货币情绪</div><div class="s-value red">26</div><div class="s-status" style="color:#f87171;">恐惧逼近极恐 · BTC跌至$73,662，ETF净流出加剧，BTC现货卖压上升</div></div>
+<div class="sentiment-item"><div class="s-label">恐惧与贪婪指数</div><div class="s-value yellow">60</div><div class="s-status" style="color:#fbbf24;">贪婪 · 标普九周连涨创2023年来最长纪录，Dow首破51K，Nasdaq两月涨25%</div></div>
+<div class="sentiment-item"><div class="s-label">黄金 XAUUSD</div><div class="s-value yellow">$4,541</div><div class="s-status" style="color:#fbbf24;">+1.02% · V型修复反弹至$4,541，PCE数据落地后买盘回归，$4,400支撑有效</div></div>
+<div class="sentiment-item"><div class="s-label">美元指数 DXY</div><div class="s-value green">98.94</div><div class="s-status" style="color:#34d399;">-0.08% · 99附近偏弱整理，美债收益率4.45%下行</div></div>
+<div class="sentiment-item"><div class="s-label">加密货币情绪</div><div class="s-value red">33</div><div class="s-status" style="color:#f87171;">恐惧 · Binance指数33维持恐惧，BTC退守$73,500，$62.5亿期权到期未推动方向</div></div>
 </div>
 
 <!-- 全球资产 -->
 <h2 class="section-title">全球资产</h2>
-<p style="font-size:11px;color:#475569;margin-top:-16px;margin-bottom:16px;">数据更新：2026.05.29 收盘 · 周末无交易</p>
+<p style="font-size:11px;color:#475569;margin-top:-16px;margin-bottom:16px;">数据更新：2026.05.29 收盘</p>
 <div class="global-grid">
+<div class="global-card"><div class="g-icon">🏛</div><div class="g-name">道琼斯</div><div class="g-price">51,032</div><div class="g-change up">+0.72%</div></div>
 <div class="global-card"><div class="g-icon">🏆</div><div class="g-name">黄金 XAUUSD</div><div class="g-price">$4,541</div><div class="g-change up">+1.02%</div></div>
 <div class="global-card"><div class="g-icon">💵</div><div class="g-name">美元指数 DXY</div><div class="g-price">98.94</div><div class="g-change down">-0.08%</div></div>
-<div class="global-card"><div class="g-icon">₿</div><div class="g-name">比特币 BTCUSD</div><div class="g-price">$73,662</div><div class="g-change up">+0.23%</div></div>
-<div class="global-card"><div class="g-icon">📊</div><div class="g-name">S&P 500</div><div class="g-price">7,588</div><div class="g-change up">+0.32% · 纪录新高</div></div>
+<div class="global-card"><div class="g-icon">₿</div><div class="g-name">比特币 BTCUSD</div><div class="g-price">$73,500</div><div class="g-change down">-3.1%</div></div>
+<div class="global-card"><div class="g-icon">📊</div><div class="g-name">S&P 500</div><div class="g-price">7,580</div><div class="g-change up">+0.20%</div></div>
 </div>
 
 <!-- 经济数据 -->
 <h2 class="section-title">经济数据</h2>
-<p style="font-size:11px;color:#475569;margin-top:-16px;margin-bottom:16px;">数据更新：2026.05.30 08:00 · 非实时数据，仅供参考</p>
+<p style="font-size:11px;color:#475569;margin-top:-16px;margin-bottom:16px;">数据更新：2026.05.31 15:00 · 非实时数据，仅供参考</p>
 <table class="cal-table">
 <tr><th>日期</th><th>事件</th><th>前值</th><th>预期</th><th>实际</th><th>影响</th></tr>
-<tr><td>05/26</td><td>美国4月新屋销售 <span style="color:#fbbf24;font-size:11px;margin-left:4px;">⚪ 符合预期</span></td><td>—</td><td>—</td><td style="color:#64748b;">70.8万</td><td><span class="cal-impact med">中</span></td></tr>
-<tr><td>05/27</td><td>美国Case-Shiller房价指数 <span style="color:#f87171;font-size:11px;margin-left:4px;">⚠️ 加速上涨</span></td><td>4.7%</td><td>—</td><td style="color:#f87171;">5.1%</td><td><span class="cal-impact med">中</span></td></tr>
-<tr><td>05/28 <span style="color:#34d399;font-size:10px;margin-left:2px;">🔥 超级周四</span></td><td>🇺🇸 美国4月PCE物价指数 <span style="color:#f87171;font-size:11px;margin-left:4px;">⚠️ 创近三年新高</span></td><td>3.5%</td><td>3.7%</td><td style="color:#f87171;">3.8%</td><td><span class="cal-impact high">高</span></td></tr>
-<tr><td>05/28</td><td>🇺🇸 美国Q1 GDP修正值 <span style="color:#fbbf24;font-size:11px;margin-left:4px;">⚪ 符合预期</span></td><td>1.8%</td><td>1.5%</td><td style="color:#64748b;">1.5%</td><td><span class="cal-impact high">高</span></td></tr>
-<tr><td>05/28</td><td>🇺🇸 美联储褐皮书 <span style="color:#fbbf24;font-size:11px;margin-left:4px;">⚪ 温和</span></td><td>—</td><td>—</td><td style="color:#64748b;">经济温和扩张</td><td><span class="cal-impact high">高</span></td></tr>
-<tr><td>05/29</td><td>🇺🇸 美股收盘 <span style="color:#34d399;font-size:11px;margin-left:4px;">✅ 三大指数创新高</span></td><td>—</td><td>—</td><td style="color:#34d399;">S&P 9周连涨</td><td><span class="cal-impact high">高</span></td></tr>
-<tr><td>05/29</td><td>Dell财报 <span style="color:#34d399;font-size:11px;margin-left:4px;">✅ 超预期</span></td><td>—</td><td>—</td><td style="color:#34d399;">领涨科技板块</td><td><span class="cal-impact med">中</span></td></tr>
-<tr><td colspan="6" style="text-align:center;color:#475569;font-size:12px;padding:12px;">━━━ 下周展望 ━━━</td></tr>
-<tr><td>06/01</td><td>🇺🇸 ISM制造业PMI（5月）</td><td>48.7</td><td>49.2</td><td style="color:#64748b;">待公布</td><td><span class="cal-impact high">高</span></td></tr>
-<tr><td>06/03</td><td>🇺🇸 ADP就业数据（5月）</td><td>—</td><td>—</td><td style="color:#64748b;">待公布</td><td><span class="cal-impact high">高</span></td></tr>
-<tr><td>06/05</td><td>🇺🇸 ⭐ 非农就业数据（5月）</td><td>—</td><td>18-20万</td><td style="color:#64748b;">待公布</td><td><span class="cal-impact high">高</span></td></tr>
-<tr><td>06/05</td><td>🇺🇸 失业率（5月）</td><td>—</td><td>—</td><td style="color:#64748b;">待公布</td><td><span class="cal-impact high">高</span></td></tr>
+<tr><td>05/26</td><td>美国4月耐用品订单 <span style="color:#34d399;font-size:11px;margin-left:4px;">✅ 超预期</span></td><td>-2.1%</td><td>+1.0%</td><td style="color:#34d399;">+1.2%</td><td><span class="cal-impact med">中</span></td></tr>
+<tr><td>05/26</td><td>5月咨商会消费者信心 <span style="color:#f87171;font-size:11px;margin-left:4px;">⚠️ 走弱</span></td><td>101.3</td><td>—</td><td style="color:#f87171;">98.7</td><td><span class="cal-impact high">高</span></td></tr>
+<tr><td>05/27 <span style="color:#60a5fa;font-size:10px;margin-left:2px;">★</span></td><td>Camp David 闭门会议 <span style="color:#fbbf24;font-size:11px;margin-left:4px;">👀 伊朗局势讨论</span></td><td>—</td><td>—</td><td style="color:#64748b;">进行中</td><td><span class="cal-impact high">高</span></td></tr>
+<tr><td>05/27</td><td>美国3月Case-Shiller房价指数 <span style="color:#fbbf24;font-size:11px;margin-left:4px;">✅ 符合预期</span></td><td>+4.2%</td><td>+4.1%</td><td>+4.1%</td><td><span class="cal-impact med">中</span></td></tr>
+<tr><td>05/28</td><td>美联储褐皮书 (Beige Book)</td><td>—</td><td>—</td><td style="color:#64748b;">完成</td><td><span class="cal-impact high">高</span></td></tr>
+<tr><td>05/28</td><td>美国Q1 GDP修正值 <span style="color:#64748b;font-size:11px;margin-left:4px;">持平</span></td><td>1.8%</td><td>—</td><td>1.8%</td><td><span class="cal-impact high">高</span></td></tr>
+<tr><td>05/29 <span style="color:#60a5fa;font-size:10px;margin-left:2px;">★</span></td><td>美国4月核心PCE物价指数 <span style="color:#f87171;font-size:11px;margin-left:4px;">⚠️ 同比3.8%创三年新高</span></td><td>3.2%</td><td>3.3%</td><td style="color:#f87171;">3.8%</td><td><span class="cal-impact high">高</span></td></tr>
+<tr><td>05/29 <span style="color:#34d399;font-size:10px;margin-left:2px;">🔥</span></td><td>Dell Q1财报 <span style="color:#34d399;font-size:11px;margin-left:4px;">✅ 超预期</span></td><td>—</td><td>—</td><td style="color:#34d399;">+32.8%</td><td><span class="cal-impact high">高</span></td></tr>
+<tr><td>05/29</td><td>比特币$6.25B期权到期 <span style="color:#fbbf24;font-size:11px;margin-left:4px;">Max Pain $75K</span></td><td>—</td><td>—</td><td style="color:#64748b;">完成</td><td><span class="cal-impact high">高</span></td></tr>
+<tr><td>06/01</td><td>美国5月ISM制造业PMI</td><td>—</td><td>—</td><td style="color:#64748b;">—</td><td><span class="cal-impact high">高</span></td></tr>
+<tr><td>06/04</td><td>美国ADP就业数据</td><td>—</td><td>—</td><td style="color:#64748b;">—</td><td><span class="cal-impact high">高</span></td></tr>
+<tr><td>06/05 <span style="color:#34d399;font-size:10px;margin-left:2px;">🔥 超级周五</span></td><td>美国5月非农就业报告 (NFP)</td><td>—</td><td>—</td><td style="color:#64748b;">—</td><td><span class="cal-impact high">高</span></td></tr>
 </table>
 
 <!-- AI解析 -->
 <h2 class="section-title">AI解析</h2>
 <div class="article-list">
-<div class="article-card"><a href="articles/2026-05-30-market-analysis.html">
-<div class="date">2026.05.30</div>
-<div class="title">周度复盘：PCE创近三年新高美股逆势九周连涨，黄金4540修复，比特币失守74000关口</div>
-<div class="desc">周度复盘：四月PCE同比3.8%创近三年新高，美股三大指数逆势再创新高——标普500九周连涨；黄金$4,540反弹修复；比特币跌至$73,660，Crypto恐惧指数逼近极恐26。</div>
-<div class="meta-row"><span>阅读时间约 6 分钟</span><span>数据来源：公开市场数据</span><span>更新：08:00</span></div>
+<div class="article-card"><a href="articles/2026-05-31-weekly-review.html">
+<div class="date">2026.05.31</div>
+<div class="title">五月收官周报：标普九周连涨道指首破51K，PCE升至3.8%创三年新高，比特币退守73K</div>
+<div class="desc">AI周度复盘：五月收官全景回顾——S&P 500九周连涨创2023年来最长纪录，Dow首破51,000，Nasdaq两月累涨25%；四月PCE同比3.8%创三年新高；黄金$4,541V型修复，比特币$73,500弱势整理，原油承压于$88。聚焦六月非农。</div>
+<div class="meta-row"><span>阅读时间约 5 分钟</span><span>数据来源：公开市场数据</span><span>更新：15:00</span></div>
 <span class="tag-sm">周度复盘</span>
 </a></div>
+
+<div class="article-card"><a href="articles/2026-05-28-market-analysis.html">
+<div class="date">2026.05.28</div>
+<div class="title">美股三指数齐创新高，原油暴跌近5%跌破$90，黄金回落至$4,455，PCE通胀数据今日来袭</div>
+<div class="desc">AI行情晨报：周三美股三大指数齐创历史新高（S&P 500 7,520, Dow 50,644, Nasdaq 26,675），原油暴跌近5%（WTI $89.41），伊朗谈判进展与白宫否认MOU并存，黄金回落至$4,455，比特币跌至$74,354，四月PCE今日发布成为焦点。</div>
+<div class="meta-row"><span>阅读时间约 5 分钟</span><span>数据来源：公开市场数据</span><span>更新：08:00</span></div>
+<span class="tag-sm">市场分析</span>
+</a></div>
+
+<div class="article-card"><a href="articles/2026-05-27-market-analysis.html">
+<div class="date">2026.05.27</div>
+<div class="title">美股续创纪录新高，标普500收于7,519，纳指26,656，今日聚焦Camp David会议</div>
+<div class="desc">AI行情晨报：周二美股三大指数全线收涨，标普500收盘7,519再创历史新高，纳指26,656收于纪录高位；黄金$4,500附近徘徊，比特币$75,643；今日Camp David闭门会议讨论伊朗局势，本周关注PCE与GDP修正值。</div>
+<div class="meta-row"><span>阅读时间约 4 分钟</span><span>数据来源：公开市场数据</span><span>更新：08:00</span></div>
+<span class="tag-sm">市场分析</span>
+</a></div>
+
+<div class="article-card"><a href="articles/2026-05-26-market-analysis.html">
+<div class="date">2026.05.26</div>
+<div class="title">伊朗和谈曙光推动全球资产重定价：欧洲股市暴涨、原油跌破$100、黄金重返$4,570</div>
+<div class="desc">AI行情晨报：Rubio称伊朗和平协议周一可能达成，Trump称已"基本谈妥"；欧洲股市大涨（DAX +2.01%）；布伦特原油跌破$100；黄金反弹至$4,570；比特币回升$76,970。本周聚焦PCE与GDP修正值。</div>
+<div class="meta-row"><span>阅读时间约 4 分钟</span><span>数据来源：公开市场数据</span><span>更新：08:00</span></div>
+<span class="tag-sm">市场分析</span>
+</a></div>
+
 <div class="article-card"><a href="articles/2026-05-25-market-analysis.html">
 <div class="date">2026.05.25</div>
 <div class="title">周开盘前瞻：假期交投清淡，黄金徘徊4500关口，比特币触及76K，本周聚焦核心PCE</div>
