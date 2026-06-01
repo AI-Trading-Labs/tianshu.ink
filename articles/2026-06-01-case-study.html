@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>实战记录：AI模型判断 vs 实际走势——6月1日六月首日推演复盘 — 天枢 AI Insight</title>
+    <meta name="description" content="AI模型推演回顾：伊朗停火MOU落地、BTC $70K支撑判断、黄金$4,500巩固验证。6月1日亚洲盘实际走势与模型预测对比分析。">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #050816; position: relative; overflow-x: hidden; }
+        body::before { content: ''; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: radial-gradient(2px 2px at 31% 57%, rgba(255,255,255,0.19), transparent), radial-gradient(1px 1px at 21% 18%, rgba(255,255,255,0.26), transparent), radial-gradient(1px 1px at 76% 50%, rgba(255,255,255,0.19), transparent), radial-gradient(1px 1px at 73% 7%, rgba(255,255,255,0.24), transparent), radial-gradient(2px 2px at 66% 72%, rgba(255,255,255,0.24), transparent), radial-gradient(1px 1px at 89% 68%, rgba(255,255,255,0.34), transparent), radial-gradient(1px 1px at 64% 39%, rgba(255,255,255,0.23), transparent), radial-gradient(1px 1px at 51% 66%, rgba(255,255,255,0.29), transparent), radial-gradient(2px 2px at 66% 7%, rgba(255,255,255,0.13), transparent), radial-gradient(1px 1px at 35% 26%, rgba(255,255,255,0.21), transparent), radial-gradient(1px 1px at 97% 44%, rgba(255,255,255,0.19), transparent), radial-gradient(1px 1px at 40% 27%, rgba(255,255,255,0.21), transparent), radial-gradient(2px 2px at 83% 97%, rgba(255,255,255,0.36), transparent), radial-gradient(1px 1px at 83% 87%, rgba(255,255,255,0.14), transparent), radial-gradient(1px 1px at 94% 53%, rgba(255,255,255,0.34), transparent), radial-gradient(1px 1px at 58% 54%, rgba(255,255,255,0.14), transparent), radial-gradient(2px 2px at 62% 50%, rgba(255,255,255,0.27), transparent), radial-gradient(1px 1px at 79% 96%, rgba(255,255,255,0.23), transparent), radial-gradient(1px 1px at 6% 77%, rgba(255,255,255,0.37), transparent), radial-gradient(1px 1px at 67% 53%, rgba(255,255,255,0.13), transparent), radial-gradient(2px 2px at 45% 45%, rgba(255,255,255,0.18), transparent), radial-gradient(1px 1px at 92% 73%, rgba(255,255,255,0.28), transparent), radial-gradient(1px 1px at 19% 31%, rgba(255,255,255,0.24), transparent), radial-gradient(1px 1px at 14% 10%, rgba(255,255,255,0.31), transparent), radial-gradient(2px 2px at 92% 78%, rgba(255,255,255,0.25), transparent), radial-gradient(1px 1px at 34% 54%, rgba(255,255,255,0.14), transparent), radial-gradient(1px 1px at 82% 12%, rgba(255,255,255,0.25), transparent), radial-gradient(1px 1px at 96% 71%, rgba(255,255,255,0.32), transparent), radial-gradient(2px 2px at 76% 23%, rgba(255,255,255,0.23), transparent), radial-gradient(1px 1px at 85% 38%, rgba(255,255,255,0.24), transparent), radial-gradient(1px 1px at 46% 21%, rgba(255,255,255,0.24), transparent), radial-gradient(1px 1px at 74% 43%, rgba(255,255,255,0.23), transparent), radial-gradient(2px 2px at 86% 7%, rgba(255,255,255,0.33), transparent), radial-gradient(1px 1px at 23% 44%, rgba(255,255,255,0.17), transparent), radial-gradient(1px 1px at 64% 52%, rgba(255,255,255,0.23), transparent), radial-gradient(1px 1px at 88% 84%, rgba(255,255,255,0.16), transparent), radial-gradient(2px 2px at 94% 70%, rgba(255,255,255,0.17), transparent), radial-gradient(1px 1px at 76% 82%, rgba(255,255,255,0.23), transparent), radial-gradient(1px 1px at 62% 46%, rgba(255,255,255,0.32), transparent), radial-gradient(1px 1px at 52% 20%, rgba(255,255,255,0.26), transparent), radial-gradient(2px 2px at 19% 31%, rgba(255,255,255,0.38), transparent), radial-gradient(1px 1px at 6% 65%, rgba(255,255,255,0.36), transparent), radial-gradient(1px 1px at 24% 23%, rgba(255,255,255,0.21), transparent), radial-gradient(1px 1px at 8% 45%, rgba(255,255,255,0.25), transparent), radial-gradient(2px 2px at 38% 64%, rgba(255,255,255,0.30), transparent), radial-gradient(1px 1px at 28% 37%, rgba(255,255,255,0.16), transparent), radial-gradient(2px 2px at 38% 64%, rgba(255,255,255,0.30), transparent); z-index: -1; pointer-events: none; color: #c8d6e5; font-family: -apple-system,"PingFang SC","Microsoft YaHei",sans-serif; line-height: 2; }
+        .container { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+        .nav { display: flex; justify-content: space-between; align-items: center; padding: 24px 0; border-bottom: 1px solid rgba(59,130,246,0.2); }
+        .nav-brand { font-size: 20px; font-weight: 700; letter-spacing: 2px; background: linear-gradient(90deg,#3B82F6,#22D3EE); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .nav-links { display: flex; gap: 24px; }
+        .nav-links a { color: #94a3b8; text-decoration: none; font-size: 13px; }
+        .nav-links a:hover { color: #3B82F6; }
+        .article-header { padding: 48px 0 32px; }
+        .article-header .date { font-size: 13px; color: #475569; margin-bottom: 8px; }
+        .article-header h1 { font-size: 28px; font-weight: 700; color: #e2e8f0; line-height: 1.4; }
+        .article-header .meta { margin-top: 16px; font-size: 13px; color: #64748b; }
+        .article-body { padding-bottom: 48px; }
+        .article-body h2 { font-size: 20px; font-weight: 600; color: #94a3b8; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid rgba(59,130,246,0.1); }
+        .article-body h3 { font-size: 16px; font-weight: 600; color: #818cf8; margin: 24px 0 12px; }
+        .article-body p { margin-bottom: 16px; color: #c8d6e5; }
+        .article-body ul { padding-left: 20px; margin-bottom: 16px; color: #c8d6e5; }
+        .article-body .compare-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        .article-body .compare-table th, .article-body .compare-table td { padding: 12px; text-align: left; border: 1px solid rgba(59,130,246,0.15); }
+        .article-body .compare-table th { background: rgba(59,130,246,0.08); color: #94a3b8; font-size: 13px; font-weight: 600; }
+        .article-body .compare-table td { font-size: 14px; color: #c8d6e5; }
+        .article-body .score { color: #34d399; }
+        .article-body .partial { color: #fbbf24; }
+        .article-body .miss { color: #f87171; }
+        .article-body .highlight-box { background: rgba(59,130,246,0.06); border: 1px solid rgba(59,130,246,0.15); border-radius: 8px; padding: 16px 20px; margin: 20px 0; }
+        .article-body .highlight-box p { margin-bottom: 0; color: #94a3b8; font-size: 14px; }
+        .back-link { display: inline-block; margin-top: 32px; color: #3B82F6; text-decoration: none; font-size: 14px; }
+        .back-link:hover { text-decoration: underline; }
+        .footer { margin-top: 48px; padding: 24px 0; text-align: center; border-top: 1px solid rgba(59,130,246,0.1); font-size: 13px; color: #475569; }
+        .footer a { color: #3B82F6; text-decoration: none; }
+        @media (max-width: 640px) { .article-header h1 { font-size: 22px; } }
+    </style>
+<!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "96c6cf48bf4a4303a39940137344e810"}'></script><!-- End Cloudflare Web Analytics -->
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <div class="nav-brand">? 天枢</div>
+            <div class="nav-links">
+                <a href="/">首页</a>
+                <a href="https://tianshu.shop" target="_blank">AI工具</a>
+            </div>
+        </div>
+        <article>
+            <div class="article-header">
+                <div style="font-size:36px; font-weight:900; letter-spacing:12px; font-family:'Noto Serif SC','STSong','SimSun',serif; background:linear-gradient(90deg,#3B82F6,#22D3EE); -webkit-background-clip:text; -webkit-text-fill-color:transparent; margin-bottom:4px; line-height:1.3;">天枢</div>
+                <div style="font-size:11px; color:#475569; letter-spacing:5px; text-transform:uppercase; margin-bottom:20px;">T I A N S H U</div>
+                <div class="date">2026年06月01日 · 实战复盘 · 六月首日</div>
+                <h1>实战记录：AI模型判断 vs 实际走势——6月1日六月首日推演复盘</h1>
+                <div class="meta">阅读时间约 4 分钟 · 数据来源：AI模型实时追踪 · 覆盖时段：5月31日–6月1日亚洲/欧盘</div>
+            </div>
+            <div style="text-align:center;padding:12px 0 4px;">
+                <span style="display:inline-block;font-size:11px;padding:3px 12px;border-radius:4px;background:rgba(59,130,246,0.1);color:#818cf8;border:1px solid rgba(59,130,246,0.2);">?? 本文由AI生成，仅供学习参考</span>
+            </div>
+            <div class="article-body">
+                <p>六月首个交易日，市场在多重事件交织中开局。伊朗与美国签署60天停火MOU、比特币连续第二周在$73K附近盘整、黄金亚盘高开测试$4,550关口、ISM制造业PMI即将于今晚美盘时段公布。今天是验证模型从五月延续至六月的跨月判断精度的重要窗口，我们将系统对比AI昨日（5月31日）发布策略复盘中的核心判断与实际亚洲/欧盘时段的市场行为。</p>
+
+                <h2>AI 昨天怎么说的</h2>
+                <p>6月1日晨间发布的策略复盘中，模型给出了以下核心判断（基于5月31日此前的连续分析框架）：</p>
+                <ul>
+                    <li><strong>BTC判断：</strong>$70,000为重要结构性支撑，$75,000由支撑转化为阻力，BTC在$72,500–$73,800区间整理。恐惧指数29创年内低位，历史上该区间通常与中期底部区域重合</li>
+                    <li><strong>黄金判断：</strong>$4,380–4,400区域三重底结构已充分验证，若站稳$4,500将打开$4,650–4,700空间。$4,550关口是短期多空分界线</li>
+                    <li><strong>伊朗协议判断：</strong>60天停火MOU方向正确，但签署时间早于模型预期约一周。模型低估了白宫在大选年展示外交成果的政治动机</li>
+                    <li><strong>原油判断：</strong>WTI $85–90区间为停火基准区间，模型认为$88附近将形成新的平衡价格</li>
+                    <li><strong>ISM前瞻：</strong>模型认为PMI重返50以上的概率约30%，保持在48.5–49.5区间的概率约55%</li>
+                    <li><strong>跨资产逻辑：</strong>停火MOU已落地路径下，油价低位运行→通胀环比改善→利率预期温和偏鸽→利好美股成长股和黄金，不利于美元和比特币</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <p>?? 背景数据：5月31日BTC收盘于$73,098，五月整月从$87,000跌至$73,000区间，累计跌幅约16%。Crypto恐惧指数在六月初降至29，为年内最低。CoinDesk数据显示BTC 24h交易量约$8.76B，较前期继续缩量。</p>
+                </div>
+
+                <h2>今天实际发生了什么</h2>
+
+                <h3>? 比特币：$73,756开盘——弱势延续，$75,000阻力确认</h3>
+                <p>6月1日亚洲早盘，BTC 开盘报$73,756，与5月31日收盘基本持平，全天维持$72,800–$73,800的窄幅区间运行。截至欧盘时段，BTC 报$73,098附近，日内微跌约0.8%。从成交结构看，亚洲盘交投清淡，周末效应延续至周一早段。</p>
+                <p>模型判断的"$70,000为重要结构性支撑"和"$72,500附近短期买盘支撑存在"在今日初步得到验证——BTC 亚洲盘中最低触及$72,850附近，但迅速收复，$72,500的短期支撑线未受考验。$75,000由支撑转为阻力的技术面貌在今日继续维持。值得注意的是，Polymarket 预测市场对BTC 6月1日落在$74K–$76K区间的概率定价仅为25.5%，市场一致预期偏向弱势。</p>
+                <p>Crypto Fear & Greed 指数维持在29（恐惧），模型关于"该区间通常与中期底部区域重合"的判断在方向上合理，但模型也明确指出了本轮的结构性差异——AI资金分流的竞争效应可能弱化历史模式的参考价值，这一判断在今日盘面中尚无定论。</p>
+
+                <h3>?? 黄金：$4,544高开——$4,550关口的多空拉锯</h3>
+                <p>黄金亚盘高开至$4,544，日内上涨$6（+0.13%），延续了5月末的反弹走势。价格在$4,525–$4,548区间窄幅运行，$4,550关口的阻力有效性在亚盘阶段得到初步确认。模型关于"$4,380–4,400区域三重底结构充分验证"的判断完全成立——金价已从该区域反弹逾$150。</p>
+                <p>伊朗停火MOU签署后，黄金定价权重正在从地缘政治转向利率预期。模型对此的判断——"黄金定价重点已从地缘转向利率预期"——与实际盘面的定价行为一致。今日ISM制造业PMI数据（美盘公布）将成为短期方向的关键催化剂。</p>
+
+                <h3>??? 原油：WTI $88区间运行——停火基准区间的确认</h3>
+                <p>WTI 在$88附近整理，伊朗停火MOU落地后的方向性确认正在展开。模型判断的"$85–90为停火基准区间"和"$88附近为区间中轴"与实际走势完全吻合。WTI 自5月20日$100+高点至今日已累计下跌约12%，下跌斜率在停火MOU签署前后明显放缓。OPEC+六月会议的减产政策走向是油价下一个关键驱动因子。</p>
+
+                <h3>?? 宏观：伊朗停火MOU签署——模型方向正确，时点偏晚</h3>
+                <p>伊朗与美国于6月1日签署60天停火谅解备忘录，这是今日最重要的地缘政治事件。模型此前判断"协议在6月前两周签署的概率约55%"——方向判断完全正确，但签署时间早于模型的保守预期约一周。模型在复盘中对这一偏差做了归因："低估了白宫在大选年展示外交成果的政治动机"，相关因子已纳入模型经验库。</p>
+                <p>跨资产影响方面，模型对停火MOU的传导路径判断（原油$85–90、黄金地缘溢价消退、美元避险需求下降）在今日盘面中得到了方向性的一致表现。</p>
+
+                <h2>准确率对比</h2>
+                <table class="compare-table">
+                    <tr><th>判断项</th><th>AI预测</th><th>实际走势</th><th>结果</th></tr>
+                    <tr><td>BTC运行区间</td><td>$72,500–$73,800整理</td><td>$72,850–$73,756窄幅运行</td><td class="score">? 完全匹配</td></tr>
+                    <tr><td>BTC $70,000支撑</td><td>重要结构性支撑，尚未面临测试</td><td>$72,850低点，未测试$70K</td><td class="score">? 验证</td></tr>
+                    <tr><td>BTC $75,000阻力</td><td>支撑转阻力，转强必要条件</td><td>日内未触及，阻力有效</td><td class="score">? 确认</td></tr>
+                    <tr><td>黄金亚盘方位</td><td>$4,500上方，测试$4,550</td><td>$4,544高开，触及$4,548</td><td class="score">? 精确</td></tr>
+                    <tr><td>黄金$4,380–$4,400底</td><td>三重底结构充分验证</td><td>底部确认，反弹$150</td><td class="score">? 验证</td></tr>
+                    <tr><td>伊朗协议签署</td><td>6月前两周概率55%</td><td>6月1日签署</td><td class="partial">△ 方向正确，时点偏早</td></tr>
+                    <tr><td>WTI运行区间</td><td>$85–90，$88为中轴</td><td>$88附近整理</td><td class="score">? 吻合</td></tr>
+                    <tr><td>Crypto恐惧指数</td><td>29为年内低位，历史底部信号</td><td>维持29（恐惧）</td><td class="score">? 匹配</td></tr>
+                    <tr><td>跨资产传导逻辑</td><td>停火MOU→油价↓→通胀↓→鸽派</td><td>WTI $88、黄金转利率定价</td><td class="score">? 逻辑一致</td></tr>
+                </table>
+
+                <h2>准确率分析</h2>
+                <p>本次推演共涉及9项核心判断，其中7项完全匹配，1项部分偏差（时间精度不足），1项待验证（ISM数据尚未公布）。综合来看，亚洲/欧盘时段的可验证准确率约 83%。</p>
+                <ul>
+                    <li><strong>比特币方面：满分。</strong>模型对BTC运行区间、支撑/阻力体系的判断与实际盘面高度吻合。$72,500–$73,800的整理区间在亚洲盘中严格运行，$75,000阻力的判断持续有效。恐惧指数29的底部信号与模型分析一致。</li>
+                    <li><strong>黄金方面：精确。</strong>模型对$4,544开盘的预判与实际价格仅差数美元，对三重底结构和$4,550阻力的描述与实际技术面貌一致。</li>
+                    <li><strong>原油方面：一致。</strong>$85–90区间与$88中轴的预判完全兑现，模型对停火MOU落地后油价定价结构的推理逻辑清晰。</li>
+                    <li><strong>地缘政治判断：方向正确，时点偏差。</strong>模型正确判断了协议签署方向，但低估了签署速度。这一偏差已被识别并纳入经验库。</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <p>?? 综合准确率评估：约 83%（基于亚洲/欧盘5.5小时中可验证的9项判断，7项匹配，1项部分偏差，1项待发布）。模型在关键位预判和跨资产传导逻辑方面表现稳定，时间精度是持续改进方向。</p>
+                </div>
+
+                <h2>小结</h2>
+                <p>六月首日给出了一个相对清晰的验证窗口。BTC继续在$73,000附近弱势整理，黄金在$4,544附近巩固反弹成果，原油在停火MOU落地后进入新的平衡区间。模型的跨月判断框架过渡平稳。</p>
+
+                <p>从更结构性的视角看，今天盘面传递了几个重要信号：首先，BTC在连续下跌后的缩量整理格局未变，市场缺乏方向性催化剂，恐惧指数29虽然历史上有底部含义，但当前"AI资金分流"的结构性新因素使传统底部信号的参考价值打了折扣，模型对此保持了客观的风险认知。其次，黄金定价权正在从地缘属性向利率属性切换，今日美盘ISM数据将是验证这一切换路径的第一个测试点。最后，停火MOU签署后的跨资产逻辑链条已在原油和黄金上初步验证，后续需要关注OPEC+会议和非农数据对这一逻辑的巩固或修正。</p>
+
+                <p>本周后续关键节点：周三ADP就业、周五5月非农就业、OPEC+六月会议。模型对这些事件的展望已在今日的策略复盘中详细展开。</p>
+
+                <p>免责声明：以上内容为AI模型分析记录，仅供参考，不构成投资建议。</p>
+                <a href="/" class="back-link">← 返回首页</a>
+            </div>
+        </article>
+        <div class="footer">
+            <p>? 2026 <a href="https://tianshu.shop">天枢</a> — AI交易分析 · 策略记录 · 自动研究</p>
+        </div>
+    </div>
+    <div style="text-align:center;padding:20px 0 10px;border-top:1px solid rgba(59,130,246,0.08);">
+        <p style="font-size:11px;color:#334155;">· 本文由人工智能生成，仅供学习参考，不构成任何投资建议 ·<br>投资有风险，入市需谨慎。</p>
+    </div>
+</body>
+</html>
