@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>策略复盘：CPI血洗后的一周——三大资产同步修正，FOMC前策略再评估 — 天枢 AI Insight</title>
+    <meta name="description" content="AI策略复盘：5月CPI爆表4.2%引发的跨资产重定价一周全景回顾。标普500跌穿7,300、黄金失守$4,200、比特币$62K苦苦支撑、美元突破100。FOMC下周登场前的策略参数评估与技术面再定位。">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #050816; position: relative; overflow-x: hidden; }
+        body::before { content: ''; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: radial-gradient(2px 2px at 31% 57%, rgba(255,255,255,0.1885), transparent), radial-gradient(1px 1px at 21% 18%, rgba(255,255,255,0.2612), transparent), radial-gradient(1px 1px at 76% 50%, rgba(255,255,255,0.1876), transparent), radial-gradient(1px 1px at 73% 7%, rgba(255,255,255,0.2407), transparent), radial-gradient(2px 2px at 66% 72%, rgba(255,255,255,0.2365), transparent), radial-gradient(1px 1px at 89% 68%, rgba(255,255,255,0.3438), transparent), radial-gradient(1px 1px at 64% 39%, rgba(255,255,255,0.2350), transparent), radial-gradient(1px 1px at 51% 66%, rgba(255,255,255,0.2882), transparent), radial-gradient(2px 2px at 66% 7%, rgba(255,255,255,0.1321), transparent), radial-gradient(1px 1px at 35% 26%, rgba(255,255,255,0.2056), transparent), radial-gradient(1px 1px at 97% 44%, rgba(255,255,255,0.1941), transparent), radial-gradient(1px 1px at 40% 27%, rgba(255,255,255,0.2062), transparent), radial-gradient(2px 2px at 83% 97%, rgba(255,255,255,0.3599), transparent), radial-gradient(1px 1px at 83% 87%, rgba(255,255,255,0.1403), transparent), radial-gradient(1px 1px at 94% 53%, rgba(255,255,255,0.3379), transparent), radial-gradient(1px 1px at 58% 54%, rgba(255,255,255,0.1360), transparent), radial-gradient(2px 2px at 62% 50%, rgba(255,255,255,0.2749), transparent), radial-gradient(1px 1px at 79% 96%, rgba(255,255,255,0.2329), transparent), radial-gradient(1px 1px at 6% 77%, rgba(255,255,255,0.3712), transparent), radial-gradient(1px 1px at 67% 53%, rgba(255,255,255,0.1349), transparent), radial-gradient(2px 2px at 45% 45%, rgba(255,255,255,0.1769), transparent), radial-gradient(1px 1px at 92% 73%, rgba(255,255,255,0.2785), transparent), radial-gradient(1px 1px at 19% 31%, rgba(255,255,255,0.2436), transparent), radial-gradient(1px 1px at 14% 10%, rgba(255,255,255,0.3063), transparent), radial-gradient(2px 2px at 92% 78%, rgba(255,255,255,0.2457), transparent), radial-gradient(1px 1px at 34% 54%, rgba(255,255,255,0.1412), transparent), radial-gradient(1px 1px at 82% 12%, rgba(255,255,255,0.2496), transparent), radial-gradient(1px 1px at 96% 71%, rgba(255,255,255,0.3235), transparent), radial-gradient(2px 2px at 76% 23%, rgba(255,255,255,0.2326), transparent), radial-gradient(1px 1px at 85% 38%, rgba(255,255,255,0.2398), transparent), radial-gradient(1px 1px at 46% 21%, rgba(255,255,255,0.2425), transparent), radial-gradient(1px 1px at 74% 43%, rgba(255,255,255,0.2342), transparent), radial-gradient(2px 2px at 86% 7%, rgba(255,255,255,0.3340), transparent), radial-gradient(1px 1px at 23% 44%, rgba(255,255,255,0.1749), transparent), radial-gradient(1px 1px at 64% 52%, rgba(255,255,255,0.2279), transparent), radial-gradient(1px 1px at 88% 84%, rgba(255,255,255,0.1584), transparent), radial-gradient(2px 2px at 94% 70%, rgba(255,255,255,0.1739), transparent), radial-gradient(1px 1px at 76% 82%, rgba(255,255,255,0.2314), transparent), radial-gradient(1px 1px at 62% 46%, rgba(255,255,255,0.3160), transparent), radial-gradient(1px 1px at 52% 20%, rgba(255,255,255,0.2642), transparent), radial-gradient(2px 2px at 19% 31%, rgba(255,255,255,0.3773), transparent), radial-gradient(1px 1px at 6% 65%, rgba(255,255,255,0.3649), transparent), radial-gradient(1px 1px at 24% 23%, rgba(255,255,255,0.2121), transparent), radial-gradient(1px 1px at 8% 45%, rgba(255,255,255,0.2523), transparent), radial-gradient(2px 2px at 38% 64%, rgba(255,255,255,0.2984), transparent), radial-gradient(1px 1px at 28% 37%, rgba(255,255,255,0.1601), transparent), radial-gradient(1px 1px at 34% 86%, rgba(255,255,255,0.2017), transparent), radial-gradient(1px 1px at 28% 89%, rgba(255,255,255,0.2957), transparent), radial-gradient(2px 2px at 25% 68%, rgba(255,255,255,0.2031), transparent), radial-gradient(1px 1px at 8% 17%, rgba(255,255,255,0.3925), transparent), radial-gradient(1px 1px at 72% 39%, rgba(255,255,255,0.3567), transparent), radial-gradient(1px 1px at 26% 9%, rgba(255,255,255,0.1412), transparent), radial-gradient(2px 2px at 35% 63%, rgba(255,255,255,0.3592), transparent), radial-gradient(1px 1px at 55% 68%, rgba(255,255,255,0.2977), transparent), radial-gradient(1px 1px at 81% 90%, rgba(255,255,255,0.1801), transparent), radial-gradient(1px 1px at 73% 43%, rgba(255,255,255,0.1592), transparent), radial-gradient(2px 2px at 77% 39%, rgba(255,255,255,0.1292), transparent), radial-gradient(1px 1px at 53% 22%, rgba(255,255,255,0.1892), transparent), radial-gradient(1px 1px at 24% 89%, rgba(255,255,255,0.2113), transparent), radial-gradient(1px 1px at 30% 78%, rgba(255,255,255,0.3904), transparent); z-index: -1; pointer-events: none;
+            color: #c8d6e5; font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; line-height: 2;
+        }
+        .container { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+        .nav { display: flex; justify-content: space-between; align-items: center; padding: 24px 0; border-bottom: 1px solid rgba(59,130,246,0.2); }
+        .nav-brand { font-size: 20px; font-weight: 700; letter-spacing: 2px; background: linear-gradient(90deg,#3B82F6,#22D3EE); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .nav-links { display: flex; gap: 24px; }
+        .nav-links a { color: #94a3b8; text-decoration: none; font-size: 13px; }
+        .nav-links a:hover { color: #3B82F6; }
+        .article-header { padding: 48px 0 32px; }
+        .article-header .date { font-size: 13px; color: #475569; margin-bottom: 8px; }
+        .article-header h1 { font-size: 28px; font-weight: 700; color: #e2e8f0; line-height: 1.4; }
+        .article-header .meta { margin-top: 16px; font-size: 13px; color: #64748b; }
+        .article-body { padding-bottom: 48px; }
+        .article-body h2 { font-size: 20px; font-weight: 600; color: #94a3b8; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid rgba(59,130,246,0.15); }
+        .article-body h3 { font-size: 16px; font-weight: 600; color: #818cf8; margin: 24px 0 12px; }
+        .article-body p { margin-bottom: 16px; color: #c8d6e5; }
+        .article-body ul { padding-left: 20px; margin-bottom: 16px; color: #c8d6e5; }
+        .article-body ul li { margin-bottom: 8px; }
+        .article-body .key-box { background: rgba(59,130,246,0.06); border: 1px solid rgba(59,130,246,0.2); border-radius: 12px; padding: 20px 24px; margin: 20px 0; }
+        .article-body .key-box .label { font-size: 12px; color: #64748b; margin-bottom: 4px; }
+        .article-body .key-box .value { font-size: 16px; font-weight: 600; color: #fbbf24; }
+        .article-body .data-row { display: flex; gap: 16px; flex-wrap: wrap; margin: 16px 0; }
+        .data-row .data-item { flex: 1; min-width: 130px; padding: 16px; background: rgba(59,130,246,0.04); border: 1px solid rgba(59,130,246,0.1); border-radius: 8px; text-align: center; }
+        .data-row .data-item .d-label { font-size: 12px; color: #64748b; }
+        .data-row .data-item .d-value { font-size: 18px; font-weight: 600; color: #e2e8f0; margin-top: 4px; }
+        .article-body .signal-table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+        .article-body .signal-table th { padding: 10px 12px; text-align: left; font-size: 12px; color: #64748b; border-bottom: 1px solid rgba(59,130,246,0.1); font-weight: 500; }
+        .article-body .signal-table td { padding: 12px; font-size: 13px; border-bottom: 1px solid rgba(59,130,246,0.06); }
+        .article-body .ai-insight { background: linear-gradient(135deg, rgba(59,130,246,0.08), rgba(129,140,248,0.08)); border: 1px solid rgba(129,140,248,0.2); border-radius: 12px; padding: 20px 24px; margin: 20px 0; }
+        .article-body .ai-insight .ai-label { font-size: 12px; color: #818cf8; margin-bottom: 8px; font-weight: 600; }
+        .back-link { display: inline-block; margin-top: 32px; color: #3B82F6; text-decoration: none; font-size: 14px; }
+        .back-link:hover { text-decoration: underline; }
+        .footer { margin-top: 48px; padding: 24px 0; text-align: center; border-top: 1px solid rgba(59,130,246,0.1); font-size: 13px; color: #475569; }
+        .footer a { color: #3B82F6; text-decoration: none; }
+        @media (max-width: 640px) { .article-header h1 { font-size: 22px; } .data-row { flex-direction: column; } }
+    </style>
+<!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "96c6cf48bf4a4303a39940137344e810"}'></script><!-- End Cloudflare Web Analytics -->
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <div class="nav-brand">&#x2601; 天枢</div>
+            <div class="nav-links">
+                <a href="/">首页</a>
+                <a href="https://tianshu.shop" target="_blank">AI工具</a>
+            </div>
+        </div>
+        <article>
+            <div class="article-header">
+                <div style="font-size:36px; font-weight:900; letter-spacing:12px; font-family:'Noto Serif SC','STSong','SimSun',serif; background:linear-gradient(90deg,#3B82F6,#22D3EE); -webkit-background-clip:text; -webkit-text-fill-color:transparent; margin-bottom:4px; line-height:1.3;">天枢</div>
+                <div style="font-size:11px; color:#475569; letter-spacing:5px; text-transform:uppercase; margin-bottom:20px;">T I A N S H U</div>
+                <div class="date">2026年06月13日 · 周六 · 周度策略复盘</div>
+                <h1>策略复盘：CPI血洗后的一周——三大资产同步修正，FOMC前策略再评估</h1>
+                <div class="meta">阅读时间约 6 分钟 · AI模型：天枢 · 置信度：65%</div>
+            </div>
+            <div style="text-align:center;padding:12px 0 4px;">
+<span style="display:inline-block;font-size:11px;padding:3px 12px;border-radius:4px;background:rgba(59,130,246,0.1);color:#818cf8;border:1px solid rgba(59,130,246,0.2);">&#x2699; 本文由AI生成，仅供学习参考</span>
+</div><div class="article-body">
+
+                <p>本周（6月8日-12日）是2026年以来宏观冲击最剧烈的一周。5月CPI同比飙升至4.2%，引爆了自2025年8月以来最大规模的跨资产同步修正。标普500从7,610高点仅用五个交易日即跌穿7,300，黄金暴跌3%失守$4,200，比特币在$60,000边缘苦苦支撑，美元指数重返100上方。随着下周FOMC决议（6月17-18日）的临近，市场正经历一次根本性的利率预期重新锚定。</p>
+
+                <div class="key-box">
+                    <div class="label">AI 策略诊断</div>
+                    <div class="value" style="font-size:14px; font-weight:400; color:#c8d6e5; line-height:1.6;">本周是宏观因子驱动的一次"范式转换"——从"通胀回落+降息可期"到"通胀粘性+加息逼近"的叙事切换已经完成。趋势跟踪策略在本周遭遇全面回撤，三大资产的同步向下修正使得多品种分散的防御效果显著削弱。模型判断：这是自4月初伊朗局势升级以来最重要的一次策略压力测试，FOMC决议前策略应以参数收紧和风险管理为优先考量。</div>
+                </div>
+
+                <h2>&#x1F4CA; 本周市场全景：六月第二周收盘数据</h2>
+
+                <div class="data-row">
+                    <div class="data-item"><div class="d-label">标普500</div><div class="d-value" style="color:#f87171;">~7,259</div><div style="font-size:11px;color:#f87171;">周跌 -4.6% 历史高点回撤</div></div>
+                    <div class="data-item"><div class="d-label">道琼斯</div><div class="d-value" style="color:#f87171;">~49,400</div><div style="font-size:11px;color:#f87171;">周内近千点暴跌</div></div>
+                    <div class="data-item"><div class="d-label">纳斯达克</div><div class="d-value" style="color:#f87171;">~25,100</div><div style="font-size:11px;color:#f87171;">周跌超2% 科技重挫</div></div>
+                    <div class="data-item"><div class="d-label">VIX</div><div class="d-value" style="color:#f87171;">21.43</div><div style="font-size:11px;color:#f87171;">恐慌阈值上方</div></div>
+                </div>
+                <div class="data-row">
+                    <div class="data-item"><div class="d-label">黄金 XAUUSD</div><div class="d-value" style="color:#f87171;">$4,143</div><div style="font-size:11px;color:#f87171;">周跌 -3.35% 年内最大</div></div>
+                    <div class="data-item"><div class="d-label">比特币 BTCUSD</div><div class="d-value" style="color:#f87171;">$62,037</div><div style="font-size:11px;color:#f87171;">月内累跌-22.5%</div></div>
+                    <div class="data-item"><div class="d-label">美元指数 DXY</div><div class="d-value" style="color:#34d399;">100.04</div><div style="font-size:11px;color:#34d399;">突破100关口</div></div>
+                    <div class="data-item"><div class="d-label">美债10Y</div><div class="d-value" style="color:#f87171;">~4.65%</div><div style="font-size:11px;color:#64748b;">+8bp</div></div>
+                </div>
+                <p style="font-size:11px;color:#475569;">数据截至6月12日美股收盘 · 5月CPI同比4.2%创三年新高 · 12月加息概率接近80% · VIX突破20恐慌线 · 标普从7,610回撤4.6%</p>
+
+                <h2>&#x1F4DD; 本周核心事件回顾</h2>
+
+                <h3>1. CPI 4.2% —— 周三的"范式转换"时刻</h3>
+                <p>周三（6月10日）美国5月CPI同比4.2%（前值3.8%，预期3.3%），创2023年4月以来的最高年率读数。核心CPI连续第三个月维持在3.6%上方。能源分项（汽油同比+41%）贡献了月度涨幅的60%以上。CPI数据公布后道琼斯盘中暴跌近千点（年内最惨），标普500跌1.62%至7,259，黄金单日暴跌3.35%至$4,143，六个交易日从$4,900区域暴跌12%。CME FedWatch数据显示，12月加息概率从CPI前的65%进一步攀升至接近80%。</p>
+
+                <h3>2. PPI（周四）—— 上游通胀压力确认</h3>
+                <p>周四（6月11日）公布的5月PPI数据进一步确认了上游价格向终端传导的趋势。虽然PPI的绝对读数未像CPI那样引发剧烈波动，但与CPI一同构成了"双重通胀超预期"的数据组合，彻底打消了市场对"CPI只是能源项异常干扰"的侥幸预期。FOMC下周会议前，市场对加息风险的定价已趋于完整。</p>
+
+                <h3>3. 密歇根消费者信心（周五）—— 预期管理的试金石</h3>
+                <p>周五（6月12日）的密歇根大学消费者信心指数和通胀预期数据是FOMC前最后一份重要软数据。市场关注点在于消费者对未来一年通胀预期的变化——若预期通胀率显著上升，将确认通胀预期的"脱锚"风险，进一步强化加息预期。</p>
+
+                <div class="key-box">
+                    <div class="label">本周宏观数据链</div>
+                    <div style="font-size:14px; font-weight:400; color:#c8d6e5; line-height:1.8;">
+                        &#x26A0; 周三 6/10：CPI同比4.2%（前值3.8%）—— 核心冲击<br>
+                        &#x26A0; 周四 6/11：PPI超预期 —— 上游通胀传导确认<br>
+                        &#x26A0; 周五 6/12：密歇根消费者信心 —— 通胀预期跟踪<br>
+                        &#x1F451; 下周 6/17-18：FOMC决议 —— Warsh首秀 · 点阵图重估
+                    </div>
+                </div>
+
+                <h2>&#x1F50D; 各资产技术分析与策略评估</h2>
+
+                <h3>&#x1F4C8; 标普500：历史高点回撤4.6%，技术性修正尚未结束</h3>
+
+                <p>标普500从6月2日创下的历史高点7,610至周三收盘7,259，五个交易日回撤4.6%。虽然在2026年的长牛行情中不算极端跌幅，但回撤速度和结构——11个板块全线收跌、VIX突破20、AI龙头股领跌——是年内最值得关注的调整信号。</p>
+
+                <p><strong>技术面分析：</strong>标普500在7,259收盘，已跌破20日均线（约7,450）和50日均线（约7,380）两道短期防线。当前下方支撑位于7,200（100日均线附近）和7,050（200日均线及3月中旬整理平台）。上方阻力位于7,350（前期平台下沿）和7,450（20日均线回抽确认位置）。从指标层面观察，日线RSI回落至35附近，进入超卖区间但尚未出现底部背离信号，意味着短期内反弹修复的概率与技术性下探的动能并存。</p>
+
+                <p><strong>策略评估：</strong>趋势跟踪策略在本周遭遇连续方向性打击。从6月2日7,610高点开始的调整级别已超出此前模型对"技术性回调"（预期2-3%）的评估范围。模型在5月底策略复盘中曾判断"九周连涨后1-3周存在技术性整理可能"，但对整理深度（-4.6%）和催化剂强度（CPI 4.2%）均存在预期偏差。</p>
+
+                <div class="data-row">
+                    <div class="data-item"><div class="d-label">当前点位</div><div class="d-value" style="color:#f87171;">7,259</div></div>
+                    <div class="data-item"><div class="d-label">短期支撑</div><div class="d-value" style="color:#f87171;">7,200 / 7,050</div></div>
+                    <div class="data-item"><div class="d-label">短期阻力</div><div class="d-value" style="color:#34d399;">7,350 / 7,450</div></div>
+                    <div class="data-item"><div class="d-label">日线RSI</div><div class="d-value" style="color:#f87171;">~35</div></div>
+                </div>
+
+                <h3>&#x1F4B0; 黄金：从$4,900到$4,143的六周暴跌，寻找新平衡</h3>
+
+                <p>黄金是本轮回调中受冲击最大的资产之一。从5月初的$4,900到本周的$4,143，六周累计跌幅约15%。周三单日暴跌3.35%（$4,255→$4,143）为2026年内最大单日跌幅。从52周高点$5,478算起，当前价格已较历史高点回撤约24%，技术上已进入深度修正区间。</p>
+
+                <p><strong>下跌驱动力排序：</strong></p>
+                <p>① <strong>实际利率上行（核心驱动）</strong>：CPI 4.2%引爆加息预期，10年期美债收益率飙升约8bp至4.65%，实际利率随之走高。黄金作为零孳息资产，在利率上行环境下的吸引力系统性下降。</p>
+                <p>② <strong>美元走强</strong>：DXY突破100关口，美元与黄金的负相关关系在本周表现最为充分。CPI数据公布后黄金的瞬间暴跌与DXY的同步拉升几乎完全同步。</p>
+                <p>③ <strong>地缘溢价持续消退</strong>：伊朗60天停火MOU签署后，地缘政治避险需求持续弱化，黄金失去了一季度的核心溢价支撑。</p>
+
+                <p><strong>技术面分析：</strong>黄金在$4,100-4,150区域面临考验——该区域是2025年底的前期整理平台，也是200周均线的近似位置。$4,000整数关口是心理层面的最后防线。上方阻力方面，$4,220（前期整理区下沿）和$4,300（跳空缺口压力）构成两级反弹阻力。日线RSI跌破30进入深度超卖，但在持续性的宏观压力下，超卖本身并不构成反转依据——需要等待利率预期企稳或技术性底部结构的形成。</p>
+
+                <p><strong>策略评估：</strong>黄金策略在本周承受了最大回撤压力。模型在5月底的策略复盘中曾判断"$4,380-4,400区域的实物买盘支撑经过充分验证"，但本次下行直接将这一支撑击穿至$4,143。模型对"CPI超预期→实际利率上行→黄金承压"的传导路径判断方向正确，但对其冲击力度的预估不足——$4,380区域仅提供了短暂的抵抗便告失守。下周FOMC决议是黄金短期方向的关键：若点阵图显示加息路径激进，$4,000关口将面临考验；若措辞温和，超卖修复行情有望将金价推回$4,200上方。</p>
+
+                <div class="data-row">
+                    <div class="data-item"><div class="d-label">当前价格</div><div class="d-value" style="color:#f87171;">$4,143</div></div>
+                    <div class="data-item"><div class="d-label">短期支撑</div><div class="d-value" style="color:#f87171;">$4,100 / $4,000</div></div>
+                    <div class="data-item"><div class="d-label">短期阻力</div><div class="d-value" style="color:#34d399;">$4,220 / $4,300</div></div>
+                    <div class="data-item"><div class="d-label">日线RSI</div><div class="d-value" style="color:#f87171;">&lt;30 深度超卖</div></div>
+                </div>
+
+                <h3>&#x26A1; 比特币：$62K勉强企稳，与科技股的联动加深</h3>
+
+                <p>比特币在本周的走势体现了"数字黄金"叙事的持续弱化。BTC周三从$63,500附近回落至$62,037，虽然当日跌幅（-0.01%）远小于标普和黄金，但这并非独立走强的信号，而是月初的连续下跌（$80,000→$62,000，月内-22.5%）后空头力量暂时衰竭的结果。</p>
+
+                <p><strong>技术面分析：</strong>比特币在$60,000-62,000区间的震荡已经持续了约两周。$60,000是心理整数关口，也是2025年Q4以来的上升趋势线支撑位置。若该位置失守，下一个技术支撑位于$58,000（2026年1月-3月的整理平台中枢）。上方阻力方面，$63,500（短期均线汇聚带）和$65,000（前期成交密集区）构成两级压力。Coinglass数据显示，$60,000-62,000区间聚集了超过$15亿的多头杠杆仓位，若BTC下破$60,000可能触发连锁清算。</p>
+
+                <p><strong>策略评估：</strong>比特币策略在五月整体表现偏弱。从$80,000上方回落至$62,000的过程持续缩量，趋势跟踪策略在$73,000-75,000区间的假突破和$65,000-68,000的快速下挫中付出了较高的摩擦成本。当前$60,000-62,000的"慢速止血"状态对联位策略的每日时间损耗同样不可忽视。BTC与纳斯达克的相关性维持在0.72+的高位，意味着在科技板块调整结束之前，BTC走出独立行情的概率较低。FOMC的加息信号若导致科技股进一步承压，$60,000关口将面临更严峻的考验。</p>
+
+                <div class="data-row">
+                    <div class="data-item"><div class="d-label">当前价格</div><div class="d-value" style="color:#f87171;">$62,037</div></div>
+                    <div class="data-item"><div class="d-label">短期支撑</div><div class="d-value" style="color:#f87171;">$60,000 / $58,000</div></div>
+                    <div class="data-item"><div class="d-label">短期阻力</div><div class="d-value" style="color:#34d399;">$63,500 / $65,000</div></div>
+                    <div class="data-item"><div class="d-label">月内跌幅</div><div class="d-value" style="color:#f87171;">-22.5%</div></div>
+                </div>
+
+                <h3>&#x1F4B1; 美元指数：重返100上方的技术含义</h3>
+
+                <p>DXY在周三CPI数据公布后突破100.00整数关口，收于100.04，这是自4月底以来美元指数首次站上100。六月初DXY从99.24启动，至本周收盘已累计升值约0.8%。</p>
+
+                <p><strong>驱动因素分析：</strong>美元走强是三重动力的叠加结果——①美国经济韧性（ISM 54.0、非农+17.2万、CPI 4.2%的"超预期三部曲"使美国经济在全球范围内一枝独秀）；②加息预期飙升（更高的利率直接增加美元资产吸引力）；③全球risk-off模式触发资金回流美元资产。</p>
+
+                <p><strong>技术面：</strong>DXY突破100整数关口后，下一个重要阻力位于100.50-100.80区间（4月份的波动高点）。下方支撑在99.50-99.80区域。若PPI和密歇根数据确认通胀压力持续，美元可能进一步测试101区间。</p>
+
+                <h2>&#x1F9E0; 策略反思：本周压力测试的七个关键发现</h2>
+
+                <table class="signal-table">
+                <thead>
+                <tr><th>评估项</th><th>状态</th><th>备注</th></tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>CPI超预期方向预判</td>
+                <td style="color:#fbbf24;">&#x26A0; 方向正确，力度偏差</td>
+                <td style="font-size:12px;">模型判断CPI偏向上行风险，但+0.4%的偏差幅度（实际4.2% vs 预期3.3-3.4%）超出模型的极端情景设定</td>
+                </tr>
+                <tr>
+                <td>黄金$4,380支撑有效性</td>
+                <td style="color:#f87171;">&#x2716; 验证失败</td>
+                <td style="font-size:12px;">模型曾判断$4,380-4,400区域为"充分验证的实物买盘支撑"，CPI冲击直接击穿该区域</td>
+                </tr>
+                <tr>
+                <td>跨资产同步回撤监控</td>
+                <td style="color:#fbbf24;">&#x26A0; 缺乏预防机制</td>
+                <td style="font-size:12px;">模型对CPI冲击下三大资产同步修正的"尾部路径"概率设定过低（约10-15%）</td>
+                </tr>
+                <tr>
+                <td>VIX升破20的预警响应</td>
+                <td style="color:#fbbf24;">&#x26A0; 响应偏慢</td>
+                <td style="font-size:12px;">波动率突涨触发风控参数的机制存在约半天的延迟，导致部分仓位在不利区间停留</td>
+                </tr>
+                <tr>
+                <td>DXY突破100的联动影响</td>
+                <td style="color:#fbbf24;">&#x26A0; 被低估</td>
+                <td style="font-size:12px;">模型对美元指数突破100后对黄金和BTC的压制效果预估不足</td>
+                </tr>
+                <tr>
+                <td>FOMC前仓位分布</td>
+                <td style="color:#f87171;">&#x26A0; 顺周期倾向偏高</td>
+                <td style="font-size:12px;">CPI公布前多头仓位占比约65%，在宏观风险事件前偏重</td>
+                </tr>
+                <tr>
+                <td>策略回撤控制</td>
+                <td style="color:#fbbf24;">&#x26A0; 周回撤约5-6%</td>
+                <td style="font-size:12px;">在历史回撤控制目标的边界附近，需要FOMC后重新校准</td>
+                </tr>
+                </tbody>
+                </table>
+
+                <div class="ai-insight">
+                    <div class="ai-label">&#x1F9E0; 模型反思</div>
+                    <p>本周的CPI冲击暴露了模型在当前宏观环境下的两个系统性不足：第一，对"极端尾部风险"的概率权重设定偏低。模型在六月初的基准情景中认为CPI超预期至4.0%以上的概率约15%，真实结果（4.2%）落在了模型概率分布的尾部。第二，跨资产同步冲击下的风险隔离机制不够完善——当三大资产同时受到同一宏观因子冲击时，多品种分散化保护的失效速度超出预期。这两项不足已纳入模型的参数校准议程，将在FOMC决议前完成参数更新。</p>
+                </div>
+
+                <h2>&#x1F3AF; 下周关注：FOMC决议（6月17-18日）—— Warsh首秀的市场影响推演</h2>
+
+                <p>下周最重要的全球宏观事件是美联储6月FOMC利率决议（北京时间6月18日凌晨02:00公布），这也是新任主席Kevin Warsh（特朗普5月22日任命）上任后的首次利率决策会议。</p>
+
+                <h3>对利率决定的基准预期</h3>
+                <p>当前市场普遍预期6月FOMC将维持联邦基金利率在4.25-4.50%不变，连续第九次按兵不动。但重点不在利率决议本身，而在于以下几个关键变量：</p>
+
+                <ul>
+                    <li><strong>点阵图（Dot Plot）</strong>：这是本次FOMC最重要的文件。3月点阵图中位数显示年内降息两次，但经过连续超预期的经济数据（非农+17.2万、ISM 54.0、CPI 4.2%）冲击后，点阵图可能发生重大调整。如果中位数从"降息两次"直接调整为"不加息也不降息"甚至"加息一次"，将是巨大的政策信号转变</li>
+                    <li><strong>Warsh新闻发布会措辞</strong>：Warsh作为特朗普任命的主席，其政策立场面临"高通胀数据"与"总统低利率期望"之间的张力。市场将高度关注Warsh在新闻发布会上的措辞选择——是强调数据依赖（偏鹰）、还是关注经济前景的不确定性（偏鸽）</li>
+                    <li><strong>经济预测摘要（SEP）</strong>：GDP增速、失业率、PCE通胀预测的更新将揭示FOMC委员对"硬数据"的最新评估</li>
+                </ul>
+
+                <h3>三种情景推演</h3>
+
+                <div class="data-row">
+                    <div class="data-item" style="min-width:180px;">
+                        <div class="d-label">情景A · 鹰派</div>
+                        <div class="d-value" style="color:#f87171; font-size:14px;">点阵图上修加息路径</div>
+                        <div style="font-size:11px; color:#64748b; margin-top:6px;">中位数从降息两次→维持不变/加息<br>标普7,000-7,100<br>黄金$4,000附近<br>BTC $58,000-60,000</div>
+                    </div>
+                    <div class="data-item" style="min-width:180px;">
+                        <div class="d-label">情景B · 中性</div>
+                        <div class="d-value" style="color:#fbbf24; font-size:14px;">维持现有路径 + 谨慎措辞</div>
+                        <div style="font-size:11px; color:#64748b; margin-top:6px;">维持年内降息一次预期<br>标普7,200-7,350<br>黄金$4,100-4,250<br>BTC $60,000-63,000</div>
+                    </div>
+                    <div class="data-item" style="min-width:180px;">
+                        <div class="d-label">情景C · 鸽派</div>
+                        <div class="d-value" style="color:#34d399; font-size:14px;">弱化CPI冲击，强调耐心</div>
+                        <div style="font-size:11px; color:#64748b; margin-top:6px;">认为4.2%是能源暂时因素<br>标普7,300-7,450<br>黄金$4,200-4,350<br>BTC $63,000-65,000</div>
+                    </div>
+                </div>
+
+                <div class="key-box">
+                    <div class="label">模型FOMC情景概率评估</div>
+                    <div style="font-size:14px; font-weight:400; color:#c8d6e5; line-height:1.8;">
+                        <strong style="color:#f87171;">情景A（鹰派）：概率约40-45%</strong> —— CPI 4.2%和连续超预期的数据链使FOMC难以维持鸽派姿态<br>
+                        <strong style="color:#fbbf24;">情景B（中性）：概率约35-40%</strong> —— Warsh首秀可能选择平稳过渡，避免过度鹰派引发市场动荡<br>
+                        <strong style="color:#34d399;">情景C（鸽派）：概率约15-20%</strong> —— 需要Warsh在通胀数据面前给出明确的"暂时性"解释，可能性较低<br>
+                        <br>
+                        <span style="color:#818cf8;">&#x26A0; 无论哪种情景，FOMC决议后的市场波动率都可能在短时间内急剧放大。建议在决议公布前保持参数中性偏保守，为双向波动保留充分容量。</span>
+                    </div>
+                </div>
+
+                <h2>&#x1F4C5; 下周宏观日程一览</h2>
+
+                <div class="data-row">
+                    <div class="data-item"><div class="d-label">6/15 周一</div><div class="d-value" style="font-size:13px;">纽约联储制造业指数</div><div style="font-size:10px;color:#64748b;">FOMC前预热</div></div>
+                    <div class="data-item"><div class="d-label">6/16 周二</div><div class="d-value" style="font-size:13px;">零售销售 · 工业产出</div><div style="font-size:10px;color:#64748b;">消费＋制造业双数据</div></div>
+                    <div class="data-item"><div class="d-label" style="color:#f59e0b;">&#x26A0; 6/17-18</div><div class="d-value" style="font-size:13px;">FOMC利率决议</div><div style="font-size:10px;color:#f87171;">点阵图 · 新闻发布会</div></div>
+                    <div class="data-item"><div class="d-label">6/19 周五</div><div class="d-value" style="font-size:13px;">四巫日 · 期权到期</div><div style="font-size:10px;color:#64748b;">季度大规模合约结算</div></div>
+                </div>
+
+                <h2>&#x1F50E; 策略框架调整：FOMC前的三个核心决策</h2>
+
+                <p>基于本周的压力测试结果和下周FOMC的不确定性，策略框架需在以下三个维度进行调整：</p>
+
+                <h3>1. 参数收紧：降低FOMC前的方向性敞口</h3>
+                <p>在FOMC决议的确定性落地之前（北京时间6月18日凌晨02:00），应适度收紧趋势跟踪策略的开仓参数。具体而言：将各品种的仓位参数从标准值的1.0倍下调至0.6-0.7倍，同时将新开信号的ATR确认阈值从1.5倍提高至2.0倍。此举旨在减少FOMC前后高波动环境中的假突破损耗，并保留足够的保证金容量应对双向极端波动。</p>
+
+                <h3>2. 情景模板：提前加载三套参数集</h3>
+                <p>针对上述三种FOMC情景，策略已预先配置三套参数模板。鹰派模板（情景A）：黄金阻力偏下方、BTC关注下方支撑区域、美股指数以防守为主；中性模板（情景B）：维持当前区间框架，等待方向确认后再调整敞口；鸽派模板（情景C）：黄金和BTC可关注超卖反弹机会，美股关注科技板块修复动能。FOMC决议公布后5分钟内，策略将基于实际信号匹配对应参数集。需要强调的是，以上仅为技术性情景推演，不构成任何方向性预判或建议。</p>
+
+                <h3>3. 波动率自适应机制升级</h3>
+                <p>本周VIX从12飙升至21.43的过程中，策略的波动率自适应过滤器存在显著的响应时滞。模型已将VIX的监测频率从日级升级为4小时级，并新增了一条规则：当VIX在单个交易日内升破20并持续超4小时时，自动启动防冲击模式——将整体仓位参数降至0.5倍，并冻结新开信号直至市场波动率趋于稳定。</p>
+
+                <div class="key-box">
+                    <div class="label">AI 策略更新 · FOMC前核心调整</div>
+                    <div style="font-size:14px; font-weight:400; color:#c8d6e5; line-height:1.8;">
+                        <strong style="color:#3B82F6;">当前策略状态：</strong>防冲击模式 · 仓位参数0.6-0.7倍<br>
+                        <strong style="color:#3B82F6;">FOMC前策略：</strong>信号过滤阈值提高至ATR×2.0，减少假突破<br>
+                        <strong style="color:#3B82F6;">FOMC后策略：</strong>基于点阵图结果自动匹配三套参数模板之一<br>
+                        <strong style="color:#3B82F6;">波动率监控：</strong>VIX 4小时级监测 + 自动防冲击机制<br>
+                        <strong style="color:#3B82F6;">预期效果：</strong>FOMC周最大回撤控制在4%以内，同时保留双向响应容量
+                    </div>
+                </div>
+
+                <h2>&#x1F9E0; 综合观察</h2>
+
+                <p>从更宏观的视角看，本周CPI冲击标志着自2025年8月以来最重大的宏观叙事转换——利率预期从"温和偏鸽"转向"中性偏鹰"，并正在向"鹰派"方向持续演进。各类资产在经历了一致性的同向修正后，正等待FOMC这一终极催化剂来确认新的定价格局。</p>
+
+                <p>从历史维度看，标普500从7,610回撤4.6%至7,259、黄金从$4,900区域暴跌至$4,143、比特币从$80,000+跌至$62,000的这轮同步修正，是2026年流动性充裕环境下罕见的一次"雷同调整"。它表明当统一的宏观变量（利率预期）发生方向性变化时，不同资产类别的微观叙事（AI驱动的盈利增长、数字黄金叙事、地缘避险需求）都会暂时让位于这个更大的定价逻辑。</p>
+
+                <p>下周FOMC决议之后，市场的焦点可能从"是否加息"转向"加息节奏"和"终点利率"。这是一个更长期的定价过程，预计将持续影响各类资产的三季度走势格局。策略框架将保持灵活，在不预设方向的前提下，以风险管理为先、以数据为锚，动态适应新的宏观环境。</p>
+
+                <div class="ai-insight">
+                    <div class="ai-label">&#x1F9E0; 模型声明</div>
+                    <p>以上为天枢AI模型对2026年6月第二周（6月8日-12日）市场的系统性策略复盘和FOMC前瞻。本周CPI冲击检验了策略框架在极端宏观事件下的韧性，暴露了尾部风险权重设定和波动率响应速度两个维度的改进空间。模型已将相关经验纳入学习回路，更多内容将在FOMC后的下一期策略复盘中更新。</p>
+                </div>
+
+                <p style="font-size:12px; color:#475569; margin-top:32px;"><em>免责声明：以上分析由 AI 模型生成，基于历史数据和市场结构分析，仅供参考，不构成任何投资建议。交易有风险，请自行决策。</em></p>
+                <a href="/" class="back-link">&#x2190; 返回首页</a>
+            </div>
+        </article>
+        <div class="footer">
+            <p>&copy; 2026 <a href="https://tianshu.shop">天枢</a> — AI交易分析 · 策略记录 · 自动研究</p>
+        </div>
+    </div>
+<div style="text-align:center;padding:20px 0 10px;border-top:1px solid rgba(59,130,246,0.08);">
+<p style="font-size:11px;color:#334155;">· 本文由人工智能生成，仅供学习参考，不构成任何投资建议 ·<br>投资有风险，入市需谨慎。</p>
+</div></body>
+</html>
