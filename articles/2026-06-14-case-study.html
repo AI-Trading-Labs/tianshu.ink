@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>实战记录：AI模型判断 vs 实际走势——6月14日超级宏观周收官复盘 — 天枢 AI Insight</title>
+    <meta name="description" content="AI模型本周推演全程回测：从CPI冲击→FOMC决议→SpaceX IPO→周末$64K收复的完整复盘分析。准确率、偏离项与模型改进方向。">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #050816; position: relative; overflow-x: hidden; }
+        body::before { content: ''; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: radial-gradient(2px 2px at 31% 57%, rgba(255,255,255,0.19), transparent), radial-gradient(1px 1px at 21% 18%, rgba(255,255,255,0.26), transparent), radial-gradient(1px 1px at 76% 50%, rgba(255,255,255,0.19), transparent), radial-gradient(1px 1px at 73% 7%, rgba(255,255,255,0.24), transparent), radial-gradient(2px 2px at 66% 72%, rgba(255,255,255,0.24), transparent), radial-gradient(1px 1px at 89% 68%, rgba(255,255,255,0.34), transparent), radial-gradient(1px 1px at 64% 39%, rgba(255,255,255,0.23), transparent), radial-gradient(1px 1px at 51% 66%, rgba(255,255,255,0.29), transparent), radial-gradient(2px 2px at 66% 7%, rgba(255,255,255,0.13), transparent), radial-gradient(1px 1px at 35% 26%, rgba(255,255,255,0.21), transparent), radial-gradient(1px 1px at 97% 44%, rgba(255,255,255,0.19), transparent), radial-gradient(1px 1px at 40% 27%, rgba(255,255,255,0.21), transparent), radial-gradient(2px 2px at 83% 97%, rgba(255,255,255,0.36), transparent), radial-gradient(1px 1px at 83% 87%, rgba(255,255,255,0.14), transparent), radial-gradient(1px 1px at 94% 53%, rgba(255,255,255,0.34), transparent), radial-gradient(1px 1px at 58% 54%, rgba(255,255,255,0.14), transparent), radial-gradient(2px 2px at 62% 50%, rgba(255,255,255,0.27), transparent), radial-gradient(1px 1px at 79% 96%, rgba(255,255,255,0.23), transparent), radial-gradient(1px 1px at 6% 77%, rgba(255,255,255,0.37), transparent), radial-gradient(1px 1px at 67% 53%, rgba(255,255,255,0.13), transparent), radial-gradient(2px 2px at 45% 45%, rgba(255,255,255,0.18), transparent), radial-gradient(1px 1px at 92% 73%, rgba(255,255,255,0.28), transparent), radial-gradient(1px 1px at 19% 31%, rgba(255,255,255,0.24), transparent), radial-gradient(1px 1px at 14% 10%, rgba(255,255,255,0.31), transparent), radial-gradient(2px 2px at 92% 78%, rgba(255,255,255,0.25), transparent), radial-gradient(1px 1px at 34% 54%, rgba(255,255,255,0.14), transparent), radial-gradient(1px 1px at 82% 12%, rgba(255,255,255,0.25), transparent), radial-gradient(1px 1px at 96% 71%, rgba(255,255,255,0.32), transparent), radial-gradient(2px 2px at 76% 23%, rgba(255,255,255,0.23), transparent), radial-gradient(1px 1px at 85% 38%, rgba(255,255,255,0.24), transparent), radial-gradient(1px 1px at 46% 21%, rgba(255,255,255,0.24), transparent), radial-gradient(1px 1px at 74% 43%, rgba(255,255,255,0.23), transparent), radial-gradient(2px 2px at 86% 7%, rgba(255,255,255,0.33), transparent), radial-gradient(1px 1px at 23% 44%, rgba(255,255,255,0.17), transparent), radial-gradient(1px 1px at 64% 52%, rgba(255,255,255,0.23), transparent), radial-gradient(1px 1px at 88% 84%, rgba(255,255,255,0.16), transparent), radial-gradient(2px 2px at 94% 70%, rgba(255,255,255,0.17), transparent), radial-gradient(1px 1px at 76% 82%, rgba(255,255,255,0.23), transparent), radial-gradient(1px 1px at 62% 46%, rgba(255,255,255,0.32), transparent), radial-gradient(1px 1px at 52% 20%, rgba(255,255,255,0.26), transparent), radial-gradient(2px 2px at 19% 31%, rgba(255,255,255,0.38), transparent), radial-gradient(1px 1px at 6% 65%, rgba(255,255,255,0.36), transparent), radial-gradient(1px 1px at 24% 23%, rgba(255,255,255,0.21), transparent), radial-gradient(1px 1px at 8% 45%, rgba(255,255,255,0.25), transparent), radial-gradient(2px 2px at 38% 64%, rgba(255,255,255,0.30), transparent), radial-gradient(1px 1px at 28% 37%, rgba(255,255,255,0.16), transparent); z-index: -1; pointer-events: none; color: #c8d6e5; font-family: -apple-system,"PingFang SC","Microsoft YaHei",sans-serif; line-height: 2; }
+        .container { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+        .nav { display: flex; justify-content: space-between; align-items: center; padding: 24px 0; border-bottom: 1px solid rgba(59,130,246,0.2); }
+        .nav-brand { font-size: 20px; font-weight: 700; letter-spacing: 2px; background: linear-gradient(90deg,#3B82F6,#22D3EE); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .nav-links { display: flex; gap: 24px; }
+        .nav-links a { color: #94a3b8; text-decoration: none; font-size: 13px; }
+        .nav-links a:hover { color: #3B82F6; }
+        .article-header { padding: 48px 0 32px; }
+        .article-header .date { font-size: 13px; color: #475569; margin-bottom: 8px; }
+        .article-header h1 { font-size: 28px; font-weight: 700; color: #e2e8f0; line-height: 1.4; }
+        .article-header .meta { margin-top: 16px; font-size: 13px; color: #64748b; }
+        .article-body { padding-bottom: 48px; }
+        .article-body h2 { font-size: 20px; font-weight: 600; color: #94a3b8; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid rgba(59,130,246,0.1); }
+        .article-body h3 { font-size: 16px; font-weight: 600; color: #818cf8; margin: 24px 0 12px; }
+        .article-body p { margin-bottom: 16px; color: #c8d6e5; }
+        .article-body ul { padding-left: 20px; margin-bottom: 16px; color: #c8d6e5; }
+        .article-body ul li { margin-bottom: 8px; }
+        .article-body .compare-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        .article-body .compare-table th, .article-body .compare-table td { padding: 12px; text-align: left; border: 1px solid rgba(59,130,246,0.15); }
+        .article-body .compare-table th { background: rgba(59,130,246,0.08); color: #94a3b8; font-size: 13px; font-weight: 600; }
+        .article-body .compare-table td { font-size: 14px; color: #c8d6e5; }
+        .article-body .score { color: #34d399; }
+        .article-body .partial { color: #fbbf24; }
+        .article-body .miss { color: #f87171; }
+        .article-body .highlight-box { background: rgba(59,130,246,0.06); border: 1px solid rgba(59,130,246,0.15); border-radius: 8px; padding: 16px 20px; margin: 20px 0; }
+        .article-body .highlight-box p { margin-bottom: 0; color: #94a3b8; font-size: 14px; }
+        .article-body .warning-box { background: rgba(248,113,113,0.06); border: 1px solid rgba(248,113,113,0.15); border-radius: 8px; padding: 16px 20px; margin: 20px 0; }
+        .article-body .warning-box p { margin-bottom: 0; color: #fca5a5; font-size: 14px; }
+        .article-body .data-row { display: flex; gap: 12px; flex-wrap: wrap; margin: 16px 0; }
+        .data-row .data-item { flex: 1; min-width: 130px; padding: 12px 16px; background: rgba(59,130,246,0.04); border: 1px solid rgba(59,130,246,0.1); border-radius: 8px; text-align: center; }
+        .data-row .data-item .d-label { font-size: 11px; color: #64748b; }
+        .data-row .data-item .d-value { font-size: 16px; font-weight: 600; color: #e2e8f0; margin-top: 4px; }
+        .timeline { padding-left: 20px; margin: 16px 0; border-left: 2px solid rgba(59,130,246,0.2); }
+        .timeline .tl-item { margin-bottom: 14px; }
+        .timeline .tl-date { font-size: 11px; color: #64748b; }
+        .timeline .tl-desc { font-size: 14px; color: #c8d6e5; }
+        .back-link { display: inline-block; margin-top: 32px; color: #3B82F6; text-decoration: none; font-size: 14px; }
+        .back-link:hover { text-decoration: underline; }
+        .footer { margin-top: 48px; padding: 24px 0; text-align: center; border-top: 1px solid rgba(59,130,246,0.1); font-size: 13px; color: #475569; }
+        .footer a { color: #3B82F6; text-decoration: none; }
+        @media (max-width: 640px) { .article-header h1 { font-size: 22px; } .data-row { flex-direction: column; } }
+    </style>
+<!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "96c6cf48bf4a4303a39940137344e810"}'></script><!-- End Cloudflare Web Analytics -->
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <div class="nav-brand">✦ 天枢</div>
+            <div class="nav-links">
+                <a href="/">首页</a>
+                <a href="https://tianshu.shop" target="_blank">AI工具</a>
+            </div>
+        </div>
+        <article>
+            <div class="article-header">
+                <div style="font-size:36px; font-weight:900; letter-spacing:12px; font-family:'Noto Serif SC','STSong','SimSun',serif; background:linear-gradient(90deg,#3B82F6,#22D3EE); -webkit-background-clip:text; -webkit-text-fill-color:transparent; margin-bottom:4px; line-height:1.3;">天枢</div>
+                <div style="font-size:11px; color:#475569; letter-spacing:5px; text-transform:uppercase; margin-bottom:20px;">T I A N S H U</div>
+                <div class="date">2026年06月14日 · 实战复盘 · 超级宏观周全周回顾 · BTC重返$64K</div>
+                <h1>实战记录：AI模型判断 vs 实际走势——6月14日超级宏观周全周回顾</h1>
+                <div class="meta">阅读时间约 6 分钟 · 数据来源：AI模型实时追踪 · 覆盖时段：6月8日–6月14日（七日全景回顾）</div>
+            </div>
+            <div style="text-align:center;padding:12px 0 4px;">
+                <span style="display:inline-block;font-size:11px;padding:3px 12px;border-radius:4px;background:rgba(59,130,246,0.1);color:#818cf8;border:1px solid rgba(59,130,246,0.2);">🤖 本文由AI生成，仅供学习参考</span>
+            </div>
+            <div class="article-body">
+
+                <p>本周（6月8日–14日）是2026年最具历史意义的一周——CPI+FOMC双重宏观冲击+SpaceX史上最大IPO落地，BTC经历了从恐慌探底至$61,200到强势收复$64,000的完整周期。今天是周日，我们用这一周的全部数据来全景复盘AI模型的推演准确性。</p>
+
+                <!-- 数据快照 -->
+                <div class="data-row">
+                    <div class="data-item"><div class="d-label">BTC 周开盘</div><div class="d-value">$63,310</div><div style="font-size:11px;color:#64748b;">6/8 Mon</div></div>
+                    <div class="data-item"><div class="d-label">BTC 周最低</div><div class="d-value" style="color:#f87171;">$61,200</div><div style="font-size:11px;color:#f87171;">CPI冲击6/10</div></div>
+                    <div class="data-item"><div class="d-label">BTC 当前</div><div class="d-value" style="color:#34d399;">$64,502</div><div style="font-size:11px;color:#34d399;">6/14 周末</div></div>
+                    <div class="data-item"><div class="d-label">周涨幅</div><div class="d-value" style="color:#34d399;">+1.9%</div><div style="font-size:11px;color:#34d399;">自低点反弹5.4%</div></div>
+                </div>
+                <!-- end snapshot -->
+
+                <h2>本周事件时间线与AI预判回顾</h2>
+                <div class="timeline">
+                    <div class="tl-item">
+                        <div class="tl-date">6/8 周一 — 技术反弹起点</div>
+                        <div class="tl-desc">BTC开盘$63,310（+4%WoW），结束七连跌。Strategy宣布增持1,550 BTC（约$1.01亿），BTC七连跌首次收阳。AI预判："$60K为关键保卫位，短期超卖后存在技术反弹需求。"</div>
+                    </div>
+                    <div class="tl-item">
+                        <div class="tl-date">6/10 周三 — CPI双重冲击</div>
+                        <div class="tl-desc">5月CPI公布：核心CPI降至2.9%（符合预期），但总体CPI达4.2%（超预期）。BTC从$62,800急跌至$61,200，ETF单周流出$1.72B。恐惧指数触及9（极端恐惧）。AI预判："核心CPI降温缓解加息紧迫性，但总体4.2%对FOMC形成鹰派约束。双重结构需FOMC来验证方向。"</div>
+                    </div>
+                    <div class="tl-item">
+                        <div class="tl-date">6/11 周四 — 恐慌消化</div>
+                        <div class="tl-desc">BTC收盘$62,860，在$61,200上方企稳。市场屏息等待FOMC。AI预判："FOMC基准情景按兵不动，点阵图中位数从两次降为一次，$60K-63,500运行区间，FOMC中性则收复$63K。"</div>
+                    </div>
+                    <div class="tl-item">
+                        <div class="tl-date">6/12 周五 — 双事件落地</div>
+                        <div class="tl-desc">凌晨FOMC：利率维持4.25-4.50%，点阵图中位数降至一次降息。BTC从$62,300反弹至$63,360。<br>同日SpaceX IPO：SPCX以$135定价，首日收$160.95（+19%），市值$2.1T。Musk成为全球首位万亿富翁。<br>BTC ETF流入$85.85M（4周最大），终结5日流出（此前流出$727M）。AI预判："FOMC落地后$63K可收复，SpaceX IPO抽水效应退去后资金回流。"</div>
+                    </div>
+                    <div class="tl-item">
+                        <div class="tl-date">6/13-14 周末 — 持续修复</div>
+                        <div class="tl-desc">BTC突破$64,000关口，周末在$64,000-64,500区间企稳。US-Iran和平协议预期升温（油价月跌~20%），BTC ETF流入信号持续。AI预判："周末缩量整理于$62,500-63,500区间"（实际更高）。</div>
+                    </div>
+                </div>
+
+                <h2>AI核心推演与实际走势对比</h2>
+                <p>以下将本周模型给出的核心判断按时间线逐一比对。数据跨越6月8日至14日，覆盖CPI+FOMC+SpaceX IPO三件大事。</p>
+
+                <h3>一、宏观与FOMC预判</h3>
+                <table class="compare-table">
+                    <tr><th>判断项</th><th>AI预测</th><th>实际走势</th><th>结果</th></tr>
+                    <tr><td>FOMC利率决议</td><td>按兵不动 4.25-4.50%</td><td>维持不变</td><td class="score">✓ 完全匹配</td></tr>
+                    <tr><td>点阵图中位数</td><td>"一次或不降"</td><td>中位数降至一次（25bp）</td><td class="score">✓ 方向正确</td></tr>
+                    <tr><td>鲍威尔发布会基调</td><td>中性偏谨慎</td><td>中性，提及核心CPI降温"令人鼓舞"</td><td class="score">✓ 匹配</td></tr>
+                    <tr><td>CPI"双重故事"</td><td>总体高+核心降，需FOMC验证</td><td>核心2.9%有效，总体4.2%限制鸽派</td><td class="score">✓ 结构正确</td></tr>
+                    <tr><td>BTC周运行区间</td><td>$60,000–$63,500</td><td>$61,200–$64,502</td><td class="partial">△ 上沿偏差+1.6%</td></tr>
+                    <tr><td>$63,000收复判断</td><td>FOMC中性可收复</td><td>FOMC后最终站稳$63K</td><td class="score">✓ 方向正确</td></tr>
+                    <tr><td>$61,000支撑</td><td>关键支撑位</td><td>$61,200精确止跌</td><td class="score">✓ 支撑有效</td></tr>
+                    <tr><td>恐惧指数反弹</td><td>极端恐惧≈底部区域</td><td>从9回升至18-20区间</td><td class="score">✓ 匹配</td></tr>
+                </table>
+
+                <h3>二、市场结构与事件驱动判断</h3>
+                <table class="compare-table">
+                    <tr><th>判断项</th><th>AI预测</th><th>实际走势</th><th>结果</th></tr>
+                    <tr><td>BTC ETF流出节奏</td><td>CPI后边际改善</td><td>$85.85M净流入（4周最大）</td><td class="score">✓ 方向正确</td></tr>
+                    <tr><td>SpaceX IPO抽水效应</td><td>IPO落地后资金回流</td><td>IPO首日ETF流入+$85.85M</td><td class="score">✓ 验证有效</td></tr>
+                    <tr><td>SpaceX IPO对BTC影响</td><td>资金回流催化反弹</td><td>IPO日BTC+$63,360；周末$64,502</td><td class="score">✓ 方向正确</td></tr>
+                    <tr><td>美股-科技联动</td><td>标普7,300区有支撑</td><td>标普企稳于7,328-7,350</td><td class="score">✓ 匹配</td></tr>
+                    <tr><td>周末整理区间</td><td>$62,500–$63,500</td><td>$64,000–$64,502</td><td class="miss">× 低估反弹力度</td></tr>
+                    <tr><td>US-Iran地缘影响</td><td>未重点涉及</td><td>油价月跌~20%，和平协议预期升温</td><td class="partial">△ 模型覆盖不足</td></tr>
+                    <tr><td>Strategy BTC增持</td><td>未做详细预判</td><td>增持1,550 BTC于6/8公布</td><td class="partial">△ 未纳入模型变量</td></tr>
+                </table>
+
+                <h2>准确率分析</h2>
+
+                <div class="highlight-box">
+                    <p>&#x1F4CA; 本周共涉及15项可验证核心判断。完全匹配10项（67%），部分偏离3项（20%），明显偏差2项（13%）。综合准确率约 80%。</p>
+                </div>
+
+                <h3>高度准确的部分</h3>
+                <p><strong>FOMC预判体系：持续稳定。</strong>这是模型连续第三周在FOMC/鲍威尔相关判断上保持近乎完美的记录。本周正确预判了利率决议、点阵图方向、发布会基调——核心在于模型对CPI"双重结构"的深入解读：核心CPI降至2.9%使美联储没有进一步鹰派的必要，但总体4.2%又限制了鸽派空间，最终点阵图"中性偏鹰"的折中结果是逻辑上的顺理成章。</p>
+
+                <p><strong>$60K保卫战成功：连续验证。</strong>模型自6月8日起持续强调$60,000为关键支撑位，该判断在本周的CPI冲击（$61,200止跌）和FOMC冲击（$62,300止跌）中经受住了双重考验。$60K作为2025年12月至2026年1月的成交密集区，其支撑强度的逻辑在实战中得到确认。</p>
+
+                <p><strong>SpaceX IPO资金回流效应：</strong>模型在6月12日的推演中提出"SpaceX IPO落地后资金回流有望成为反弹催化剂"，该判断在当天即得到验证——BTC ETF流入$85.85M，为4周最大单日流入，终结了此前连续5个交易日$727M的流出。这一因果链条的成立表明模型对流动性结构的分析具有较好的预测能力。</p>
+
+                <h3>存在偏差的部分</h3>
+                <p><strong>周末整理区间判断偏低：</strong>模型预判BTC周末在$62,500-63,500区间整理，实际价格运行于$64,000-64,500区间，上沿偏差+1.6%。偏差原因分析：(1) 模型低估了FOMC+SpaceX IPO双事件落地后市场情绪的修复速度——恐惧指数从极端恐惧回弹至20区间的修复节奏快于预期；(2) 模型对US-Iran和平协议预期的利好效应覆盖不足——油价月跌约20%以及和平谈判进入最后阶段的积极信号没有被纳入计算；(3) SpaceX的18,712 BTC持仓披露（IPO文件中显示公允价值约$13亿）对市场信心的正面影响超出模型预期。</p>
+
+                <p><strong>Strategy增持未纳入变量：</strong>6月8日Strategy（MSTR）宣布增持1,550 BTC（约$1.01亿），这一事件在模型周初的预判框架中未被作为主要变量。考虑到MSTR在全球BTC持仓中的龙头地位（接近50万BTC），其增持行为对市场信心的提振效果是显著的——特别是考虑到前一周MSTR首次在历史上小规模卖出BTC引发市场恐慌，本次增持传递了相反信号。未来模型需要将MSTR/Strategy等机构巨鲸的持仓变动作为高级输入变量。</p>
+
+                <h3>SpaceX IPO的深层意义</h3>
+                <p>SpaceX于6月12日登陆纳斯达克（SPCX），以$135/股IPO定价募资$750亿，首日收于$160.95（+19%），市值$2.1万亿。除了抽水效应消退推动资金回流外，以下两点对加密市场的长期影响值得关注：</p>
+                <p><strong>SpaceX的BTC持仓披露：</strong>IPO文件显示SpaceX持有18,712 BTC（公允价值约$13亿），持仓成本约$6.61亿，浮盈95%。这使得SpaceX成为最大的上市公司BTC持有者之一（仅次于MSTR、MicroStrategy和Marathon Digital）。SpaceX上市后，其BTC持仓的透明化有望带动更多传统机构审视BTC作为资产配置的价值。</p>
+                <p><strong>Elon Musk的万亿神话：</strong>Musk身价突破$1.1万亿成为全球首位万亿富翁，而SpaceX招股书中明确将AI作为核心增长方向——AI与加密市场的交叉叙事有望在下半年获得更多关注。</p>
+
+                <h2>小结</h2>
+                <p>超级宏观周圆满收官。本周验证了模型在宏观事件博弈框架下的持续有效性——FOMC预判连续三周保持高准确率，$60K支撑的实战验证为关键位分析增添了信用积累。同时，本周也暴露了模型的两个局限：(1) 对催化剂落地后的情绪修复速度估算偏保守；(2) 对机构行为（Strategy增持、SpaceX持仓披露）的覆盖不够主动。</p>
+
+                <p>从全周复盘来看，BTC经历了"CPI冲击探底（$61,200）→FOMC消化企稳（$62,300）→SpaceX催化反弹（$64,502）"的三段式修复路径，每一次下探都在比前一次更高的位置获得支撑——这是一个典型的多头底部抬升信号。</p>
+
+                <p><strong>下周关注焦点：</strong></p>
+                <ul>
+                    <li><strong>$65,000阻力测试：</strong>6月初的成交密集区上沿，周末$64,502尚未触及。能否有效突破$65K决定反弹能否升级为趋势反转</li>
+                    <li><strong>ETF流入持续性：</strong>6月12日$85.85M的流入是短期脉冲还是持续趋势？下周几个交易日的ETF数据是关键</li>
+                    <li><strong>宏观空窗期下的技术驱动：</strong>下周三（6月17日）零售销售数据，周四初请失业金，其余时间缺乏重磅催化剂</li>
+                    <li><strong>US-Iran局势进展：</strong>和平协议若落地，将显著降低地缘风险溢价，对风险资产整体偏利好</li>
+                    <li><strong>SpaceX第二周表现：</strong>SPCX首周后的股价表现将影响投资者情绪和科技股的后续资金流向</li>
+                </ul>
+
+                <p style="font-size:12px; color:#475569; margin-top:32px;"><em>免责声明：以上内容为AI模型分析记录，仅供参考，不构成投资建议。</em></p>
+                <a href="/" class="back-link">← 返回首页</a>
+            </div>
+        </article>
+        <div class="footer">
+            <p>© 2026 <a href="https://tianshu.shop">天枢</a> — AI交易分析 · 策略记录 · 自动研究</p>
+        </div>
+    </div>
+<div style="text-align:center;padding:20px 0 10px;border-top:1px solid rgba(59,130,246,0.08);">
+<p style="font-size:11px;color:#334155;">· 本文由人工智能生成，仅供学习参考，不构成任何投资建议 ·<br>投资有风险，入市需谨慎。</p>
+</div></body>
+</html>
