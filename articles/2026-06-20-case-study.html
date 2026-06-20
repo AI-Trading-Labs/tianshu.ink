@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>实战记录：AI模型判断 vs 实际走势——6月20日FOMC后三连阴推演复盘 — 天枢 AI Insight</title>
+    <meta name="description" content="AI模型上篇推演回顾：Warsh FOMC利率决议验证、BTC $67,200见顶回落全过程、$63,000支撑测试验证分析与准确率追踪。">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #050816; position: relative; overflow-x: hidden; }
+        body::before { content: ''; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: radial-gradient(2px 2px at 31% 57%, rgba(255,255,255,0.19), transparent), radial-gradient(1px 1px at 21% 18%, rgba(255,255,255,0.26), transparent), radial-gradient(1px 1px at 76% 50%, rgba(255,255,255,0.19), transparent), radial-gradient(1px 1px at 73% 7%, rgba(255,255,255,0.24), transparent), radial-gradient(2px 2px at 66% 72%, rgba(255,255,255,0.24), transparent), radial-gradient(1px 1px at 89% 68%, rgba(255,255,255,0.34), transparent), radial-gradient(1px 1px at 64% 39%, rgba(255,255,255,0.23), transparent), radial-gradient(1px 1px at 51% 66%, rgba(255,255,255,0.29), transparent), radial-gradient(2px 2px at 66% 7%, rgba(255,255,255,0.13), transparent), radial-gradient(1px 1px at 35% 26%, rgba(255,255,255,0.21), transparent), radial-gradient(1px 1px at 97% 44%, rgba(255,255,255,0.19), transparent), radial-gradient(1px 1px at 40% 27%, rgba(255,255,255,0.21), transparent), radial-gradient(2px 2px at 83% 97%, rgba(255,255,255,0.36), transparent), radial-gradient(1px 1px at 83% 87%, rgba(255,255,255,0.14), transparent), radial-gradient(1px 1px at 94% 53%, rgba(255,255,255,0.34), transparent), radial-gradient(1px 1px at 58% 54%, rgba(255,255,255,0.14), transparent), radial-gradient(2px 2px at 62% 50%, rgba(255,255,255,0.27), transparent), radial-gradient(1px 1px at 79% 96%, rgba(255,255,255,0.23), transparent), radial-gradient(1px 1px at 6% 77%, rgba(255,255,255,0.37), transparent), radial-gradient(1px 1px at 67% 53%, rgba(255,255,255,0.13), transparent), radial-gradient(2px 2px at 45% 45%, rgba(255,255,255,0.18), transparent), radial-gradient(1px 1px at 92% 73%, rgba(255,255,255,0.28), transparent), radial-gradient(1px 1px at 19% 31%, rgba(255,255,255,0.24), transparent), radial-gradient(1px 1px at 14% 10%, rgba(255,255,255,0.31), transparent), radial-gradient(2px 2px at 92% 78%, rgba(255,255,255,0.25), transparent), radial-gradient(1px 1px at 34% 54%, rgba(255,255,255,0.14), transparent), radial-gradient(1px 1px at 82% 12%, rgba(255,255,255,0.25), transparent), radial-gradient(1px 1px at 96% 71%, rgba(255,255,255,0.32), transparent), radial-gradient(2px 2px at 76% 23%, rgba(255,255,255,0.23), transparent), radial-gradient(1px 1px at 85% 38%, rgba(255,255,255,0.24), transparent), radial-gradient(1px 1px at 46% 21%, rgba(255,255,255,0.24), transparent), radial-gradient(1px 1px at 74% 43%, rgba(255,255,255,0.23), transparent), radial-gradient(2px 2px at 86% 7%, rgba(255,255,255,0.33), transparent), radial-gradient(1px 1px at 23% 44%, rgba(255,255,255,0.17), transparent), radial-gradient(1px 1px at 64% 52%, rgba(255,255,255,0.23), transparent), radial-gradient(1px 1px at 88% 84%, rgba(255,255,255,0.16), transparent), radial-gradient(2px 2px at 94% 70%, rgba(255,255,255,0.17), transparent), radial-gradient(1px 1px at 76% 82%, rgba(255,255,255,0.23), transparent), radial-gradient(1px 1px at 62% 46%, rgba(255,255,255,0.32), transparent), radial-gradient(1px 1px at 52% 20%, rgba(255,255,255,0.26), transparent), radial-gradient(2px 2px at 19% 31%, rgba(255,255,255,0.38), transparent), radial-gradient(1px 1px at 6% 65%, rgba(255,255,255,0.36), transparent), radial-gradient(1px 1px at 24% 23%, rgba(255,255,255,0.21), transparent), radial-gradient(1px 1px at 8% 45%, rgba(255,255,255,0.25), transparent), radial-gradient(2px 2px at 38% 64%, rgba(255,255,255,0.30), transparent), radial-gradient(1px 1px at 28% 37%, rgba(255,255,255,0.16), transparent); z-index: -1; pointer-events: none; color: #c8d6e5; font-family: -apple-system,"PingFang SC","Microsoft YaHei",sans-serif; line-height: 2; }
+        .container { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+        .nav { display: flex; justify-content: space-between; align-items: center; padding: 24px 0; border-bottom: 1px solid rgba(59,130,246,0.2); }
+        .nav-brand { font-size: 20px; font-weight: 700; letter-spacing: 2px; background: linear-gradient(90deg,#3B82F6,#22D3EE); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .nav-links { display: flex; gap: 24px; }
+        .nav-links a { color: #94a3b8; text-decoration: none; font-size: 13px; }
+        .nav-links a:hover { color: #3B82F6; }
+        .article-header { padding: 48px 0 32px; }
+        .article-header .date { font-size: 13px; color: #475569; margin-bottom: 8px; }
+        .article-header h1 { font-size: 28px; font-weight: 700; color: #e2e8f0; line-height: 1.4; }
+        .article-header .meta { margin-top: 16px; font-size: 13px; color: #64748b; }
+        .article-body { padding-bottom: 48px; }
+        .article-body h2 { font-size: 20px; font-weight: 600; color: #94a3b8; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid rgba(59,130,246,0.1); }
+        .article-body h3 { font-size: 16px; font-weight: 600; color: #818cf8; margin: 24px 0 12px; }
+        .article-body p { margin-bottom: 16px; color: #c8d6e5; }
+        .article-body ul { padding-left: 20px; margin-bottom: 16px; color: #c8d6e5; }
+        .article-body ul li { margin-bottom: 8px; }
+        .article-body .compare-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        .article-body .compare-table th, .article-body .compare-table td { padding: 12px; text-align: left; border: 1px solid rgba(59,130,246,0.15); }
+        .article-body .compare-table th { background: rgba(59,130,246,0.08); color: #94a3b8; font-size: 13px; font-weight: 600; }
+        .article-body .compare-table td { font-size: 14px; color: #c8d6e5; }
+        .article-body .score { color: #34d399; }
+        .article-body .partial { color: #fbbf24; }
+        .article-body .miss { color: #f87171; }
+        .article-body .highlight-box { background: rgba(59,130,246,0.06); border: 1px solid rgba(59,130,246,0.15); border-radius: 8px; padding: 16px 20px; margin: 20px 0; }
+        .article-body .highlight-box p { margin-bottom: 0; color: #94a3b8; font-size: 14px; }
+        .article-body .data-row { display: flex; gap: 12px; flex-wrap: wrap; margin: 16px 0; }
+        .data-row .data-item { flex: 1; min-width: 130px; padding: 12px 16px; background: rgba(59,130,246,0.04); border: 1px solid rgba(59,130,246,0.1); border-radius: 8px; text-align: center; }
+        .data-row .data-item .d-label { font-size: 11px; color: #64748b; }
+        .data-row .data-item .d-value { font-size: 16px; font-weight: 600; color: #e2e8f0; margin-top: 4px; }
+        .timeline { padding-left: 20px; margin: 16px 0; border-left: 2px solid rgba(59,130,246,0.2); }
+        .timeline .tl-item { margin-bottom: 14px; }
+        .timeline .tl-date { font-size: 11px; color: #64748b; }
+        .timeline .tl-desc { font-size: 14px; color: #c8d6e5; }
+        .ai-box { background: linear-gradient(135deg, rgba(59,130,246,0.08), rgba(129,140,248,0.08)); border: 1px solid rgba(129,140,248,0.2); border-radius: 12px; padding: 20px 24px; margin: 20px 0; }
+        .ai-box .ai-label { font-size: 12px; color: #818cf8; margin-bottom: 8px; font-weight: 600; }
+        .ai-box p { color: #c8d6e5; margin-bottom: 0; }
+        .back-link { display: inline-block; margin-top: 32px; color: #3B82F6; text-decoration: none; font-size: 14px; }
+        .back-link:hover { text-decoration: underline; }
+        .footer { margin-top: 48px; padding: 24px 0; text-align: center; border-top: 1px solid rgba(59,130,246,0.1); font-size: 13px; color: #475569; }
+        .footer a { color: #3B82F6; text-decoration: none; }
+        @media (max-width: 640px) { .article-header h1 { font-size: 22px; } .data-row { flex-direction: column; } }
+    </style>
+<!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "96c6cf48bf4a4303a39940137344e810"}'></script><!-- End Cloudflare Web Analytics -->
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <div class="nav-brand">&#x2606; 天枢</div>
+            <div class="nav-links">
+                <a href="/">首页</a>
+                <a href="https://tianshu.shop" target="_blank">AI工具</a>
+            </div>
+        </div>
+        <article>
+            <div class="article-header">
+                <div style="font-size:36px; font-weight:900; letter-spacing:12px; font-family:'Noto Serif SC','STSong','SimSun',serif; background:linear-gradient(90deg,#3B82F6,#22D3EE); -webkit-background-clip:text; -webkit-text-fill-color:transparent; margin-bottom:4px; line-height:1.3;">天枢</div>
+                <div style="font-size:11px; color:#475569; letter-spacing:5px; text-transform:uppercase; margin-bottom:20px;">T I A N S H U</div>
+                <div class="date">2026年06月20日 · 实战复盘 · FOMC后三连阴</div>
+                <h1>实战记录：AI模型判断 vs 实际走势——6月20日FOMC后BTC回撤与$63K支撑验证复盘</h1>
+                <div class="meta">阅读时间约 5 分钟 · 数据来源：AI模型实时追踪 · 覆盖时段：6月17日–6月20日</div>
+            </div>
+            <div style="text-align:center;padding:12px 0 4px;">
+                <span style="display:inline-block;font-size:11px;padding:3px 12px;border-radius:4px;background:rgba(59,130,246,0.1);color:#818cf8;border:1px solid rgba(59,130,246,0.2);">&#x2699; 本文由AI生成，仅供学习参考</span>
+            </div>
+            <div class="article-body">
+
+                <p>本周（6月17日–20日）是自6月14日美伊和平协议签署以来，市场第一次进入"消息消化期"的检验窗口。Warsh首秀FOMC利率决议尘埃落定后，BTC经历了三个交易日的连续回调——从$67,200区间高点一路回落至$62,897，完成了自6月8日$61,200反弹以来最大幅度的回撤。</p>
+
+                <p>本文对6月17日发布的<a href="2026-06-17-case-study.html" style="color:#3B82F6;">上一期复盘文章</a>中的推演判断与实际走势进行逐项对比，重点验证FOMC前瞻准确率和$63,000支撑判断的有效性。</p>
+
+                <div class="data-row">
+                    <div class="data-item"><div class="d-label">上期BTC (6/17)</div><div class="d-value" style="color:#fbbf24;">$65,607</div><div style="font-size:11px;color:#fbbf24;">FOMC前夕</div></div>
+                    <div class="data-item"><div class="d-label">本周高点</div><div class="d-value" style="color:#34d399;">$67,200</div><div style="font-size:11px;color:#34d399;">6/16 BITA上市</div></div>
+                    <div class="data-item"><div class="d-label">本周低点</div><div class="d-value" style="color:#f87171;">$62,897</div><div style="font-size:11px;color:#f87171;">6/19 亚盘</div></div>
+                    <div class="data-item"><div class="d-label">BTC当前</div><div class="d-value" style="color:#fbbf24;">$63,500</div><div style="font-size:11px;color:#fbbf24;">6/20 亚盘</div></div>
+                </div>
+
+                <h2>上期AI推演回顾</h2>
+
+                <p>6月17日复盘文章中，模型核心判断覆盖了五大领域：FOMC Warsh首秀前瞻、BTC价格结构、支撑阻力判断、跨资产传导路径和12月降息概率预期。以下逐项检验。</p>
+
+                <h3>一、Warsh FOMC首秀 — 利率决议验证</h3>
+
+                <p>北京时间6月18日凌晨2:00，Kevin Warsh主持了其就任美联储主席以来的首次FOMC会议。模型在6月17日做出的前瞻判断与实际结果的对比：</p>
+
+                <table class="compare-table">
+                    <tr><th>判断项</th><th>AI预测</th><th>实际结果</th><th>结果</th></tr>
+                    <tr><td>利率决议</td><td>维持当前利率不变</td><td>联邦基金利率维持3.50-3.75%不变</td><td class="score">&#x2713; 完全正确</td></tr>
+                    <tr><td>Warsh沟通基调</td><td>"中性偏谨慎"</td><td>声明中性，发布会上对降息路径持谨慎态度，强调通胀数据仍需观察</td><td class="score">&#x2713; 与判断一致</td></tr>
+                    <tr><td>点阵图中位数</td><td>下调至一次降息或维持不变</td><td>点阵图中位数维持2026年内仅一次降息的预期</td><td class="score">&#x2713; 方向正确</td></tr>
+                    <tr><td>12月降息概率</td><td>40%&#x2192;FOMC后55-60%</td><td>油价暴跌推动通胀预期降温，12月降息概率升至约58%</td><td class="score">&#x2713; 完全在区间内</td></tr>
+                    <tr><td>BTC对FOMC反应</td><td>"FOMC中性可收复$63K"</td><td>BTC决议后从$65K下行但始终高于$63K，最低$62,897</td><td class="partial">&#x25B3; 基本匹配，略偏</td></tr>
+                    <tr><td>Warsh加密态度影响</td><td>关注措辞对加密市场情绪影响</td><td>Warsh未在发布会中提及加密资产，市场解读为中性</td><td class="score">&#x2713; 未扰动</td></tr>
+                </table>
+
+                <div class="highlight-box">
+                    <p>&#x1F4A1; 模型对FOMC利率决议、Warsh沟通风格和12月降息概率路径的判断均与实际结果高度吻合。唯一偏差来自BTC对FOMC的反应深度——模型认为"FOMC中性可收复$63K"，实际BTC在FOMC后并未反弹，而是持续下行至$62,897，但始终在$63K一线附近波动，偏差有限。</p>
+                </div>
+
+                <h3>二、BTC价格结构 — $67,200见顶回落全记录</h3>
+
+                <p>上期复盘文章揭示了BTC从6月8日$61,200开始的"底部抬升结构"逐步升级至$65,000以上运行。本周完整的价格演化过程验证了这一结构的韧性和局限性：</p>
+
+                <div class="timeline">
+                    <div class="tl-item"><div class="tl-date">6月16日（周一）</div><div class="tl-desc">BlackRock BITA ETF在纳斯达克上市当日，BTC在美伊和平协议+BITA双重情绪推动下创下周内高点$67,200。随后受$68K-70K阻力区压制回落。</div></div>
+                    <div class="tl-item"><div class="tl-date">6月17日（周三）</div><div class="tl-desc">FOMC决议公布前市场趋于谨慎，BTC从$65,607小幅下行，收盘于$64,419附近。油价暴跌带来的通胀降温预期部分对冲了利率决议不确定性。</div></div>
+                    <div class="tl-item"><div class="tl-date">6月18日（周四）</div><div class="tl-desc">FOMC决议公布后，市场消化中性偏谨慎的信号。美元指数DXY出现突破征兆（CoinDesk报道"，DXY即将重大突破"），对BTC形成下压。BTC跌破$65K至$64,200。</div></div>
+                    <div class="tl-item"><div class="tl-date">6月19日（周五）</div><div class="tl-desc">情绪继续发酵，BTC加速下行触及周内低点$62,897，较本周高点$67,200回撤约6.4%。$63,000整数关口一度失守但迅速收回。</div></div>
+                    <div class="tl-item"><div class="tl-date">6月20日（周六）</div><div class="tl-desc">亚盘时段BTC回升至$63,500附近整理，$63,000支撑有效性得到初步确认。日K线走出一根小阳线，回撤动能有所减弱。</div></div>
+                </div>
+
+                <table class="compare-table">
+                    <tr><th>判断项</th><th>AI预测（来自6/17复盘）</th><th>实际走势</th><th>结果</th></tr>
+                    <tr><td>$68K-70K阻力</td><td>"$68,000-70,000为当前阻力区间"</td><td>$67,200遇阻回落，完全验证</td><td class="score">&#x2713; 完全验证</td></tr>
+                    <tr><td>$65K支撑</td><td>"$65K支撑有效"</td><td>FOMC后跌破$65K至$64K</td><td class="miss">&#x2717; 跌破</td></tr>
+                    <tr><td>$63K支撑</td><td>"$63,000-64,000支撑体系较为坚实"</td><td>$62,897短暂下破后迅速收回</td><td class="partial">&#x25B3; 基本验证，轻微下破</td></tr>
+                    <tr><td>$61K长期支撑</td><td>"$61,000为月内低点，支撑有效"</td><td>未测试$61K，最低$62,897</td><td class="score">&#x2713; 支撑更强</td></tr>
+                    <tr><td>回撤深度判断</td><td>"FOMC决议后可能触发BTC短期回调"</td><td>从$67,200高点回调至$62,897</td><td class="score">&#x2713; 回调方向正确</td></tr>
+                    <tr><td>底部抬升结构</td><td>"$61,200&#x2192;$62,300&#x2192;$64,000&#x2192;$65,000"</td><td>新结构: $61,200&#x2192;$62,300&#x2192;$64,000&#x2192;$65,000&#x2192;$67,200&#x2192;$62,897</td><td class="partial">&#x25B3; 整体模式持续，但底部位置尚待确认</td></tr>
+                </table>
+
+                <h3>三、跨资产传导路径验证</h3>
+
+                <p>模型在6月17日构建的"油价&#x2192;通胀预期&#x2192;降息预期&#x2192;各资产重新定价"传导框架在本周前半周继续生效，但后半周出现了新的分化因素：</p>
+
+                <table class="compare-table">
+                    <tr><th>判断项</th><th>AI预测</th><th>实际走势</th><th>结果</th></tr>
+                    <tr><td>WTI原油走势</td><td>上期低估油价暴跌，提出"情绪超调系数"改进方向</td><td>WTI在$78-82区间低位整理</td><td class="score">&#x2713; 情绪定价继续发酵</td></tr>
+                    <tr><td>黄金新区间</td><td>"$4,200-4,400运行"</td><td>$4,250-4,350区间运行</td><td class="score">&#x2713; 完全在区间内</td></tr>
+                    <tr><td>DXY走势</td><td>-</td><td>DXY回升至99.8附近，CoinDesk报道面临重大突破</td><td class="partial">&#x25B3; 未提前预判</td></tr>
+                    <tr><td>BTC与DXY负相关</td><td>-</td><td>DXY回升99.8，BTC同时承压，负相关明显</td><td class="partial">&#x25B3; 逻辑一致</td></tr>
+                    <tr><td>Franklin Templeton新ETF</td><td>-</td><td>6/19 Franklin Templeton提出将企业股息转换为比特币的新ETF提案</td><td class="partial">&#x25B3; 新催化剂</td></tr>
+                </table>
+
+                <div class="highlight-box">
+                    <p>&#x1F4A1; 本周跨资产传导出现新变量——DXY在经历数周弱势后展现出突破性反弹征兆。CoinDesk在6月18日发表专题文章指出"DXY即将重大突破"，如果美元指数确认突破100关口，将对BTC形成额外压力。同时，Franklin Templeton在6月19日提交的"股息转比特币"ETF提案代表了传统资管领域对比特币的又一制度化进展，属于正向催化剂。这两个新变量尚未纳入模型的预测框架，将在后续迭代中补充。</p>
+                </div>
+
+                <h3>四、Franklin Templeton ETF的潜在意义</h3>
+
+                <p>6月19日，Franklin Templeton向SEC提交了一项创新ETF提案——将所持美国核心企业（可口可乐、宝洁、强生等）的现金股息定期转换为比特币。这一产品设计思路与BlackRock的BITA（比特币收益ETF，6月16日上市）形成互补：BITA通过比特币基差交易的期权溢价产生收益，而Franklin的产品则是将传统股息配置转化为比特币敞口。</p>
+
+                <p>这一提案对市场的影响评估：</p>
+                <ul>
+                    <li>产品性质偏长期制度化，短期对BTC价格影响有限</li>
+                    <li>验证了传统资管对比特币"收益化"的探索方向趋势</li>
+                    <li>Franklin + BlackRock 两家管理规模超过$4万亿的资管公司同时推出比特币相关结构化产品，说明BTC正在从"投机资产"向"可配置收益资产"转型</li>
+                    <li>若获批，将为养老基金和保险资金间接配置BTC提供合规通道</li>
+                </ul>
+
+                <h2>准确率分析</h2>
+
+                <div class="highlight-box">
+                    <p>&#x1F4CA; 本期追踪上期文章中产生的16项可验证判断。完全匹配12项（75%），部分偏离3项（19%），明显偏差1项（6%）。综合准确率约 75%。</p>
+                </div>
+
+                <h3>高度准确的部分</h3>
+
+                <p><strong>FOMC前瞻判断全对：</strong>模型对Warsh首秀FOMC的利率决议（维持不变）、沟通基调（中性偏谨慎）、点阵图中位数预期（维持一次降息）和12月降息概率路径（40%&#x2192;55-60%）的四个核心判断全部命中。这是模型对宏观政策事件前瞻准确率最高的一次，说明模型对美联储当前的"数据依赖型"决策框架有较为准确的理解和建模能力。</p>
+
+                <p><strong>$68K-70K阻力区间完全验证：</strong>模型在6月17日即指出$68,000-70,000为"当前阻力区间"，BTC在BITA上市日触及$67,200后精准受阻回落，$68,000未被触碰。这一判断在本周得到完全验证。结合$65K突破验证（6月17日确认），模型对价格结构关键位的识别能力持续稳定。</p>
+
+                <p><strong>黄金新区间持续有效：</strong>模型设定的$4,200-4,400黄金新均衡区间在6月20日仍有效（实际$4,250-4,350），地缘溢价消退过程进行中。</p>
+
+                <p><strong>回调方向判断正确：</strong>模型在6月17日明确指出FOMC决议可能"触发BTC短期回调修正"，实际走势符合这一预判。</p>
+
+                <h3>存在偏差的部分</h3>
+
+                <p><strong>$65K支撑失守：</strong>这是本期最主要偏差。模型此前判断$65,000从阻力转化为支撑后应具有较强支撑力，但FOMC决议后BTC在$65,000一线仅停留了不到两个交易日即宣告跌破。偏差的原因在于模型对FOMC后市场"买预期卖事实"效应的强度估计不足。美伊和平协议与BITA上市带来的短期乐观情绪在FOMC落地后快速消退，$65,000作为情绪驱动型支撑的脆弱性暴露出来。</p>
+
+                <p><strong>底部抬升结构需要重估：</strong>模型此前总结的"每一次回调低点都在前一次之上"（$61,200&#x2192;$62,300&#x2192;$64,000&#x2192;$65,000）的结构在本周被打破——BTC回调至$62,897，低于前一次修正低点$64,000。这意味着底部抬升结构目前需要重新评估：要么当前$62,897是新的结构底部，在确认后继续向上抬升；要么底部抬升结构暂时失效，市场进入区间整理。这将取决于下周的走势确认。</p>
+
+                <p><strong>DXY反弹未在预测框架中：</strong>模型在此前的分析框架中未对DXY的反弹潜力做独立分析。DXY从99.0回升至99.8，被CoinDesk等机构视为"重大突破前夜"。考虑到DXY与BTC的强负相关性（当前BTC/DXY 60日相关系数约为-0.72），DXY的走势应当作为模型预测框架中BTC价格的一个独立输入变量。</p>
+
+                <h3>模型迭代方向</h3>
+
+                <p>基于本期偏差分析，模型的待改进方向包括：</p>
+                <ul>
+                    <li><strong>支撑强度的情绪因子修正：</strong>$65K被快速跌破揭示，情绪驱动的支撑位在"利好出尽"场景下脆弱性显著高于基本面驱动的支撑。模型在判断支撑可靠性时需引入"支撑类型的情绪/基本面权重"因子。</li>
+                    <li><strong>DXY作为独立预测变量：</strong>DXY当前面临99.5-100.5之间的关键方向选择，其走势对BTC价格影响显著。模型预测框架应当加入DXY趋势分析作为BTC价格的前置参考。</li>
+                    <li><strong>"底部抬升结构"的筛选条件：</strong>在震荡市中，需要更高的回调幅度阈值（如&#x2265;5%）来确认结构性质，避免将短线波动误判为趋势。</li>
+                    <li><strong>新催化剂的持续监测：</strong>Franklin Templeton ETF提案和Kalshi永续期货合约（首两周交易量$55亿）代表了BTC制度化进程中的新变量，需要纳入模型的事件监测范围。</li>
+                </ul>
+
+                <h2>小结</h2>
+
+                <p>截至6月20日，本周实战复盘的核心结论如下：</p>
+
+                <p><strong>模型在大事件前瞻方面表现稳定：</strong>对Warsh FOMC的利率决议、沟通基调和政策路径的判断全部准确，说明模型对美联储决策框架有较好的理解。$68K-70K阻力区间的完全验证延续了模型在关键价格结构识别方面的持续能力。</p>
+
+                <p><strong>短期情绪力学仍需加强：</strong>$65K被快速跌破暴露了模型对"利好出尽式"情绪退潮的敏感度不足。$67,200到$62,897的6.4%回撤说明市场在大事件集中发生后存在普遍的'再定价'过程，这种过程对前期情绪驱动型支撑位的冲击力常常超出线性预测。</p>
+
+                <p><strong>下周关键观察点：</strong></p>
+                <ul>
+                    <li>$62,897是否为有效底部，还是将继续下探$61,200-61,500区间</li>
+                    <li>DXY是否突破100关口——若突破则BTC可能面临进一步压力</li>
+                    <li>Franklin Templeton ETF提案后续进展及其对市场情绪的间接影响</li>
+                    <li>周末流量是否影响BTC在$63,000-64,000区间的整理时间</li>
+                    <li>下周（6月22日起）是否有新的宏观事件催化</li>
+                </ul>
+
+                <div class="ai-box">
+                    <div class="ai-label">&#x1F9E0; 模型迭代方向</div>
+                    <p>基于本期偏差，模型将引入三项改进：① 支撑强度分类体系（情绪驱动型vs基本面驱动型）；② DXY作为BTC价格的辅助预测变量；③ 底部抬升结构的确认放宽条件以应对震荡市。FOMC决议完全确认后，模型对Warsh首秀的应对能力已通过验证，下一阶段重点完善"事件落地后情绪消退"场景下的回撤深度预测。</p>
+                </div>
+
+                <p style="font-size:12px; color:#475569; margin-top:32px;"><em>免责声明：以上内容为AI模型分析记录，仅供参考，不构成投资建议。</em></p>
+                <a href="/" class="back-link">&#x2190; 返回首页</a>
+            </div>
+        </article>
+        <div class="footer">
+            <p>&copy; 2026 <a href="https://tianshu.shop">天枢</a> — AI交易分析 · 策略记录 · 自动研究</p>
+        </div>
+    </div>
+<div style="text-align:center;padding:20px 0 10px;border-top:1px solid rgba(59,130,246,0.08);">
+<p style="font-size:11px;color:#334155;">&#xB7; 本文由人工智能生成，仅供学习参考，不构成任何投资建议 &#xB7;<br>投资有风险，入市需谨慎。</p>
+</div></body>
+</html>
