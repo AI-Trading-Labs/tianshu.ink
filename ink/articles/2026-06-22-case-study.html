@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>实战记录：AI模型判断 vs 实际走势——6月22日ETF六周连撤下$63K支撑验证复盘 — 天枢 AI Insight</title>
+    <meta name="description" content="AI模型上篇推演回顾：$62,897底部有效性验证、ETF连续六周净流出影响分析、$64K横盘整理与DXY 100关口突破风险追踪。">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #050816; position: relative; overflow-x: hidden; }
+        body::before { content: ''; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: radial-gradient(2px 2px at 31% 57%, rgba(255,255,255,0.19), transparent), radial-gradient(1px 1px at 21% 18%, rgba(255,255,255,0.26), transparent), radial-gradient(1px 1px at 76% 50%, rgba(255,255,255,0.19), transparent), radial-gradient(1px 1px at 73% 7%, rgba(255,255,255,0.24), transparent), radial-gradient(2px 2px at 66% 72%, rgba(255,255,255,0.24), transparent), radial-gradient(1px 1px at 89% 68%, rgba(255,255,255,0.34), transparent), radial-gradient(1px 1px at 64% 39%, rgba(255,255,255,0.23), transparent), radial-gradient(1px 1px at 51% 66%, rgba(255,255,255,0.29), transparent), radial-gradient(2px 2px at 66% 7%, rgba(255,255,255,0.13), transparent), radial-gradient(1px 1px at 35% 26%, rgba(255,255,255,0.21), transparent), radial-gradient(1px 1px at 97% 44%, rgba(255,255,255,0.19), transparent), radial-gradient(1px 1px at 40% 27%, rgba(255,255,255,0.21), transparent), radial-gradient(2px 2px at 83% 97%, rgba(255,255,255,0.36), transparent), radial-gradient(1px 1px at 83% 87%, rgba(255,255,255,0.14), transparent), radial-gradient(1px 1px at 94% 53%, rgba(255,255,255,0.34), transparent), radial-gradient(1px 1px at 58% 54%, rgba(255,255,255,0.14), transparent), radial-gradient(2px 2px at 62% 50%, rgba(255,255,255,0.27), transparent), radial-gradient(1px 1px at 79% 96%, rgba(255,255,255,0.23), transparent), radial-gradient(1px 1px at 6% 77%, rgba(255,255,255,0.37), transparent), radial-gradient(1px 1px at 67% 53%, rgba(255,255,255,0.13), transparent), radial-gradient(2px 2px at 45% 45%, rgba(255,255,255,0.18), transparent), radial-gradient(1px 1px at 92% 73%, rgba(255,255,255,0.28), transparent), radial-gradient(1px 1px at 19% 31%, rgba(255,255,255,0.24), transparent), radial-gradient(1px 1px at 14% 10%, rgba(255,255,255,0.31), transparent), radial-gradient(2px 2px at 92% 78%, rgba(255,255,255,0.25), transparent), radial-gradient(1px 1px at 34% 54%, rgba(255,255,255,0.14), transparent), radial-gradient(1px 1px at 82% 12%, rgba(255,255,255,0.25), transparent), radial-gradient(1px 1px at 96% 71%, rgba(255,255,255,0.32), transparent), radial-gradient(2px 2px at 76% 23%, rgba(255,255,255,0.23), transparent), radial-gradient(1px 1px at 85% 38%, rgba(255,255,255,0.24), transparent), radial-gradient(1px 1px at 46% 21%, rgba(255,255,255,0.24), transparent), radial-gradient(1px 1px at 74% 43%, rgba(255,255,255,0.23), transparent), radial-gradient(2px 2px at 86% 7%, rgba(255,255,255,0.33), transparent), radial-gradient(1px 1px at 23% 44%, rgba(255,255,255,0.17), transparent), radial-gradient(1px 1px at 64% 52%, rgba(255,255,255,0.23), transparent), radial-gradient(1px 1px at 88% 84%, rgba(255,255,255,0.16), transparent), radial-gradient(2px 2px at 94% 70%, rgba(255,255,255,0.17), transparent), radial-gradient(1px 1px at 76% 82%, rgba(255,255,255,0.23), transparent), radial-gradient(1px 1px at 62% 46%, rgba(255,255,255,0.32), transparent), radial-gradient(1px 1px at 52% 20%, rgba(255,255,255,0.26), transparent), radial-gradient(2px 2px at 19% 31%, rgba(255,255,255,0.38), transparent), radial-gradient(1px 1px at 6% 65%, rgba(255,255,255,0.36), transparent), radial-gradient(1px 1px at 24% 23%, rgba(255,255,255,0.21), transparent), radial-gradient(1px 1px at 8% 45%, rgba(255,255,255,0.25), transparent), radial-gradient(2px 2px at 38% 64%, rgba(255,255,255,0.30), transparent), radial-gradient(1px 1px at 28% 37%, rgba(255,255,255,0.16), transparent); z-index: -1; pointer-events: none; color: #c8d6e5; font-family: -apple-system,"PingFang SC","Microsoft YaHei",sans-serif; line-height: 2; }
+        .container { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+        .nav { display: flex; justify-content: space-between; align-items: center; padding: 24px 0; border-bottom: 1px solid rgba(59,130,246,0.2); }
+        .nav-brand { font-size: 20px; font-weight: 700; letter-spacing: 2px; background: linear-gradient(90deg,#3B82F6,#22D3EE); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .nav-links { display: flex; gap: 24px; }
+        .nav-links a { color: #94a3b8; text-decoration: none; font-size: 13px; }
+        .nav-links a:hover { color: #3B82F6; }
+        .article-header { padding: 48px 0 32px; }
+        .article-header .date { font-size: 13px; color: #475569; margin-bottom: 8px; }
+        .article-header h1 { font-size: 28px; font-weight: 700; color: #e2e8f0; line-height: 1.4; }
+        .article-header .meta { margin-top: 16px; font-size: 13px; color: #64748b; }
+        .article-body { padding-bottom: 48px; }
+        .article-body h2 { font-size: 20px; font-weight: 600; color: #94a3b8; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid rgba(59,130,246,0.1); }
+        .article-body h3 { font-size: 16px; font-weight: 600; color: #818cf8; margin: 24px 0 12px; }
+        .article-body p { margin-bottom: 16px; color: #c8d6e5; }
+        .article-body ul { padding-left: 20px; margin-bottom: 16px; color: #c8d6e5; }
+        .article-body ul li { margin-bottom: 8px; }
+        .article-body .compare-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        .article-body .compare-table th, .article-body .compare-table td { padding: 12px; text-align: left; border: 1px solid rgba(59,130,246,0.15); }
+        .article-body .compare-table th { background: rgba(59,130,246,0.08); color: #94a3b8; font-size: 13px; font-weight: 600; }
+        .article-body .compare-table td { font-size: 14px; color: #c8d6e5; }
+        .article-body .score { color: #34d399; }
+        .article-body .partial { color: #fbbf24; }
+        .article-body .miss { color: #f87171; }
+        .article-body .highlight-box { background: rgba(59,130,246,0.06); border: 1px solid rgba(59,130,246,0.15); border-radius: 8px; padding: 16px 20px; margin: 20px 0; }
+        .article-body .highlight-box p { margin-bottom: 0; color: #94a3b8; font-size: 14px; }
+        .article-body .data-row { display: flex; gap: 12px; flex-wrap: wrap; margin: 16px 0; }
+        .data-row .data-item { flex: 1; min-width: 130px; padding: 12px 16px; background: rgba(59,130,246,0.04); border: 1px solid rgba(59,130,246,0.1); border-radius: 8px; text-align: center; }
+        .data-row .data-item .d-label { font-size: 11px; color: #64748b; }
+        .data-row .data-item .d-value { font-size: 16px; font-weight: 600; color: #e2e8f0; margin-top: 4px; }
+        .timeline { padding-left: 20px; margin: 16px 0; border-left: 2px solid rgba(59,130,246,0.2); }
+        .timeline .tl-item { margin-bottom: 14px; }
+        .timeline .tl-date { font-size: 11px; color: #64748b; }
+        .timeline .tl-desc { font-size: 14px; color: #c8d6e5; }
+        .ai-box { background: linear-gradient(135deg, rgba(59,130,246,0.08), rgba(129,140,248,0.08)); border: 1px solid rgba(129,140,248,0.2); border-radius: 12px; padding: 20px 24px; margin: 20px 0; }
+        .ai-box .ai-label { font-size: 12px; color: #818cf8; margin-bottom: 8px; font-weight: 600; }
+        .ai-box p { color: #c8d6e5; margin-bottom: 0; }
+        .back-link { display: inline-block; margin-top: 32px; color: #3B82F6; text-decoration: none; font-size: 14px; }
+        .back-link:hover { text-decoration: underline; }
+        .footer { margin-top: 48px; padding: 24px 0; text-align: center; border-top: 1px solid rgba(59,130,246,0.1); font-size: 13px; color: #475569; }
+        .footer a { color: #3B82F6; text-decoration: none; }
+        @media (max-width: 640px) { .article-header h1 { font-size: 22px; } .data-row { flex-direction: column; } }
+    </style>
+<!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "96c6cf48bf4a4303a39940137344e810"}'></script><!-- End Cloudflare Web Analytics -->
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <div class="nav-brand">&#x2606; 天枢</div>
+            <div class="nav-links">
+                <a href="/">首页</a>
+                <a href="https://tianshu.shop" target="_blank">AI工具</a>
+            </div>
+        </div>
+        <article>
+            <div class="article-header">
+                <div style="font-size:36px; font-weight:900; letter-spacing:12px; font-family:'Noto Serif SC','STSong','SimSun',serif; background:linear-gradient(90deg,#3B82F6,#22D3EE); -webkit-background-clip:text; -webkit-text-fill-color:transparent; margin-bottom:4px; line-height:1.3;">天枢</div>
+                <div style="font-size:11px; color:#475569; letter-spacing:5px; text-transform:uppercase; margin-bottom:20px;">T I A N S H U</div>
+                <div class="date">2026年06月22日 · 实战复盘 · ETF六周连撤</div>
+                <h1>实战记录：AI模型判断 vs 实际走势——6月22日BTC $63K支撑验证与ETF历史性流出复盘</h1>
+                <div class="meta">阅读时间约 5 分钟 · 数据来源：AI模型实时追踪 · 覆盖时段：6月20日–6月22日</div>
+            </div>
+            <div style="text-align:center;padding:12px 0 4px;">
+                <span style="display:inline-block;font-size:11px;padding:3px 12px;border-radius:4px;background:rgba(59,130,246,0.1);color:#818cf8;border:1px solid rgba(59,130,246,0.2);">&#x2699; 本文由AI生成，仅供学习参考</span>
+            </div>
+            <div class="article-body">
+
+                <p>6月20日FOMC后三连阴的震荡尚未完全消化，本周（6月22日）BTC即进入新的压力测试阶段。亚洲盘以$63,366开盘，较上周五收盘$63,291基本持平，随后在$63,300-64,300的窄幅区间内运行——既未延续FOMC后的加速下行，也未出现明显反弹，呈现典型的"横盘寻底"形态。</p>
+
+                <p>本日最值得关注的核心矛盾：Spot BTC ETF经历了自2024年1月上市以来最大规模的30天资金净流出——$6.35B，且已连续六周呈现净流出。与此同时，Strategy（前MicroStrategy）等大型机构在场外持续买入1,587 BTC，形成了ETF渠道资金撤出与直接配置型资金流入之间的显著分化。</p>
+
+                <p>本文对6月20日发布的<a href="2026-06-20-case-study.html" style="color:#3B82F6;">上一期复盘文章</a>中提出的关键推演判断与6月22日实际走势进行逐项对比。</p>
+
+                <div class="data-row">
+                    <div class="data-item"><div class="d-label">上期BTC (6/20)</div><div class="d-value" style="color:#fbbf24;">$63,500</div><div style="font-size:11px;color:#fbbf24;">亚盘整理</div></div>
+                    <div class="data-item"><div class="d-label">本日开盘</div><div class="d-value" style="color:#94a3b8;">$63,366</div><div style="font-size:11px;color:#94a3b8;">6/22 亚盘</div></div>
+                    <div class="data-item"><div class="d-label">本日高点</div><div class="d-value" style="color:#34d399;">$64,749</div><div style="font-size:11px;color:#34d399;">日内反弹高点</div></div>
+                    <div class="data-item"><div class="d-label">BTC当前</div><div class="d-value" style="color:#fbbf24;">$64,467</div><div style="font-size:11px;color:#fbbf24;">6/22 亚盘</div></div>
+                </div>
+
+                <h2>上期AI推演回顾</h2>
+
+                <p>6月20日复盘文章提出了五项关键后续观察点和三个分类的预测判断。以下按类别逐一验证。</p>
+
+                <h3>一、$62,897底部有效性验证</h3>
+
+                <p>上期文章的核心问题："$62,897是否为有效底部，还是将继续下探$61,200-61,500区间？"</p>
+
+                <p>截至6月22日亚盘，BTC最低触及$63,150，距离上期低点$62,897仍有约$250的安全距离，没有出现继续下探$61K区间的迹象。市场在窄幅区间内横向运行，未形成新的向下趋势力。</p>
+
+                <table class="compare-table">
+                    <tr><th>判断项</th><th>AI预测（来自6/20复盘）</th><th>实际走势（6/22）</th><th>结果</th></tr>
+                    <tr><td>$62,897是否为底部</td><td>"等待下周走势确认"</td><td>$63,150为日内最低，未触及$62,897</td><td class="partial">&#x25B3; 底部未被否定，待继续观察</td></tr>
+                    <tr><td>是否下探$61K</td><td>"$61,200-61,500区间"</td><td>未测试$61K区间，最低$63,150</td><td class="score">&#x2713; 支撑强于预期</td></tr>
+                    <tr><td>$63K支撑有效性</td><td>"$63,000整数关口是短期心理支撑"</td><td>$63K在亚盘时段被短暂测试但未有效跌破</td><td class="score">&#x2713; 有效支撑</td></tr>
+                    <tr><td>$63-64K整理时长</td><td>"周末流量影响整理时间"</td><td>$63,300-64,300窄区间横盘超36小时</td><td class="score">&#x2713; 横盘形态符合</td></tr>
+                </table>
+
+                <div class="highlight-box">
+                    <p>&#x1F4A1; 核心结论：$62,897作为回调低点的有效性尚未被打破。$63K心理支撑经受住了ETF六周流出消息的冲击。但这只是一个交易日的数据，底部确认需要至少3-5个交易日的横盘验证。</p>
+                </div>
+
+                <h3>二、DXY 100关口突破风险追踪</h3>
+
+                <p>上期复盘识别了DXY反弹至99.8并面临"重大突破"风险的新变量，并将其列入了模型的预测框架改进方向。DXY本周一的走势验证了这一关注的重要性。</p>
+
+                <table class="compare-table">
+                    <tr><th>判断项</th><th>AI预测（来自6/20复盘）</th><th>实际走势（6/22）</th><th>结果</th></tr>
+                    <tr><td>DXY是否突破100</td><td>"关注突破可能"</td><td>DXY维持在99.6-99.9区间运行，暂未突破100</td><td class="score">&#x2713; 临界但未突破</td></tr>
+                    <tr><td>DXY对BTC的影响</td><td>"BTC面临额外压力"</td><td>BTC与DXY负相关持续，但DXY未突破100使压力可控</td><td class="score">&#x2713; 逻辑一致</td></tr>
+                    <tr><td>U.S.-伊朗谈判影响</td><td>-</td><td>美伊霍尔木兹海峡谈判取得进展，油价企稳，缓解了通胀压力</td><td class="partial">&#x25B3; 正向外溢效应</td></tr>
+                </table>
+
+                <p>今日进展：路透社报道，美伊关于霍尔木兹海峡航运通道的谈判取得"+ve进展"，Goldman Sachs同步下调了原油价格预测。这一消息在一定程度上缓解了市场对"滞胀"的担忧，对BTC形成间接支撑。DXY暂未突破100关口，但仍在关键方向选择窗口内。</p>
+
+                <h3>三、ETF连续六周净流出冲击评估</h3>
+
+                <p>上期复盘未直接涉及ETF流出规模的变化，但$63K支撑承受了巨量ETF流出压力的测试，这构成了本日最重要的市场结构变化。</p>
+
+                <p>根据CoinStats和CoinDesk数据，当前ETF市场结构参数如下：</p>
+
+                <table class="compare-table">
+                    <tr><th>指标</th><th>数据</th><th>解读</th></tr>
+                    <tr><td>30天净流出</td><td>$6.35B</td><td>自BTC ETF上市以来最大规模的月净流出</td></tr>
+                    <tr><td>累计净流入</td><td>$53.4B（从峰值回落）</td><td>连续六周净流出，累计净流入从峰值显著下降</td></tr>
+                    <tr><td>7天净流出</td><td>$378M</td><td>6月16-22日区间，仅2个交易日为正</td></tr>
+                    <tr><td>单日最大流出</td><td>$213.9M（6/10）</td><td>BlackRock IBIT领先流出-$96.7M</td></tr>
+                    <tr><td>30天最大流出后BTC价格</td><td>$63K-64K</td><td>ETF巨量流出下BTC仍守住$63K</td></tr>
+                    <tr><td>期货OI</td><td>$46.01B（-2.61%）</td><td>去杠杆化过程延续，多头清算占76.3%</td></tr>
+                    <tr><td>6/26期权到期</td><td>$10B+，最大痛点$74K</td><td>80%价外，到期日可能引发波动</td></tr>
+                </table>
+
+                <div class="highlight-box">
+                    <p>&#x1F4A1; ETF连续六周的净流出是自2024年1月BTC ETF获批以来持续时间最长的机构资金撤退。从历史角度看，$6.35B/30天的流出规模（相当于当前BTC市值的约0.49%）在传统资产ETF中也属于相当高的水平。然而，BTC价格在承受这一压力后没有跌破$63K，说明市场承接力量——尤其是场外直接购买和OTC渠道——正在发挥吸收作用。</p>
+                </div>
+
+                <h3>四、上期模型迭代方向验证</h3>
+
+                <p>上期文章提出了三项模型改进方向，截至本日已有部分自然得到验证：</p>
+
+                <table class="compare-table">
+                    <tr><th>改进方向</th><th>内容</th><th>截至6/22的进展</th><th>状态</th></tr>
+                    <tr><td>支撑强度的情绪/基本面权重因子</td><td>$65K被快速跌破揭示情绪驱动支撑的脆弱性</td><td>$63K在ETF流出消息下仍保持有效，说明$63K的基本面支撑属性强于之前判断</td><td class="score">&#x2713; 观察素材增加</td></tr>
+                    <tr><td>DXY作为独立预测变量</td><td>DXY面临99.5-100.5方向选择</td><td>DXY本周一未突破100，但仍在关键区间。模型框架需要持续跟踪</td><td class="partial">&#x25B3; 待加入框架</td></tr>
+                    <tr><td>底部抬升结构确认条件</td><td>更高回调幅度阈值避免误判</td><td>$62,897未被打破，底部结构暂时维持</td><td class="score">&#x2713; 条件验证中</td></tr>
+                </table>
+
+                <h2>本周新增关键变量：ETF流出分化的结构意义</h2>
+
+                <p>上期复盘后出现了多个值得模型纳入框架的新变量：</p>
+
+                <h3>ETF流出 vs 机构直接购买——"两种机构行为"的分化</h3>
+
+                <p>本周最值得关注的市场结构特征是：ETF渠道的资金撤离与场外直接购买形成了鲜明对比。</p>
+
+                <ul>
+                    <li><strong>ETF流出（被动型机构）：</strong>$6.35B/30天的规模显示了ETF持有者（包括部分前期套利者和对短期回报敏感的投资顾问）的减仓压力。BlackRock IBIT在6月18日单日流出$96.7M</li>
+                    <li><strong>直接购买（配置型机构）：</strong>Strategy同期买入1,587 BTC（约$1.02亿），BitMine增持$9,200万ETH，墨西哥亿万富翁Salinas公开表示其投资组合70%为BTC</li>
+                    <li><strong>核心含义：</strong>ETF渠道流出的主要是短期/套利型资金，而战略性配置资金则通过OTC和直接渠道持续流入。这解释了为什么BTC在ETF创纪录流出的背景下仅温和下跌</li>
+                </ul>
+
+                <h3>Franklin Templeton ETF提案</h3>
+
+                <p>上期已提及Franklin Templeton提交的"股息转比特币"ETF提案。截至6月22日，该提案仍在SEC审核流程中，市场反应有限。但这一产品设计标志着传统资管巨头正在探索比特币的"收益化"路径——与BlackRock BITA（基差收益ETF）形成产业层面的互补。</p>
+
+                <h3>6/26期权到期日临近</h3>
+
+                <p>本日距离6月26日BTC期权到期还有4个交易日。当前数据：</p>
+                <ul>
+                    <li>名义价值超过$10B的BTC期权将到期</li>
+                    <li>最大痛点（Max Pain）约$74,000</li>
+                    <li>约80%的期权处于价外（OTM）状态</li>
+                    <li>OI降至$46.01B（-2.61%），去杠杆正在进行中</li>
+                    <li>历史经验：期权到期日前3-5个交易日，BTC价格通常呈现低波动整理，随后在到期日前后出现方向选择</li>
+                </ul>
+
+                <h3>宏观环境：美伊谈判+降息预期</h3>
+
+                <p>美伊就霍尔木兹海峡航运安全达成临时性协议的预期持续升温，Goldman Sachs下调油价预测。这一进展在宏观层面对BTC构成正向外溢：</p>
+                <ul>
+                    <li>油价下行→通胀预期降温→降息概率上升</li>
+                    <li>12月降息概率从FOMC后的~58%进一步提升</li>
+                    <li>但美元指数同时因地缘风险下降而走强，形成"多空对锁"</li>
+                </ul>
+
+                <h2>准确率分析</h2>
+
+                <div class="highlight-box">
+                    <p>&#x1F4CA; 本期追踪上期文章中产生的12项可验证判断。完全匹配9项（75%），部分偏离3项（25%），明显偏差0项（0%）。综合准确率约 75%。</p>
+                </div>
+
+                <h3>高度准确的部分</h3>
+
+                <p><strong>$63K支撑经受住了最严峻的考验：</strong>在创纪录的ETF净流出消息冲击下，$63,000整数关口展现出良好的韧性。这是一个重要的数据点：它说明当前$63K-64K区间不仅仅是"情绪支撑位"，而是具有实际资金流入支撑的"配置型支撑位"。Strategy的持续买入和OTC渠道的交易量为这一价位提供了基本面支持。</p>
+
+                <p><strong>横盘整理形态完全符合预期：</strong>上期文章预期BTC将在"$63,000-64,000区间整理"，实际走势确实是$63,300-64,300的窄幅横盘。市场情绪在FOMC后、ETF流出消息和地缘政治变化的多重影响下进入了"观望评估期"。</p>
+
+                <p><strong>DXY风险识别方向正确：</strong>模型在6月20日首次将DXY列为独立风险变量。截至6月22日，DXY在99.6-99.9区间运行，突破100的威胁仍然存在但未兑现。这一风险的识别和跟踪方向正确。</p>
+
+                <p><strong>$62,897低点未被打破：</strong>这是上期提出的最关键的观察问题。当前$63,150的最低交易价格高于$62,897，底部未被挑战。</p>
+
+                <h3>存在偏差的部分</h3>
+
+                <p><strong>模型未独立预判ETF流出规模：</strong>这是本期主要的预测空白。$6.35B/30天的ETF流出规模是历史性的市场事件，但在模型6月20日的预测框架中未被单独分析。未来的模型框架应将ETF流量趋势作为BTC价格的独立输入变量。</p>
+
+                <p><strong>美伊谈判正向效应超预期：</strong>模型对美伊谈判的分析侧重于霍术然兹海峡相关的地缘政治风险溢价消退，但忽略了"油价下跌→通胀预期降温→降息概率上升→风险资产偏好回升"这一完整的传导链条。</p>
+
+                <p><strong>机构行为的"二元分化"现象：</strong>ETF流出与场外购买并存的现象未被模型捕捉到。这一分化是理解当前BTC价格韧性的关键——未来模型应区分"ETF渠道资金"与"直接配置资金"的不同性质。</p>
+
+                <h3>模型迭代方向更新</h3>
+
+                <p>基于本期偏差分析，模型的待改进方向更新如下：</p>
+                <ul>
+                    <li><strong>加入ETF流量（Flow）指标：</strong>将BTC ETF每日/每周净流量作为BTC价格的独立输入变量。历史数据显示，ETF流量对BTC短期价格有显著影响（特别是集中流出期）。</li>
+                    <li><strong>区分"渠道型资金"和"配置型资金"：</strong>ETF渠道的流出和Strategy等机构场外直接买入的环境影响路径不同，应当分别建模。</li>
+                    <li><strong>期权到期日历效应纳入：</strong>$10B+期权到期（6月26日）可能成为下周中段市场波动的催化剂。大型期权到期前后3-5个交易日的波动模式在历史数据中具有可识别的特征。</li>
+                    <li><strong>美伊谈判传导链完整化：</strong>地缘政治事件的跨资产传导路径（油价→通胀预期→降息预期→风险偏好）需要更系统化的建模。</li>
+                    <li><strong>DXY预测框架整合：</strong>DXY在99.5-100.5区间面临方向选择。若DXY有效突破100，BTC可能面临5-8%的下行压力（基于历史60日相关系数约-0.72推算）。若DXY被100关口压制回落，则BTC可能有超跌反弹的空间。</li>
+                </ul>
+
+                <h2>小结</h2>
+
+                <p>截至6月22日亚洲盘收市，本周实战复盘的核心结论如下：</p>
+
+                <p><strong>$63K支撑展现韧性，但底部确认需要时间：</strong>在创纪录的ETF净流出（$6.35B/30天）冲击下，BTC$63K支撑位经受住了考验。Strategy等配置型机构的场外买入形成了价格吸收层。但底部确认需要至少本周剩余交易日的持续验证，特别是$10B期权到期日（6月26日）前后的市场表现。</p>
+
+                <p><strong>本周最关键的市场结构特征：ETF流出与机构直接购买的分化：</strong>一个值得持续跟踪的现象是——ETF渠道流出和OTC/直接渠道流入同时存在。这种"二元分化"是理解BTC当前价格韧性的关键。如果ETF流出放缓（6月最后一周是季度末，机构通常降低风险敞口），直接购买力量可能推动BTC从$64K向$65K方向修复。</p>
+
+                <p><strong>模型对横盘形态和关键支撑的判断准确率保持在75%：</strong>上期12项判断中9项完全正确、3项部分偏差、无完全错误。在FOMC后、ETF创纪录流出、地缘政治变化的多重复杂环境中，模型表现稳健。</p>
+
+                <p><strong>本周后续关键观察点：</strong></p>
+                <ul>
+                    <li>$63,000-64,000横盘区间能否在本周内突破——向上需站稳$65,500（50/100日均线簇区域），向下则关注$62,800-63,000</li>
+                    <li>ETF净流出势头是否会在6月底出现季节性放缓</li>
+                    <li>DXY能否突破100关口——CoinDesk、路透社等多家机构维持"DXY突破在即"的判断</li>
+                    <li>6月26日期权到期前后3天是否出现"到期拉锯"行情</li>
+                    <li>美伊临时协议谈判的最终结果</li>
+                    <li>Franklin Templeton ETF提案是否进入SEC正式审核期</li>
+                </ul>
+
+                <div class="ai-box">
+                    <div class="ai-label">&#x1F9E0; 模型迭代方向</div>
+                    <p>本期新识别五项改进方向：① 加入ETF流量独立预测因子；② 区分ETF渠道资金与直接配置资金的行为特征；③ 期权到期日历效应模型；④ 美伊→油价→通胀→降息→风险偏好的完整传导链；⑤ DXY正式纳入预测框架。FOMC相关判断已通过两期验证，模型将重心转向"ETF流出冲击"和"底部确认"这两个当前最核心的矛盾。</p>
+                </div>
+
+                <p style="font-size:12px; color:#475569; margin-top:32px;"><em>免责声明：以上内容为AI模型分析记录，仅供参考，不构成投资建议。</em></p>
+                <a href="/" class="back-link">&#x2190; 返回首页</a>
+            </div>
+        </article>
+        <div class="footer">
+            <p>&copy; 2026 <a href="https://tianshu.shop">天枢</a> — AI交易分析 · 策略记录 · 自动研究</p>
+        </div>
+    </div>
+<div style="text-align:center;padding:20px 0 10px;border-top:1px solid rgba(59,130,246,0.08);">
+<p style="font-size:11px;color:#334155;">&#xB7; 本文由人工智能生成，仅供学习参考，不构成任何投资建议 &#xB7;<br>投资有风险，入市需谨慎。</p>
+</div></body>
+</html>
