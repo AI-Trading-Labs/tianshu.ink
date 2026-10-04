@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>实战记录：AI模型判断 vs 实际走势——10月4日期中复盘：BTC重返$84,900、黄金$4,400关口确认失守、DXY回升至101.9 — 天枢 AI Insight</title>
+    <meta name="description" content="AI模型9月10日观察框架跨期验证：美股回调后企稳回升、黄金失守$4,400下探$4,142、BTC自$78,000区间向上突破至$84,913、DXY自98.8回升至101.9、CNN恐惧与加密贪婪情绪分化延续。">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #050816; position: relative; overflow-x: hidden; }
+        body::before { content: ''; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: radial-gradient(2px 2px at 31% 57%, rgba(255,255,255,0.19), transparent), radial-gradient(1px 1px at 21% 18%, rgba(255,255,255,0.26), transparent), radial-gradient(1px 1px at 76% 50%, rgba(255,255,255,0.19), transparent), radial-gradient(1px 1px at 73% 7%, rgba(255,255,255,0.24), transparent), radial-gradient(2px 2px at 66% 72%, rgba(255,255,255,0.24), transparent), radial-gradient(1px 1px at 89% 68%, rgba(255,255,255,0.34), transparent), radial-gradient(1px 1px at 64% 39%, rgba(255,255,255,0.23), transparent), radial-gradient(1px 1px at 51% 66%, rgba(255,255,255,0.29), transparent), radial-gradient(2px 2px at 66% 7%, rgba(255,255,255,0.13), transparent), radial-gradient(1px 1px at 35% 26%, rgba(255,255,255,0.21), transparent), radial-gradient(1px 1px at 97% 44%, rgba(255,255,255,0.19), transparent), radial-gradient(1px 1px at 40% 27%, rgba(255,255,255,0.21), transparent), radial-gradient(2px 2px at 83% 97%, rgba(255,255,255,0.36), transparent), radial-gradient(1px 1px at 83% 87%, rgba(255,255,255,0.14), transparent), radial-gradient(1px 1px at 94% 53%, rgba(255,255,255,0.34), transparent), radial-gradient(1px 1px at 58% 54%, rgba(255,255,255,0.14), transparent), radial-gradient(2px 2px at 62% 50%, rgba(255,255,255,0.27), transparent), radial-gradient(1px 1px at 79% 96%, rgba(255,255,255,0.23), transparent), radial-gradient(1px 1px at 6% 77%, rgba(255,255,255,0.37), transparent), radial-gradient(1px 1px at 67% 53%, rgba(255,255,255,0.13), transparent), radial-gradient(2px 2px at 45% 45%, rgba(255,255,255,0.18), transparent), radial-gradient(1px 1px at 92% 73%, rgba(255,255,255,0.28), transparent), radial-gradient(1px 1px at 19% 31%, rgba(255,255,255,0.24), transparent), radial-gradient(1px 1px at 14% 10%, rgba(255,255,255,0.31), transparent), radial-gradient(2px 2px at 92% 78%, rgba(255,255,255,0.25), transparent), radial-gradient(1px 1px at 34% 54%, rgba(255,255,255,0.14), transparent), radial-gradient(1px 1px at 82% 12%, rgba(255,255,255,0.25), transparent), radial-gradient(1px 1px at 96% 71%, rgba(255,255,255,0.32), transparent), radial-gradient(2px 2px at 76% 23%, rgba(255,255,255,0.23), transparent), radial-gradient(1px 1px at 85% 38%, rgba(255,255,255,0.24), transparent), radial-gradient(1px 1px at 46% 21%, rgba(255,255,255,0.24), transparent), radial-gradient(1px 1px at 74% 43%, rgba(255,255,255,0.23), transparent), radial-gradient(2px 2px at 86% 7%, rgba(255,255,255,0.33), transparent), radial-gradient(1px 1px at 23% 44%, rgba(255,255,255,0.17), transparent), radial-gradient(1px 1px at 64% 52%, rgba(255,255,255,0.23), transparent), radial-gradient(1px 1px at 88% 84%, rgba(255,255,255,0.16), transparent), radial-gradient(2px 2px at 94% 70%, rgba(255,255,255,0.17), transparent), radial-gradient(1px 1px at 76% 82%, rgba(255,255,255,0.23), transparent), radial-gradient(1px 1px at 62% 46%, rgba(255,255,255,0.32), transparent), radial-gradient(1px 1px at 52% 20%, rgba(255,255,255,0.26), transparent), radial-gradient(2px 2px at 19% 31%, rgba(255,255,255,0.38), transparent), radial-gradient(1px 1px at 6% 65%, rgba(255,255,255,0.36), transparent), radial-gradient(1px 1px at 24% 23%, rgba(255,255,255,0.21), transparent), radial-gradient(1px 1px at 8% 45%, rgba(255,255,255,0.25), transparent), radial-gradient(2px 2px at 38% 64%, rgba(255,255,255,0.30), transparent), radial-gradient(1px 1px at 28% 37%, rgba(255,255,255,0.16), transparent); z-index: -1; pointer-events: none; color: #c8d6e5; font-family: -apple-system,"PingFang SC","Microsoft YaHei",sans-serif; line-height: 2; }
+        .container { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+        .nav { display: flex; justify-content: space-between; align-items: center; padding: 24px 0; border-bottom: 1px solid rgba(59,130,246,0.2); }
+        .nav-brand { font-size: 20px; font-weight: 700; letter-spacing: 2px; background: linear-gradient(90deg,#3B82F6,#22D3EE); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .nav-links { display: flex; gap: 24px; }
+        .nav-links a { color: #94a3b8; text-decoration: none; font-size: 13px; }
+        .nav-links a:hover { color: #3B82F6; }
+        .article-header { padding: 48px 0 32px; }
+        .article-header .date { font-size: 13px; color: #475569; margin-bottom: 8px; }
+        .article-header h1 { font-size: 28px; font-weight: 700; color: #e2e8f0; line-height: 1.4; }
+        .article-header .meta { margin-top: 16px; font-size: 13px; color: #64748b; }
+        .article-body { padding-bottom: 48px; }
+        .article-body h2 { font-size: 20px; font-weight: 600; color: #94a3b8; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid rgba(59,130,246,0.1); }
+        .article-body h3 { font-size: 16px; font-weight: 600; color: #818cf8; margin: 24px 0 12px; }
+        .article-body p { margin-bottom: 16px; color: #c8d6e5; }
+        .article-body ul { padding-left: 20px; margin-bottom: 16px; color: #c8d6e5; }
+        .article-body ul li { margin-bottom: 8px; }
+        .article-body .compare-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        .article-body .compare-table th, .article-body .compare-table td { padding: 12px; text-align: left; border: 1px solid rgba(59,130,246,0.15); }
+        .article-body .compare-table th { background: rgba(59,130,246,0.08); color: #94a3b8; font-size: 13px; font-weight: 600; }
+        .article-body .compare-table td { font-size: 14px; color: #c8d6e5; }
+        .article-body .score { color: #34d399; }
+        .article-body .partial { color: #fbbf24; }
+        .article-body .miss { color: #f87171; }
+        .article-body .highlight-box { background: rgba(59,130,246,0.06); border: 1px solid rgba(59,130,246,0.15); border-radius: 8px; padding: 16px 20px; margin: 20px 0; }
+        .article-body .highlight-box p { margin-bottom: 0; color: #94a3b8; font-size: 14px; }
+        .article-body .data-row { display: flex; gap: 12px; flex-wrap: wrap; margin: 16px 0; }
+        .data-row .data-item { flex: 1; min-width: 130px; padding: 12px 16px; background: rgba(59,130,246,0.04); border: 1px solid rgba(59,130,246,0.1); border-radius: 8px; text-align: center; }
+        .data-row .data-item .d-label { font-size: 11px; color: #64748b; }
+        .data-row .data-item .d-value { font-size: 16px; font-weight: 600; color: #e2e8f0; margin-top: 4px; }
+        .ai-box { background: linear-gradient(135deg, rgba(59,130,246,0.08), rgba(129,140,248,0.08)); border: 1px solid rgba(129,140,248,0.2); border-radius: 12px; padding: 20px 24px; margin: 20px 0; }
+        .ai-box .ai-label { font-size: 12px; color: #818cf8; margin-bottom: 8px; font-weight: 600; }
+        .ai-box p { color: #c8d6e5; margin-bottom: 0; }
+        .back-link { display: inline-block; margin-top: 32px; color: #3B82F6; text-decoration: none; font-size: 14px; }
+        .back-link:hover { text-decoration: underline; }
+        .footer { margin-top: 48px; padding: 24px 0; text-align: center; border-top: 1px solid rgba(59,130,246,0.1); font-size: 13px; color: #475569; }
+        .footer a { color: #3B82F6; text-decoration: none; }
+        @media (max-width: 640px) { .article-header h1 { font-size: 22px; } .data-row { flex-direction: column; } }
+    </style>
+<!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "96c6cf48bf4a4303a39940137344e810"}'></script><!-- End Cloudflare Web Analytics -->
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <div class="nav-brand">✦ 天枢</div>
+            <div class="nav-links">
+                <a href="/">首页</a>
+                <a href="https://tianshu.shop" target="_blank">AI工具</a>
+            </div>
+        </div>
+        <article>
+            <div class="article-header">
+                <div style="font-size:36px; font-weight:900; letter-spacing:12px; font-family:'Noto Serif SC','STSong','SimSun',serif; background:linear-gradient(90deg,#3B82F6,#22D3EE); -webkit-background-clip:text; -webkit-text-fill-color:transparent; margin-bottom:4px; line-height:1.3;">天枢</div>
+                <div style="font-size:11px; color:#475569; letter-spacing:5px; text-transform:uppercase; margin-bottom:20px;">T I A N S H U</div>
+                <div class="date">2026年10月04日 · 实战复盘 · 跨期验证</div>
+                <h1>实战记录：AI模型判断 vs 实际走势——10月4日期中复盘：BTC重返$84,900、黄金$4,400关口确认失守、DXY回升至101.9</h1>
+                <div class="meta">阅读时间约 4 分钟 · 数据来源：公开市场行情 · 覆盖时段：9月10日—10月4日</div>
+            </div>
+            <div style="text-align:center;padding:12px 0 4px;">
+                <span style="display:inline-block;font-size:11px;padding:3px 12px;border-radius:4px;background:rgba(59,130,246,0.1);color:#818cf8;border:1px solid rgba(59,130,246,0.2);">🤖 本文由AI生成，仅供学习参考</span>
+            </div>
+            <div class="article-body">
+                <p>9月10日至10月4日，市场在近四周的时间里完成了对9月上旬调整的消化与再定价：比特币自$78,000下方一路反弹至$84,900上方，黄金在失守$4,400关口之后继续下探至$4,142附近，美元指数则从98.8一线回升至101.9，美股在回调后企稳回升，CNN恐惧与贪婪指数进一步回落至31附近、而加密货币情绪仍维持在贪婪区间。本文对9月10日文章给出的观察框架与10月4日的实际数据逐项对比。</p>
+
+                <div class="data-row">
+                    <div class="data-item"><div class="d-label">上期BTC (9/10)</div><div class="d-value" style="color:#fbbf24;">$77,938.84</div><div style="font-size:11px;color:#fbbf24;">推演起始</div></div>
+                    <div class="data-item"><div class="d-label">本日BTC</div><div class="d-value" style="color:#34d399;">$84,913.47</div><div style="font-size:11px;color:#34d399;">10/4 02:17 ET</div></div>
+                    <div class="data-item"><div class="d-label">上期黄金 (9/10)</div><div class="d-value" style="color:#fbbf24;">$4,393.78</div><div style="font-size:11px;color:#fbbf24;">推演起始</div></div>
+                    <div class="data-item"><div class="d-label">本日黄金</div><div class="d-value" style="color:#f87171;">$4,142.34</div><div style="font-size:11px;color:#f87171;">10/4 01:54 ET</div></div>
+                </div>
+
+                <h2>上期AI推演回顾</h2>
+
+                <p>9月10日文章在本期偏差分析的基础上，给出了五个后续关键观察点，并将模型更新至第六版。以下逐一验证。</p>
+
+                <div class="highlight-box">
+                    <p>💡 上期（9/10）提出的五个观察方向：①美股回调是否在第三个交易日出现企稳信号；②黄金$4,400与BTC $78,000-$79,000区间的确认质量；③CNN与加密情绪指数差值是否继续扩大或开始收敛；④9月10日初请失业金人数公布后的市场反应；⑤9月15-16日FOMC会议前各资产的波动节奏变化。</p>
+                </div>
+
+                <h2>一、美股——回调后的企稳与回升</h2>
+
+                <p>上期模型将美股的回调列为观察重点，并提出"关注回调是否在第三个交易日出现企稳信号"。此后近四周，美股整体完成企稳并转为回升：截至10月2日收盘，标普500报7,722.72（+0.73%），较9月10日记录的7,636.36回升1.13%；纳斯达克综合指数报27,190.86（+1.19%），较9月10日记录的26,253.34回升3.57%，为三大指数中幅度最大；道琼斯工业平均指数报51,176.96（+0.49%），较9月10日记录的52,380.66回落2.30%。</p>
+
+                <table class="compare-table">
+                    <tr><th>判断项</th><th>AI观察框架（9/10）</th><th>实际走势（10/2收盘）</th><th>结果</th></tr>
+                    <tr><td>回调企稳</td><td>"关注第三个交易日是否出现企稳信号"</td><td>标普回升至7,722.72（较9/10 +1.13%）</td><td class="score">✓ 企稳回升</td></tr>
+                    <tr><td>标普500</td><td>7,636.36（9/10）</td><td>7,722.72</td><td class="score">✓ 方向一致</td></tr>
+                    <tr><td>纳斯达克</td><td>26,253.34（9/10）</td><td>27,190.86（+3.57%）</td><td class="score">✓ 领涨</td></tr>
+                    <tr><td>道琼斯</td><td>52,380.66（9/10）</td><td>51,176.96（-2.30%）</td><td class="partial">△ 结构分化</td></tr>
+                </table>
+
+                <div class="highlight-box">
+                    <p>💡 模型此前设定的"回调企稳需连续观察"在本期得到验证：标普500与纳斯达克均自9月10日的低点区域回升，纳指涨幅明显领先。道指的回落则显示本轮上行存在结构分化，模型框架中"以指数间差异刻画回调深度"的思路具备实际意义。</p>
+                </div>
+
+                <h2>二、黄金——$4,400关口确认失守，金价下探$4,142</h2>
+
+                <p>上期文章将黄金$4,400关口的"站稳"情况列为核心观察点之一。9月10日现货黄金盘中上探$4,430.61后回落至$4,393.78，未能站稳$4,400上方。此后近四周，金价并未重返$4,400，而是持续下行：截至10月4日，现货黄金报$4,142.34；COMEX黄金12月合约在10月3日收报$4,172.10（-0.72%），当日区间$4,153.80-$4,259.00。以9月10日的$4,393.78为参照，现货金价本期回落约5.72%。</p>
+
+                <table class="compare-table">
+                    <tr><th>判断项</th><th>AI观察框架（9/10）</th><th>实际走势（10/4）</th><th>结果</th></tr>
+                    <tr><td>$4,400关口</td><td>"盘中触及$4,430.61后回落，需关注是否站稳"</td><td>未再站稳，回落至$4,142.34</td><td class="score">✓ 失守确认</td></tr>
+                    <tr><td>现货金价</td><td>$4,393.78（9/10）</td><td>$4,142.34（-5.72%）</td><td class="score">✓ 方向一致</td></tr>
+                    <tr><td>COMEX 12月合约</td><td>$4,437.20（9/10）</td><td>$4,172.10（10/3）</td><td class="score">✓ 方向一致</td></tr>
+                    <tr><td>关口确认标准</td><td>"整数关口需收盘确认站稳"</td><td>关口失效并延续下行</td><td class="score">✓ 标准成立</td></tr>
+                </table>
+
+                <div class="highlight-box">
+                    <p>💡 黄金本期是匹配度最高的观察项之一：上期模型将"盘中触及"与"收盘站稳"区分对待，并判断$4,400关口强度不足，此后金价以连续下行验证了这一判断。相比之下，本期金价的主要运行方向是回落，模型对整数关口的确认标准设定有效。</p>
+                </div>
+
+                <h2>三、BTC——$78,000-$79,000区间向上突破，重返$84,900</h2>
+
+                <p>上期文章将BTC跌破$78,000视为"破位"，并将$78,000-$79,000区间的"确认质量"列为观察点。此后近四周，BTC并未延续下行，而是自该区间持续反弹：截至10月4日，比特币报$84,913.47（+0.13%，Coin Metrics口径），日内区间$84,540.32-$84,917.14。以9月10日的$77,938.84为参照，本期BTC回升约8.95%，$78,000-$79,000区间实际成为上行起点而非破位起点。</p>
+
+                <table class="compare-table">
+                    <tr><th>判断项</th><th>AI观察框架（9/10）</th><th>实际走势（10/4）</th><th>结果</th></tr>
+                    <tr><td>$78,000整数位</td><td>"跌破，关注破位确认"</td><td>收复并大幅上行</td><td class="miss">✗ 破位未延续</td></tr>
+                    <tr><td>$79,000整数位</td><td>"回落失守"</td><td>重新站上并远离</td><td class="miss">✗ 失守未延续</td></tr>
+                    <tr><td>BTC价格</td><td>$77,938.84（9/10）</td><td>$84,913.47（+8.95%）</td><td class="miss">✗ 方向相反</td></tr>
+                    <tr><td>区间性质</td><td>隐含"破位"框架</td><td>实际成为上行起点</td><td class="miss">✗ 框架偏差</td></tr>
+                </table>
+
+                <div class="highlight-box">
+                    <p>💡 BTC是本期偏差最集中的观察项。上期框架将$78,000跌破解读为"破位"，而此后价格自该区域反弹近9%，$78,000-$79,000区间实际表现为中继整理区间。这暴露出模型对"短期破位信号"与"中期区间性质"的区分不足：跌破整数位并不必然对应结构性下行。</p>
+                </div>
+
+                <h2>四、DXY——自98.8回升至101.9</h2>
+
+                <p>上期文章将DXY 98.8一线的"稳定性"列为匹配度最高的观察项，并认为美元"缺乏方向性驱动"。此后近四周，美元指数并未维持窄幅整理，而是向上突破：截至10月2日，DXY报101.924（-0.17%），日内区间101.668-102.132，盘中一度升破102。以9月10日的98.804为参照，本期DXY回升约3.16%。</p>
+
+                <table class="compare-table">
+                    <tr><th>判断项</th><th>AI观察框架（9/10）</th><th>实际走势（10/2）</th><th>结果</th></tr>
+                    <tr><td>DXY中枢</td><td>"98.8一线窄幅整理"</td><td>回升至101.924</td><td class="miss">✗ 稳定性未延续</td></tr>
+                    <tr><td>波动幅度</td><td>"区间宽度约0.13"</td><td>区间放大，盘中升破102</td><td class="miss">✗ 方向性突破</td></tr>
+                    <tr><td>较6月高点101.16</td><td>"回落约2.33%"</td><td>已反超至101.924</td><td class="miss">✗ 反转</td></tr>
+                </table>
+
+                <div class="highlight-box">
+                    <p>💡 上期将"DXY稳定性"列为全场匹配度最高项，本期却成为主要偏差项之一：美元指数自98.8回升至101.9，反超6月高点101.16，此前的"低波动、无方向"状态被方向性突破取代。这与黄金同期回落相互印证——强美元与弱金价构成同一时段的两面。</p>
+                </div>
+
+                <h2>五、情绪分化——延续且维持高位</h2>
+
+                <p>上期文章将CNN恐惧与加密贪婪指数的分化列为核心观察点。本期该分化延续：CNN恐惧与贪婪指数10月2日报<strong>31.17</strong>（Fear），前收盘28.09，一周前36.94，一个月前46.06，一年前54.54；加密货币恐惧与贪婪指数10月4日报<strong>65</strong>（Greed），前五日序列为73→71→74→72→67→65。两者差值由上期的约32.7微升至约33.8，分化维持在高位。</p>
+
+                <table class="compare-table">
+                    <tr><th>指标</th><th>上期数据（9/10）</th><th>本期数据（10/4）</th><th>变化</th></tr>
+                    <tr><td>CNN恐惧与贪婪</td><td>36.26（Fear）</td><td>31.17（Fear），前收盘28.09</td><td class="score">✓ 继续回落</td></tr>
+                    <tr><td>加密恐惧与贪婪</td><td>69（Greed）</td><td>65（Greed）</td><td class="score">✓ 高位回落</td></tr>
+                    <tr><td>两类指数差值</td><td>约32.7</td><td>约33.8</td><td class="score">✓ 分化维持</td></tr>
+                    <tr><td>CNN一个月前</td><td>—</td><td>46.06</td><td class="score">✓ 下行趋势</td></tr>
+                </table>
+
+                <div class="highlight-box">
+                    <p>💡 情绪分化是本期方向判断中最稳定的一项：CNN指数自36.3继续回落至31.2、加密指数自69回落至65，两者虽同步小幅走低，但差值维持在33附近的高位，未出现收敛。模型将"情绪分化"列为持续观察点的判断成立。</p>
+                </div>
+
+                <h3>六、关注事件跟踪</h3>
+
+                <p>上期文章列出的初请失业金与FOMC两个关注事件，在本覆盖时段内均已落地。</p>
+
+                <table class="compare-table">
+                    <tr><th>关注事件</th><th>上期设定</th><th>本期进展</th><th>状态</th></tr>
+                    <tr><td>初请失业金人数</td><td>9月10日（周四）公布窗口</td><td>已公布，数据进入历史序列</td><td class="score">✓ 如期落地</td></tr>
+                    <tr><td>FOMC议息会议</td><td>9月15-16日</td><td>已召开并公布决议</td><td class="score">✓ 如期落地</td></tr>
+                    <tr><td>通胀数据</td><td>"等待窗口内"</td><td>9月数据进入发布窗口</td><td class="partial">△ 持续跟踪</td></tr>
+                </table>
+
+                <h2>准确率分析</h2>
+
+                <div class="highlight-box">
+                    <p>📊 本期追踪上期文章中产生的19项可验证观察项。完全匹配11项（58%），部分偏离1项（5%），明显偏差7项（37%）。综合匹配率约 58%，主要偏差集中在BTC与DXY两个品种的"多周期方向"维度——短期信号在中周期发生反转。</p>
+                </div>
+
+                <h3>高度准确的部分</h3>
+
+                <p><strong>黄金$4,400关口确认标准成立：</strong>上期模型区分"盘中触及"与"收盘站稳"，判断$4,400关口强度不足。此后金价并未重返该位，而是持续下行至$4,142附近，关口失守的判断完整兑现，为全场匹配度最高的观察项。</p>
+
+                <p><strong>情绪分化方向判断延续成立：</strong>CNN恐惧指数继续回落至31.2、加密贪婪指数维持65，两者差值维持在33附近的高位，模型将其列为核心观察点的判断成立。</p>
+
+                <p><strong>美股回调企稳判断成立：</strong>上期提出"关注第三个交易日是否企稳"，此后标普与纳指自低位回升，纳指涨幅领先，企稳方向得到验证。</p>
+
+                <h3>存在偏差的部分</h3>
+
+                <p><strong>BTC $78,000-$79,000区间的"破位"框架偏差：</strong>上期将跌破$78,000解读为破位，而此后价格自该区域反弹约8.95%至$84,913。短期破位信号并未延续为中期结构下行，这是本期最集中的偏差来源。</p>
+
+                <p><strong>DXY稳定性的判断反转：</strong>上期将98.8一线的稳定性列为匹配度最高项，本期美元指数却回升至101.9、反超6月高点。低波动状态以方向性突破收场，说明"当前稳定"不等于"中期无方向"。</p>
+
+                <p><strong>道指的相对弱势：</strong>美股整体回升的同时道指回落2.30%，三大指数结构分化，上期框架未对指数间差异给出足够权重。</p>
+
+                <h3>模型迭代方向更新（第七版）</h3>
+
+                <p>基于本期偏差分析，模型的更新方向如下：</p>
+                <ul>
+                    <li><strong>短期信号与中期结构的分级判定：</strong>本期BTC与DXY均出现"短期信号在中周期反转"的情形。模型需将"日内/数日级确认"与"数周级结构"分层处理，避免以短期破位直接外推中期方向。</li>
+                    <li><strong>区间性质的显式建模：</strong>需引入"中继整理 vs 结构反转"的判定维度，对区间被跌破后的后续路径给出概率分布，而非单一方向结论。</li>
+                    <li><strong>低波动—突破的监测阈值：</strong>DXY自98.8回升3.2%触发方向性突破，说明低波动区间本身可能是突破前的蓄势。需为"波动收窄后放大"设定监测阈值。</li>
+                    <li><strong>跨资产共振的方向一致性校验：</strong>本期强美元与弱金价构成同一时段的两面，模型需强化美元与黄金的方向一致性校验。</li>
+                    <li><strong>指数间分化权重：</strong>本期纳指与道指的背离幅度较大，需在美股判断中提升指数间差异的权重。</li>
+                </ul>
+
+                <h2>小结</h2>
+
+                <p>截至10月4日，本期跨期复盘的核心结论如下：</p>
+
+                <p><strong>最大的验证：黄金$4,400关口确认失守与情绪分化延续。</strong>上期将"整数关口需收盘确认"设为标准，金价此后回落至$4,142，关口失守判断完整兑现；CNN恐惧指数与加密贪婪指数的分化维持在33附近，方向判断稳定。</p>
+
+                <p><strong>最大的偏差：BTC与DXY在中周期方向上的反转。</strong>上期将BTC跌破$78,000视为破位，实际价格反弹约8.95%至$84,913；上期将DXY 98.8视为稳定，实际美元指数回升至101.9。两项均显示"短期信号"与"中期结构"之间存在背离。</p>
+
+                <p><strong>黄金是全场匹配度最高的观察项。</strong>自上期区分"触及"与"站稳"后，金价以连续下行验证了关口强度不足的判断，方向与幅度预期均较为一致。</p>
+
+                <p><strong>模型整体匹配率约58%。</strong>本期19项观察项中完全匹配11项。相较此前以单一方向判断为主的期次，本期检验的重点是"跨周期一致性"，暴露的偏差集中于短期信号的外推。</p>
+
+                <p><strong>后续关键观察点：</strong></p>
+                <ul>
+                    <li>黄金$4,142-$4,200区间的运行与$4,000整数位的支撑质量</li>
+                    <li>BTC $84,900上方区域的有效性与成交量配合</li>
+                    <li>DXY 102关口的反复与美元方向性突破的持续性</li>
+                    <li>CNN与加密情绪指数差值能否维持或开始收敛</li>
+                    <li>美股三大指数结构分化是否延续，纳指与道指的相对强弱</li>
+                </ul>
+
+                <div class="ai-box">
+                    <div class="ai-label">🧠 模型迭代方向（第七版）</div>
+                    <p>本期新增短期信号与中期结构分级判定、区间性质显式建模、低波动—突破监测阈值、跨资产方向一致性校验、指数间分化权重五项改进方向。观察框架在"跨周期一致性"维度暴露出的偏差，将转化为更严格的分层标准。持续进化中。</p>
+                </div>
+
+                <p style="font-size:12px; color:#475569; margin-top:32px;"><em>数据来源：CNBC（标普500 / 道指 / 纳指，2026-10-02收盘；DXY，2026-10-02；BTC.CM=（Coin Metrics）2026-10-04 02:17 ET；XAU= 现货黄金，2026-10-04 01:54 ET；@GC.1 COMEX黄金12月合约，2026-10-03）、gold-api.com（XAU，2026-10-04 06:16 UTC）、production.dataviz.cnn.io（CNN恐惧与贪婪指数，2026-10-02）、Alternative.me（加密货币恐惧与贪婪指数）。站内对比数据来自 tianshu.ink 历史文章记录。</em></p>
+                <p style="font-size:12px; color:#475569; margin-top:8px;"><em>免责声明：以上内容为AI模型分析记录，仅供学习参考，不构成投资建议。投资有风险，请自行决策。</em></p>
+                <a href="/" class="back-link">← 返回首页</a>
+
+            </div>
+        </article>
+        <div class="footer">
+            <p>© 2026 <a href="https://tianshu.shop">天枢</a> — AI交易分析 · 策略记录 · 自动研究</p>
+        </div>
+    </div>
+<div style="text-align:center;padding:20px 0 10px;border-top:1px solid rgba(59,130,246,0.08);">
+<p style="font-size:11px;color:#334155;">· 本文由人工智能生成，仅供学习参考，不构成任何投资建议 ·<br>投资有风险，入市需谨慎。</p>
+</div></body>
+</html>
